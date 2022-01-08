@@ -1,0 +1,13 @@
+.social-icon {
+    font-size: 1.6em !important;
+}
+
+.social-icon:hover{
+    opacity: 60%;
+}
+
+.logo {
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+}
