@@ -1,5 +1,7 @@
 import React from "react";
 import './Home.css';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const SCREENS =
 {
@@ -62,9 +64,10 @@ function switchReviewLeft() {
 
 function Home() {
     return (
-        <div style={{ backgroundColor: '#f2f2f2' }}>
-            <div className="container mt-5">
-                <div className="row justify-content-center">
+        <div className="bg-theme">
+            <Navbar />
+            <div className="container page-top-margin">
+                <div className="row justify-content-center align-items-center pt-5">
                     <div className="col-md-5">
                         <div className="header-align">
                             <h1 className="text-header">Bible Verse Memorization<br />Made Easy.</h1>
@@ -72,9 +75,9 @@ function Home() {
                             <div className="row">
                                 <div className="col">
                                     <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank"><img
-                                        className="download-icon" src="/images/versify/apple_store.png" /></a>
+                                        className="download-icon" src="/images/apple_store.png" /></a>
                                     <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank"><img
-                                        className="download-icon" src="/images/versify/google_play.png" /></a>
+                                        className="download-icon" src="/images/google_play.png" /></a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +89,7 @@ function Home() {
                 </div>
             </div>
 
-            <div style={{ backgroundColor: 'white', width: '100%' }}>
+            <div className="w-100" style={{ backgroundColor: 'white' }}>
                 <img src="/images/grey_triangle.png" className="triangle" />
                 <div style={{ marginTop: '50px' }}>
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
@@ -184,6 +187,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
