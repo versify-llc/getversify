@@ -69,17 +69,16 @@ function Home() {
             <div className="container page-top-margin">
                 <div className="row justify-content-center align-items-center pt-5">
                     <div className="col-md-5">
-                        <div className="header-align">
-                            <h1 className="text-header">Bible Verse Memorization<br />Made Easy.</h1>
-                            <p className="text-body-lg sub-text">Our app is now available in app stores! Download it today.</p>
-                            <div className="row">
-                                <div className="col">
-                                    <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank"><img
-                                        className="download-icon" src="/images/apple_store.png" /></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank"><img
-                                        className="download-icon" src="/images/google_play.png" /></a>
-                                </div>
+                        <div className="float-end">
+                            <h1 className="text-header text-end">Bible Verse Memorization<br />Made Easy.</h1>
+                            <p className="text-body-lg sub-text text-end">Our app is now available in app stores! Download it today.</p>
+                            <div className="float-end">
+                                <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank"><img
+                                    className="download-icon" src="/images/apple_store.png" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank"><img
+                                    className="download-icon" src="/images/google_play.png" /></a>
                             </div>
+
                         </div>
                     </div>
                     <div className="col-md-1"></div>

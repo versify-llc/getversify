@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-.header-align {
-  text-align: end;
-}
-
 .download-icon {
   height: 40px;
   margin:0px 5px 30px 5px !important;
@@ -93,7 +89,6 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-
 }
 
 /* Breakpoints */

@@ -13,15 +13,11 @@ import {
 function App() {
   return (
     <Router>
-      <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={Contact} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={Contact} />
+      </Routes>
     </Router>
   );
 }
