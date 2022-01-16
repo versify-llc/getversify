@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* =========================================================================== */
+/* Custom code */
+.bg-theme {
+  background-color: #F2F2F2 !important;
+}
+
+.header-align {
+  text-align: start;
+}
+
+.download-icon {
+  height: 40px;
+  margin:0px 5px 30px 5px !important;
+}
+
+.phone-screen {
+  width: 300px;
+  align-items: center;
+}
+
+.game-icon {
+  width: 45px;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.game-text {
+  display: inline-block;
+  text-align: left;
+}
+
+.game-button {
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding: 10px 15px 5px 15px;
+  width: 160px;
+}
+
+.game-button:hover{
+  background-color: #f2f2f2;
+}
+
+.btn-check:checked+.btn-outline-primary{
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+}
+
+.btn-outline-primary:hover{
+  background-color: #f2f2f2 !important;
+}
+
+.btn-outline-primary{
+  border-color: #e7e7e7 !important;
+}
+
+.btn-align {
+  text-align: end;
+}
+
+.game-screen{
+  height: 500px;
+}
+
+.phone-align {
+  text-align: start;
+}
+
+.sub-text {
+  margin-left: 20%;
+}
+
+.btn-group-vertical {
+  text-align: center;
+}
+
+.small-pad .small-pad-top {
+  padding: 0px;
+}
+
+.line-divide {
+    width: 50px;
+    height: 4px !important;
+    color: #7FDCA5;
+    opacity: 1;
+}
+
+.profile-img {
+  width: 225px;
+  border-radius: 150px;
+}
+
+.top-margin {
+  margin-top: 40px !important;
+}
+
+.profile-top-margin {
+  margin-top: 100px !important;
+}
+
+/* Breakpoints */
+@media only screen and (max-width: 767px) {
+  .header-align, .phone-align, .btn-align {
+    text-align: center;
+  }
+  .small-pad {
+    padding-bottom: 20px;
+  }
+  .small-pad-top {
+    padding-top: 20px;
+  }
+  .line-divide {
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .top-margin{
+    margin-top: 10px !important;
+  }
+  .profile-top-margin{
+    margin-top: 30px !important;
+  }
+  .break{
+    display: none;
+  }
+  .profile-img {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .download-icon {
+    height: 35px;
+  }
+  .sub-text {
+    margin-left: 0px;
+  }
+}
