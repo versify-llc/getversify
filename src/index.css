@@ -1,3 +1,149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;700&display=swap');
+
+
+:root {
+    --theme-blue: #5AC1D0;
+    --theme-green: #7FDCA5;
+    --theme-lightgrey: #f2f2f2;
+    --theme-black: #373737;
+    --theme-darkgrey: #AAAAAA;
+}
+/*Primary background color*/
+.bg-theme {
+  background-color: var(--theme-lightgrey) !important; 
+}
+
+.navbar-link {
+    font-size: 20px !important;
+    color: var(--theme-black) !important;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.text-header-xl {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    color:var(--theme-black);
+    font-size: calc(3.5rem + 2vw);
+}
+
+.text-header {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    color:var(--theme-black);
+    font-size: calc(1.75rem + 1.5vw);
+}
+
+.text-header-md {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    color:var(--theme-black);
+    font-size: calc(1rem + 1.5vw);
+}
+
+.text-header-sm {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    color:var(--theme-black);
+    font-size: calc(1rem + 1vw);
+}
+
+.text-header-xs {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    color:var(--theme-black);
+    font-size: calc(1rem + .1vw);
+}
+
+
+.text-body-lg {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: var(--theme-black);
+    font-size: calc(1.375rem + .1vw);
+}
+
+.text-body-md {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: var(--theme-black);
+    font-size: calc(1.25rem + .1vw);
+}
+
+.text-body-sm {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: var(--theme-black);
+    font-size: calc(1rem + .1vw);
+}
+
+.primary-btn {
+    margin: 0;
+    background-color: rgb(67, 189, 219); /*PUT versify blue */
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Barlow', sans-serif !important;
+}
+
+.secondary-btn {
+    margin: 0;
+    background-color: rgb(163, 163, 163); /*PUT versify blue */
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Barlow', sans-serif !important;
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .home-btn {
+      width: 200px;
+  }
+
+  .white-text {
+      color: white !important;
+  }
+
+  .navbar-light .navbar-toggler {
+      border: none !important;
+  }
+
+  .triangle {
+    width: 100%;
+    vertical-align: top !important;
+  }
+
+  .triangle-rotate {
+    width: 100%;
+    transform: rotate(180deg);
+    vertical-align: bottom !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .text-body-lg {
+        font-size: calc(1rem + .6vw);
+    }
+    .text-body-md{
+        font-size: calc(1rem + .4vw);
+    }
+  }
+
 html, body, #root {
   width: 100%;
   height: 100%;

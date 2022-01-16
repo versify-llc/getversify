@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* =========================================================================== */
+/* Custom code */
+.bg-theme {
+  background-color: #F2F2F2 !important;
+}
+
+.header-align {
+  text-align: end;
+}
+
+.download-icon {
+  height: 40px;
+  margin:0px 5px 30px 5px !important;
+}
+
+.phone-screen {
+  width: 300px;
+  align-items: center;
+}
+
+.game-icon {
+  width: 45px;
+  display: inline-block !important;
+  /* margin-right: 20px; */
+  /* text-align: left; */
+  color: #373737;
+  vertical-align: middle;
+
+}
+
+.game-text {
+  display: inline-block;
+  /* text-align: left; */
+  vertical-align: middle;
+}
+
+.game-button {
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding: 10px 15px 5px 15px;
+  width: 160px;
+}
+
+.game-button:hover{
+  background-color: #f2f2f2;
+}
+
+.btn-check:checked+.btn-outline-primary{
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+}
+
+.btn-outline-primary:hover{
+  background-color: #f2f2f2 !important;
+}
+
+.btn-outline-primary{
+  border-color: #e7e7e7 !important;
+}
+
+.btn-align {
+  text-align: end;
+}
+
+.game-screen{
+  height: 500px;
+}
+
+.phone-align {
+  text-align: start;
+}
+
+.sub-text {
+  margin-left: 20%;
+}
+
+.btn-group-vertical {
+  text-align: center;
+}
+
+.small-pad .small-pad-top {
+  padding: 0px;
+}
+
+.arrow-icon {
+  width: 25px;
+}
+
+.arrow-button{
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+/* Breakpoints */
+@media only screen and (max-width: 768px) {
+  .header-align, .phone-align, .btn-align {
+    text-align: center;
+  }
+  .small-pad {
+    padding-bottom: 20px;
+  }
+  .small-pad-top {
+    padding-top: 20px;
+  }
+  .phone-screen{
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .download-icon {
+    height: 35px;
+  }
+  .sub-text {
+    margin-left: 0px;
+  }
+  .phone-screen{
+    width: 250px;
+  }
+}
