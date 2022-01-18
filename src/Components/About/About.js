@@ -1,19 +1,24 @@
 import React from "react";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 import './About.css';
 
 function About() {
     return (
         <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
-            <div className="container" style={{ marginTop: "100px" }}>
-                <div className="row justify-content-center top-margin">
+            <nav className="navbar navbar-expand-md bg-white fixed-top">
+                <Navbar />
+            </nav>
+            <div className="container page-top-margin">
+                <div className="row justify-content-center pt-5">
                     <div className="col-md-3" style={{ height: "auto" }}>
-                        <div className="header-align">
+                        <div className="about-header-align">
                             <h1 className="text-header-sm">MEET</h1>
                             <h1 className="text-header" style={{ color: "#7FDCA5" }}>Versify.</h1>
                         </div>
                     </div>
                     <div className="col-md-1"></div>
-                    <div className="col-md-5 header-align small-pad">
+                    <div className="col-md-5 about-header-align small-pad">
                         <p className="text-body-md" style={{ color: "#8f8f8f" }}><i>
                             "My son, do not forget my teaching,
                             but let your heart keep my commandments,
@@ -42,18 +47,18 @@ function About() {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">332</h1>
+                    <h1 className="text-header-xl white-text">674</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">121</h1>
+                        <h1 className="text-header white-text">271</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">1,796</h1>
-                        <p className="text-header-sm white-text">Verses In Progress</p>
+                        <h1 className="text-header white-text">6,000+</h1>
+                        <p className="text-header-sm white-text">Games Played</p>
                     </div>
 
                 </div>
@@ -64,12 +69,12 @@ function About() {
                 <div className="container profile-top-margin">
                     <div className="row justify-content-center top-margin">
                         <div className="col-md-4" style={{ height: "auto" }}>
-                            <div className="header-align">
+                            <div className="about-header-align">
                                 <h1 className="text-header-sm">MEET</h1>
                                 <h1 className="text-header" style={{ color: "#7FDCA5" }}>The Team.</h1>
                             </div>
                         </div>
-                        <div className="col-md-5 header-align small-pad">
+                        <div className="col-md-5 about-header-align small-pad">
                             <p className="text-body-md">
                                 <b>
                                     Versify was created by two college students who have a passion for software development
@@ -84,7 +89,7 @@ function About() {
                             <img className="profile-img" src="/images/richie.jpg" alt="Richie" />
                         </div>
                         <div className="col-md-1"></div>
-                        <div className="col-md-5 header-align small-pad">
+                        <div className="col-md-5 about-header-align small-pad">
                             <p className="text-body-md">
                                 <b>
                                     Richie Tarkowski
@@ -100,7 +105,7 @@ function About() {
                     </div>
                     <br className="break" />
                     <div className="row justify-content-center top-margin" id="alyssa-profile">
-                        <div className="col-md-5 header-align small-pad">
+                        <div className="col-md-5 about-header-align small-pad">
                             <p className="text-body-md">
                                 <b>
                                     Alyssa Tarkowski
@@ -121,6 +126,8 @@ function About() {
                     </div>
                 </div>
             </div>
+            <div className="py-1"></div>
+            <Footer />
         </div>
     );
 }

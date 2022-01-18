@@ -6,7 +6,7 @@
   background-color: #F2F2F2 !important;
 }
 
-.header-align {
+.about-header-align {
   text-align: start;
 }
 
@@ -79,7 +79,7 @@
 
 /* Breakpoints */
 @media only screen and (max-width: 767px) {
-  .header-align, .phone-align, .btn-align {
+  .about-header-align, .phone-align, .btn-align {
     text-align: center;
   }
   .small-pad {

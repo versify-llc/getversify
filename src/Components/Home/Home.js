@@ -49,7 +49,9 @@ function Home() {
 
     return (
         <div className="bg-theme">
-            <Navbar />
+            <nav className="navbar navbar-expand-md fixed-top bg-theme">
+                <Navbar />
+            </nav>
             <div className="container page-top-margin">
                 <div className="row justify-content-center align-items-center pt-5">
                     <div className="col-md-5">
@@ -149,7 +151,7 @@ function Home() {
                                 <i className="fas fa-star fa-lg star-icon px-1"></i>
                                 <i className="fas fa-star fa-lg star-icon px-1"></i>
                             </div>
-                            <p className="text-body-lg white-text" id="review-header"><b>"{REVIEW_HEADER[reviewIndex]}"</b></p>
+                            <p className="text-body-lg white-text" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
                             <p className="text-body-sm white-text m-auto" id="review-body" style={{ maxWidth: '500px' }}>
                                 <i>{REVIEW_BODY[reviewIndex]}</i>
                             </p>
