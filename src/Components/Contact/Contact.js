@@ -1,9 +1,25 @@
+import axios from 'axios';
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import './Contact.css';
 
 function Contact() {
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const elements = event.target.elements;
+        const name = elements.inputName.value;
+        const email = elements.inputEmail.value;
+        const message = elements.inputMessage.value;
+
+        await axios.post('https://congratgrad.herokuapp.com/contact/send', { 'sender': email, 'message': message });
+
+        elements.inputName.value = '';
+        elements.inputEmail.value = '';
+        elements.inputMessage.value = '';
+    }
+
     return (
         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <nav className="navbar navbar-expand-md fixed-top bg-white">
@@ -20,24 +36,24 @@ function Contact() {
                             below and we will get back to you promptly.
                         </p>
 
-                        <form>
+                        <form onSubmit={onSubmit}>
                             <div className="form-group text-start">
-                                <label className="text-body-sm" htmlfor="inputName">Your Name</label>
+                                <label className="text-body-sm" htmlFor="inputName">Your Name</label>
                                 <input type="text" className="form-control" id="inputName" aria-describedby="emailHelp" />
                             </div>
                             <br />
                             <div className="form-group text-start">
-                                <label className="text-body-sm" htmlfor="inputEmail">Your Email</label>
+                                <label className="text-body-sm" htmlFor="inputEmail">Your Email</label>
                                 <input type="email" className="form-control" id="inputEmail" />
                             </div>
                             <br />
                             <div className="form-group text-start">
-                                <label className="text-body-sm" htmlfor="inputMessage">Your Message</label>
+                                <label className="text-body-sm" htmlFor="inputMessage">Your Message</label>
                                 <textarea className="form-control" id="inputMessage" rows="3"></textarea>
                             </div>
                             <br />
                             <div className="content-align">
-                                <div className="btn submit-btn">Submit</div>
+                                <button type="submit" className="btn submit-btn">Submit</button>
                             </div>
                         </form>
                     </div>
