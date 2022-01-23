@@ -6,7 +6,7 @@ import './About.css';
 function About() {
     return (
         <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
-            <nav className="navbar navbar-expand-md bg-white fixed-top">
+            <nav className="navbar navbar-light navbar-expand-md bg-white fixed-top">
                 <Navbar />
             </nav>
             <div className="container page-top-margin">

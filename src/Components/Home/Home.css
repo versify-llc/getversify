@@ -75,6 +75,10 @@
   padding: 0px;
 }
 
+.review-promo {
+  height: 235px !important;
+}
+
 .arrow-icon {
   color: white;
 }

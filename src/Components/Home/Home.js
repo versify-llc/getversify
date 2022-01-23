@@ -23,7 +23,7 @@ const REVIEW_BODY =
     [
         'Such a well designed app to help you memorize verses!! I haven’t put my phone down since I downloaded it- even better than TikTok!!',
         'It is not often that a small dev makes something so polished and well rounded. This app feels clean and well made. Overall a great experience.',
-        'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun! I actually look forward to memorizing verses now. I love the games and point system.',
+        'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun!',
         'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!'
     ]
 
@@ -49,11 +49,11 @@ function Home() {
 
     return (
         <div className="bg-theme">
-            <nav className="navbar navbar-expand-md fixed-top bg-theme">
+            <nav className="navbar navbar-light navbar-expand-md fixed-top bg-theme">
                 <Navbar />
             </nav>
             <div className="container page-top-margin">
-                <div className="row justify-content-center align-items-center pt-5">
+                <div className="row justify-content-center align-items-center pt-4">
                     <div className="col-md-5">
                         <div className="header-align">
                             <h1 className="text-header">Bible Verse Memorization<br />Made Easy</h1>
@@ -75,7 +75,7 @@ function Home() {
             </div>
 
             <div className="w-100 pb-2" style={{ backgroundColor: 'white' }}>
-                <img src="/images/grey_triangle.png" className="triangle" alt="" style={{ marginTop: '-1px' }} />
+                <img src="/images/grey_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px' }}>
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
                     <p className="text-body-lg mb-4">Play a variety of interactive games to help you memorize verses</p>
@@ -131,12 +131,12 @@ function Home() {
             </div>
 
             <div style={{ backgroundColor: '#5AC1D0', width: '100%' }}>
-                <img src="/images/white_triangle.png" className="triangle" alt="" style={{ marginTop: '-1px' }} />
+                <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
                     <p className="text-body-lg white-text">Memorize any verse in the ESV for free! No subscription. No catch.</p>
                     <br />
-                    <div className="justify-content-center row">
+                    <div className="review-promo justify-content-center row">
                         <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
                             <button className="arrow-button align-middle"
                                 onClick={() => setReviewIndex(decrementReviewIndex(reviewIndex))}>
@@ -165,7 +165,7 @@ function Home() {
                         <div className="col-1 col-sm-2"></div>
                     </div>
                 </div>
-                <img src="/images/grey_triangle.png" className="triangle-rotate" alt="" style={{ marginBottom: '-1px' }} />
+                <img src="/images/grey_triangle.png" className="triangle-rotate" alt="" />
             </div>
 
             <div className="w-100">
