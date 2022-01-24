@@ -100,7 +100,18 @@ function About() {
                     </div>
                     <br className="break" />
                     <div className="row justify-content-center top-margin" id="alyssa-profile">
+                        {document.documentElement.clientWidth < 750 ?
+                            <div>
+                                <div className="col-md-1"></div>
+                                <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
+                                    <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                                </div>
+                            </div>
+                            :
+                            null
+                        }
                         <div className="col-md-5 header-align small-pad">
+
                             <p className="text-body-md">
                                 <b>
                                     Alyssa Tarkowski
@@ -112,11 +123,18 @@ function About() {
                                 She is also a Software Engineer Intern at State Farm. Her favorite thing about being a
                                 part of the Versify team is learning new programming tricks from her older brother.
                             </p>
+
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
-                            <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
-                        </div>
+                        {document.documentElement.clientWidth >= 750 ?
+                            <div>
+                                <div className="col-md-1"></div>
+                                <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
+                                    <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                                </div>
+                            </div>
+                            :
+                            null
+                        }
 
                     </div>
                 </div>
