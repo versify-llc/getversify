@@ -2,12 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
+import Snackbar from '../Snackbar/Snackbar';
 import './Contact.css';
 
 
 function Contact() {
 
     const [loading, setLoading] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -22,6 +24,9 @@ function Contact() {
         setLoading(true);
         await axios.post('https://congratgrad.herokuapp.com/contact/send', { 'sender': email, 'message': `${name} : ${message}` });
         setLoading(false);
+        setSubmitted(true);
+
+        setTimeout(() => setSubmitted(false), 3000);
 
         elements.inputName.value = '';
         elements.inputEmail.value = '';
@@ -90,6 +95,7 @@ function Contact() {
             </div>
             <div className='pt-3'></div>
             <Footer />
+            <Snackbar message="Submitted!" show={submitted} />
         </div>
     );
 }
