@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './Home.css';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
 const SCREENS =
-{
-    'read': '/images/read_game_screen.png',
-    'type': '/images/type_game_screen.png',
-    'blank': '/images/blank_game_screen.png',
-    'test': '/images/type_game_screen.png'
-}
+    [
+        '/images/read_game_screen.png',
+        '/images/type_game_screen.png',
+        '/images/blank_game_screen.png',
+        '/images/type_game_screen.png'
+    ];
 
 const REVIEW_HEADER =
     [
@@ -23,171 +23,166 @@ const REVIEW_BODY =
     [
         'Such a well designed app to help you memorize verses!! I haven’t put my phone down since I downloaded it- even better than TikTok!!',
         'It is not often that a small dev makes something so polished and well rounded. This app feels clean and well made. Overall a great experience.',
-        'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun! I actually look forward to memorizing verses now. I love the games and point system.',
+        'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun!',
         'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!'
     ]
 
-let reviewIndex = 0;
-
-function switchScreen() {
-    let screen = document.querySelector('input[name="btnradio"]:checked').value;
-    document.getElementById("gameScreen").innerHTML =
-        `
-    <img className="game-screen" src=${SCREENS[screen]}>
-
-    `
-}
-
-function switchReviewRight() {
-    if (reviewIndex == REVIEW_HEADER.length - 1) {
-        reviewIndex = 0;
-    } else {
-        reviewIndex += 1;
+function incrementReviewIndex(current) {
+    if (current === REVIEW_HEADER.length - 1) {
+        return 0;
     }
 
-    document.getElementById("review-header").innerHTML = "<b>" + REVIEW_HEADER[reviewIndex] + "</b>";
-    document.getElementById("review-body").innerHTML = "<i>" + REVIEW_BODY[reviewIndex] + "</i>";
-
+    return current + 1;
 }
 
-function switchReviewLeft() {
-    if (reviewIndex == 0) {
-        reviewIndex = REVIEW_HEADER.length - 1;
-    } else {
-        reviewIndex -= 1;
+function decrementReviewIndex(current) {
+    if (current === 0) {
+        return REVIEW_HEADER.length - 1;
     }
 
-    document.getElementById("review-header").innerHTML = "<b>" + REVIEW_HEADER[reviewIndex] + "</b>";
-    document.getElementById("review-body").innerHTML = "<i>" + REVIEW_BODY[reviewIndex] + "</i>";
-
+    return current - 1;
 }
 
 function Home() {
+    const [gameIndex, setGameIndex] = useState(0);
+    const [reviewIndex, setReviewIndex] = useState(0);
+
     return (
         <div className="bg-theme">
-            <Navbar />
+            <nav className="navbar navbar-light navbar-expand-md fixed-top bg-theme">
+                <Navbar />
+            </nav>
             <div className="container page-top-margin">
-                <div className="row justify-content-center align-items-center pt-5">
+                <div className="row justify-content-center align-items-center pt-4">
                     <div className="col-md-5">
                         <div className="header-align">
-                            <h1 className="text-header">Bible Verse Memorization<br />Made Easy.</h1>
+                            <h1 className="text-header">Bible Verse Memorization<br />Made Easy</h1>
                             <p className="text-body-lg sub-text">Our app is now available in app stores! Download it today.</p>
-                            <div className="row">
-                                <div className="col">
-                                    <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank"><img
-                                        className="download-icon" src="/images/apple_store.png" /></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank"><img
-                                        className="download-icon" src="/images/google_play.png" /></a>
-                                </div>
-                            </div>
+
+                            <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">
+                                <img className="download-icon" src="/images/apple_store.png" alt="Apple App Store link" />
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank" rel="noreferrer">
+                                <img className="download-icon" src="/images/google_play.png" alt="Google Play Store Link" />
+                            </a>
                         </div>
                     </div>
                     <div className="col-md-1"></div>
                     <div className="col-md-5 phone-align small-pad">
-                        <img className="phone-screen" src="/images/home_screen.png" />
+                        <img className="phone-screen" src="/images/home_screen.png" alt="Versify home screenshot" />
                     </div>
                 </div>
             </div>
 
-            <div className="w-100" style={{ backgroundColor: 'white' }}>
-                <img src="/images/grey_triangle.png" className="triangle" />
+            <div className="w-100 pb-2" style={{ backgroundColor: 'white' }}>
+                <img src="/images/grey_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px' }}>
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
-                    <p className="text-body-lg">Play a variety of interactive games to help you memorize verses</p>
+                    <p className="text-body-lg mb-4">Play a variety of interactive games to help you memorize verses</p>
 
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-4 btn-align">
                             <form>
                                 <div className="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" className="btn-check" name="btnradio" id="readbtn" value="read" autoComplete="off"
-                                        onClick={switchScreen} />
-                                    <label className="game-button btn-outline-primary" forhtml="readbtn">
-                                        <i className="fas fa-book-open fa-2x game-icon"></i>
-                                        <p className="text-body-lg game-text">Read</p>
+                                        checked={gameIndex === 0} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" forhtml="readbtn" onClick={() => setGameIndex(0)}>
+                                        <div className="col-5">
+                                            <i className="fas fa-book-open fa-2x game-icon"></i>
+                                        </div>
+                                        <div className="col-7 text-body-lg game-text">Read</div>
                                     </label>
 
                                     <input type="radio" className="btn-check" name="btnradio" id="typebtn" value="type" autoComplete="off"
-                                        onClick={switchScreen} />
-                                    <label className="game-button btn-outline-primary" forhtml="typebtn">
-                                        <i className="fas fa-fingerprint game-icon fa-2x"></i>
-                                        <p className="text-body-lg game-text">Type</p>
+                                        checked={gameIndex === 1} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" forhtml="typebtn" onClick={() => setGameIndex(1)}>
+                                        <div className="col-5">
+                                            <i className="fas fa-fingerprint game-icon fa-2x"></i>
+                                        </div>
+                                        <div className="col-7 text-body-lg game-text">Type</div>
                                     </label>
 
                                     <input type="radio" className="btn-check" name="btnradio" id="blankbtn" value="blank" autoComplete="off"
-                                        onClick={switchScreen} />
-                                    <label className="game-button btn-outline-primary" forhtml="blankbtn">
-                                        <i className="fas fa-bars fa-2x game-icon"></i>
-                                        <p className="text-body-lg game-text">Blank</p>
+                                        checked={gameIndex === 2} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" forhtml="blankbtn" onClick={() => setGameIndex(2)}>
+                                        <div className="col-5">
+                                            <i className="fas fa-bars fa-2x game-icon"></i>
+                                        </div>
+                                        <div className="text-body-lg game-text col-7">Blank</div>
                                     </label>
 
                                     <input type="radio" className="btn-check" name="btnradio" id="testbtn" value="test" autoComplete="off"
-                                        onClick={switchScreen} />
-                                    <label className="game-button btn-outline-primary" forhtml="testbtn">
-                                        <i className="far fa-check-circle fa-2x game-icon"></i>
-                                        <p className="text-body-lg game-text">Test</p>
+                                        checked={gameIndex === 3} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" forhtml="testbtn" onClick={() => setGameIndex(3)}>
+                                        <div className="col-5">
+                                            <i className="far fa-check-circle fa-2x game-icon"></i>
+                                        </div>
+                                        <div className="text-body-lg game-text col-7">Test</div>
                                     </label>
-
                                 </div>
                             </form>
                         </div>
                         <div className="col-md-1"></div>
                         <div className="col-md-4 phone-align small-pad" id="gameScreen">
-                            <img className="game-screen" src="/images/read_game_screen.png" />
+                            <img className="game-screen" src={SCREENS[gameIndex]} alt="Game screenshot" />
                         </div>
                     </div>
                 </div>
             </div>
 
             <div style={{ backgroundColor: '#5AC1D0', width: '100%' }}>
-                <img src="/images/white_triangle.png" className="triangle" />
+                <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
                     <p className="text-body-lg white-text">Memorize any verse in the ESV for free! No subscription. No catch.</p>
                     <br />
-                    <div className="justify-content-center row">
-                        <div className="col-sm-1 offset-sm-2" style={{ position: 'relative' }}>
-                            <button className="arrow-button align-middle" onClick={switchReviewLeft}>
-                                <img className="arrow-icon" src="/images/arrow_left.png" />
+                    <div className="review-promo justify-content-center row">
+                        <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
+                            <button className="arrow-button align-middle"
+                                onClick={() => setReviewIndex(decrementReviewIndex(reviewIndex))}>
+                                <i className="fas fa-chevron-left fa-2x arrow-icon" />
                             </button>
                         </div>
                         <div className="col">
-                            <img src="/images/stars.png" style={{ paddingBottom: '20px' }} />
-                            <p className="text-body-lg white-text" id="review-header"><b>"I would give it 10 stars if I could!!"</b></p>
-                            <p className="text-body-sm white-text m-auto" id="review-body" style={{ maxWidth: '500px' }}><i>Such a well designed
-                                app to help you memorize verses!! I haven’t put my phone down since I downloaded it- even better than
-                                TikTok!!</i></p>
+                            <div className="pb-4">
+                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                            </div>
+                            <p className="text-body-lg white-text" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
+                            <p className="text-body-sm white-text m-auto" id="review-body" style={{ maxWidth: '500px' }}>
+                                <i>{REVIEW_BODY[reviewIndex]}</i>
+                            </p>
                         </div>
-                        <div className="col-sm-1" style={{ position: 'relative' }}>
-                            <button className="arrow-button" onClick={switchReviewRight}>
-                                <img className="arrow-icon" src="/images/arrow_right.png" />
+                        <div className="col-1" style={{ position: 'relative' }}>
+                            <button className="arrow-button"
+                                onClick={() => setReviewIndex(incrementReviewIndex(reviewIndex))}>
+                                <i className="fas fa-chevron-right fa-2x arrow-icon" />
                             </button>
                         </div>
-                        <div className="col-sm-2"></div>
+                        <div className="col-1 col-sm-2"></div>
                     </div>
                 </div>
-                <img src="/images/grey_triangle.png" className="triangle-rotate" />
+                <img src="/images/grey_triangle.png" className="triangle-rotate" alt="" />
             </div>
 
-            <div style={{ width: '100%' }}>
-                <div>
-                    <div className="text-header-md small-pad-top">
-                        <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
-                        <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#15CF74' }}>Easy.</h1>
-                    </div>
-                    <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
-                    <div className="row">
-                        <div className="col">
-                            <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank">
-                                <img className="download-icon" src="/images/apple_store.png" />
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank">
-                                <img className="download-icon" src="/images/google_play.png" />
-                            </a>
-                        </div>
-                    </div>
+            <div className="w-100">
+                <div className="text-header-md small-pad-top">
+                    <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
+                    <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#15CF74' }}>Easy.</h1>
                 </div>
+                <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
+                <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">
+                    <img className="download-icon" src="/images/apple_store.png" alt="Apple App Store link" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank" rel="noreferrer">
+                    <img className="download-icon" src="/images/google_play.png" alt="Google Play Store link" />
+                </a>
             </div>
             <Footer />
+            <div className="pt-1"></div>
         </div>
     );
 }

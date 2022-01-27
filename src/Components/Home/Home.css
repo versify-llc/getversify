@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-.header-align {
-  text-align: end;
-}
-
 .download-icon {
   height: 40px;
   margin:0px 5px 30px 5px !important;
+}
+
+.header-align, .btn-align {
+  text-align: right !important;
 }
 
 .phone-screen {
@@ -15,18 +15,13 @@
 }
 
 .game-icon {
-  width: 45px;
   display: inline-block !important;
-  /* margin-right: 20px; */
-  /* text-align: left; */
   color: #373737;
   vertical-align: middle;
-
 }
 
 .game-text {
   display: inline-block;
-  /* text-align: left; */
   vertical-align: middle;
 }
 
@@ -35,7 +30,7 @@
   border-radius: 10px;
   background-color: transparent;
   margin-bottom: 10px;
-  padding: 10px 15px 5px 15px;
+  padding: 10px 15px;
   width: 160px;
 }
 
@@ -80,8 +75,15 @@
   padding: 0px;
 }
 
+.review-promo {
+  height: 235px !important;
+}
+
 .arrow-icon {
-  width: 25px;
+  color: white;
+}
+.star-icon {
+  color: white;
 }
 
 .arrow-button{
@@ -93,13 +95,12 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-
 }
 
 /* Breakpoints */
 @media only screen and (max-width: 768px) {
   .header-align, .phone-align, .btn-align {
-    text-align: center;
+    text-align: center !important;
   }
   .small-pad {
     padding-bottom: 20px;
@@ -110,6 +111,7 @@
   .phone-screen{
     width: 200px;
   }
+
 }
 
 @media only screen and (max-width: 1000px) {
