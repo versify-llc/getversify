@@ -1,7 +1,72 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import './About.css';
+
+//Return correct order of picture and text based on screen size (mobile vs desktop)
+function AlyssaAbout() {
+    const [dimensions, setDimensions] = React.useState({
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+
+    //Listens for window resize
+    React.useEffect(() => {
+        function handleResize() {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth
+            })
+
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+
+        }
+    })
+    return (
+        <div className="row justify-content-center top-margin" id="alyssa-profile">
+            {dimensions.width < 768 ?
+                <Fragment>
+                    <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
+                        <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                    </div>
+                    <div className="col-md-1"></div>
+                </Fragment>
+                :
+                null
+            }
+            <div className="col-md-5 about-header-align small-pad">
+                <p className="text-body-md">
+                    <b>
+                        Alyssa Tarkowski
+                    </b>
+                </p>
+                <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
+                    Alyssa is the lead UI/UX Designer for the Versify app. She is a sophomore at
+                    Ferris State University pursuing a degree in Computer Information Systems.
+                    She is also a Software Engineer Intern at State Farm. Her favorite thing about being a
+                    part of the Versify team is learning new programming tricks from her older brother.
+                </p>
+
+            </div>
+            {dimensions.width >= 768 ?
+                <Fragment>
+                    <div className="col-md-1"></div>
+                    <div className="col-lg-3 col-md-4 text-center m-0" style={{ height: "auto", width: "auto" }}>
+                        <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                    </div>
+                </Fragment>
+                :
+                null
+            }
+
+        </div>
+    );
+}
 
 function About() {
     return (
@@ -47,7 +112,7 @@ function About() {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">674</h1>
+                    <h1 className="text-header-xl white-text">1,021</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
@@ -104,33 +169,7 @@ function About() {
                         </div>
                     </div>
                     <br className="break" />
-                    <div className="row justify-content-center top-margin" id="alyssa-profile">
-                        <div className="col-md-5 about-header-align small-pad">
-                            <p className="text-body-md">
-                                <b>
-                                    Alyssa Tarkowski
-                                </b>
-                            </p>
-                            <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
-                                Alyssa is the lead UI/UX Designer for the Versify app. She is a sophomore at
-                                Ferris State University pursuing a degree in Computer Information Systems.
-                                She is also a Software Engineer Intern at State Farm. Her favorite thing about being a
-                                part of the Versify team is learning new programming tricks from her older brother.
-                            </p>
-
-                        </div>
-                        {document.documentElement.clientWidth >= 750 ?
-                            <div>
-                                <div className="col-md-1"></div>
-                                <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
-                                    <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
-                                </div>
-                            </div>
-                            :
-                            null
-                        }
-
-                    </div>
+                    <AlyssaAbout />
                 </div>
             </div>
             <div className="py-1"></div>
