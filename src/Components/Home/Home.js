@@ -171,7 +171,7 @@ function Home() {
             <div className="w-100">
                 <div className="text-header-md small-pad-top">
                     <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
-                    <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#15CF74' }}>Easy.</h1>
+                    <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#7FDCA5' }}>Easy.</h1>
                 </div>
                 <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
                 <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">

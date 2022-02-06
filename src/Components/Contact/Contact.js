@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { API_URL } from '../../constants';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Snackbar from '../Snackbar/Snackbar';
@@ -10,6 +11,7 @@ function Contact() {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [message, setMessage] = useState('');
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -22,7 +24,15 @@ function Contact() {
         const message = elements.inputMessage.value;
 
         setLoading(true);
-        await axios.post('https://congratgrad.herokuapp.com/contact/send', { 'sender': email, 'message': `${name} : ${message}` });
+
+        try {
+            await axios.post(`${API_URL}/contact/send`, { 'sender': email, 'message': `${name} : ${message}` });
+            setMessage('Message Sent!');
+        }
+        catch (e) {
+            setMessage('Message Failed');
+        }
+
         setLoading(false);
         setSubmitted(true);
 
@@ -66,8 +76,8 @@ function Contact() {
                             <br />
                             <div className="content-align">
                                 <button type="submit" className="btn submit-btn">
-                                    {loading ? <div class="spinner-border text-light" role="status" style={{ width: '1.25rem', height: '1.25rem' }}>
-                                        <span class="sr-only">Loading...</span>
+                                    {loading ? <div className="spinner-border text-light" role="status" style={{ width: '1.25rem', height: '1.25rem' }}>
+                                        <span className="sr-only">Loading...</span>
                                     </div> : 'Submit'}
                                 </button>
                             </div>
@@ -95,7 +105,7 @@ function Contact() {
             </div>
             <div className='pt-3'></div>
             <Footer />
-            <Snackbar message="Submitted!" show={submitted} />
+            <Snackbar message={message} show={submitted} />
         </div>
     );
 }
