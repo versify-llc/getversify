@@ -16,7 +16,8 @@ const REVIEW_HEADER =
         '"I would give it 10 stars if I could!!"',
         '"Fantastic"',
         '"Memorizing verses is no longer a chore!"',
-        '"Great tool!"'
+        '"Great tool!"',
+        '"Best Memorization App"'
     ]
 
 const REVIEW_BODY =
@@ -24,7 +25,8 @@ const REVIEW_BODY =
         'Such a well designed app to help you memorize verses!! I haven’t put my phone down since I downloaded it- even better than TikTok!!',
         'It is not often that a small dev makes something so polished and well rounded. This app feels clean and well made. Overall a great experience.',
         'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun!',
-        'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!'
+        'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!',
+        'I have a difficult time memorizing verses and I have been on the search for an app to help me out. This app is so easy to use and understand. Additionally, this app makes it fun to memorize verses.'
     ]
 
 function incrementReviewIndex(current) {
