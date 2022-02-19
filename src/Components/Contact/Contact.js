@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { API_URL } from '../../constants';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
@@ -12,6 +12,15 @@ function Contact() {
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [message, setMessage] = useState('');
+
+    const ping = async () => {
+        try {
+            var response = await axios.get(`${API_URL}/ping`);
+            console.log(response.statusText)
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -43,9 +52,13 @@ function Contact() {
         elements.inputMessage.value = '';
     }
 
+    // Ping our server when this page mounts to warm it up 
+    // so the user does not need to wait for it to reboot.
+    useEffect(() => ping(), []);
+
     return (
         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <nav className="navbar navbar-light navbar-expand-md fixed-top bg-white">
+            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
                 <Navbar />
             </nav>
 
@@ -92,7 +105,7 @@ function Contact() {
                             <a className="text-muted" href="https://instagram.com/theversifyapp" target="_blank" rel="noreferrer">
                                 <i className="fab fa-instagram social-icon"></i>
                             </a>
-                            <div className='px-1 d-inline-block'></div>
+                            <div className='px-2 d-inline-block'></div>
                             <a className="text-muted" href="https://www.facebook.com/profile.php?id=100071561531471" target="_blank" rel="noreferrer">
                                 <i className="fab fa-facebook social-icon"></i>
                             </a>

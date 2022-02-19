@@ -51,9 +51,10 @@ function Home() {
 
     return (
         <div className="bg-theme">
-            <nav className="navbar navbar-light navbar-expand-md fixed-top bg-theme">
+            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur-grey">
                 <Navbar />
             </nav>
+            <div className="pt-1"></div>
             <div className="container page-top-margin">
                 <div className="row justify-content-center align-items-center pt-4">
                     <div className="col-md-5">

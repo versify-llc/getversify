@@ -71,7 +71,7 @@ function AlyssaAbout() {
 function About() {
     return (
         <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
-            <nav className="navbar navbar-light navbar-expand-md bg-white fixed-top">
+            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
                 <Navbar />
             </nav>
             <div className="container page-top-margin">
@@ -112,17 +112,17 @@ function About() {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">1,300</h1>
+                    <h1 className="text-header-xl white-text">1,700</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">750</h1>
+                        <h1 className="text-header white-text">1,200</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">18,000</h1>
+                        <h1 className="text-header white-text">30,000</h1>
                         <p className="text-header-sm white-text">Games Played</p>
                     </div>
 

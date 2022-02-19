@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 function Privacy() {
     return (
         <div className="bg-theme">
-            <nav className="navbar navbar-light navbar-expand-md fixed-top bg-theme">
+            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur-grey">
                 <Navbar />
             </nav>
 

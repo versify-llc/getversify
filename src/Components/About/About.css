@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/* =========================================================================== */
-/* Custom code */
-.bg-theme {
-  background-color: #F2F2F2 !important;
-}
-
 .about-header-align {
   text-align: start;
 }
