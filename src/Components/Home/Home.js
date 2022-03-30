@@ -203,6 +203,11 @@ function Home() {
                 <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank" rel="noreferrer">
                     <img className="download-icon" src="/images/google_play.png" alt="Google Play Store link" />
                 </a>
+                <div className="py-3">
+                    English Standard Version (ESV) provided by www.esv.org
+                    <br />
+                    <a href="/esv" className="esv-link">Learn more</a>
+                </div>
             </div>
             <Footer />
             <div className="pt-1"></div>

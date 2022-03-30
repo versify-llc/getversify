@@ -4,29 +4,27 @@ import Footer from '../Footer/Footer';
 
 function Privacy() {
     return (
-        <div className="bg-theme">
-            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur-grey">
+        <div>
+            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
                 <Navbar />
             </nav>
 
+            <div className="pt-1"></div>
+
             <div className="container page-top-margin py-3" style={{ textAlign: 'left' }}>
-                <h5>We built Versify as a free app. This app is provided at no cost and is intended for use as is. </h5> <br />
+                <h2>Privacy Policy</h2> <br />
 
-                This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use Versify. <br /> <br />
+                <h5>Versify is a free app. It is intended for use as is. </h5> <br />
 
-                If you choose to use Verisfy, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the app. We will not use or share your information with anyone except as described in this Privacy Policy. <br /> <br />
+                The purpose of this page is to inform you of the collection, use, and disclosure of personal information if you download and use Versify. <br /> <br />
 
-                <h3>Information Collection and Use </h3>
+                If you choose to use Verisfy, then you agree to the collection and use of information in relation to this policy. The personal information that we collect is used for providing and improving the app. We will not use or share your information with anyone except as described in this Privacy Policy. <br /> <br />
 
-                For a better experience, while using Versify, we may require you to provide us with certain personally identifiable information (PII). The PII that we request may be collected on our servers. <br /> <br />
-
-                Our app does not use third-party services that collect information used to identify you. <br /> <br />
-
-                <h3>Log Data</h3>
+                <h4>Log Data</h4>
 
                 We want to inform you that whenever you use Versify, in a case of an error in the app, we collect data and information (through a third-party service) to investigate the issue. This data may include information such as your operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics. <br /> <br />
 
-                <h3>Service Providers</h3>
+                <h4>Service Providers</h4>
 
                 We may employ third-party services and individuals due to the following reasons: <br /> <br />
 
@@ -35,27 +33,27 @@ function Privacy() {
                     <li>To assist us in analyzing how Versify is used.</li>
                 </ul>
 
-                <h3>Security</h3>
+                <h4>Security</h4>
 
-                We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security. <br /> <br />
+                We value your trust in providing us your personal information, thus we strive to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security. <br /> <br />
 
-                <h3>Links to Other Sites</h3>
+                <h4>Links to Other Sites</h4>
 
                 Versify may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services. <br /> <br />
 
-                <h3>Children's Privacy</h3>
+                <h4>Children's Privacy</h4>
 
-                If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us. <br /> <br />
+                If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us at <span style={{ color: '#5AC1D0' }}>theversifyapp@gmail.com</span>. <br /> <br />
 
-                <h3>Changes to the Privacy Policy</h3>
+                <h4>Changes to the Privacy Policy</h4>
 
-                We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. <br /> <br />
+                We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. Future versions of our Privacy Policy can be found on this page. <br /> <br />
 
                 <h6>This policy is effective as of 2021-11-25</h6> <br />
 
-                <h3>Contact Us</h3>
+                <h4>Contact Us</h4>
 
-                If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact us at theversifyapp@gmail.com. <br /> <br />
+                If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact us at <span style={{ color: '#5AC1D0' }}>theversifyapp@gmail.com</span>. <br /> <br />
 
                 <small>This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator</small> <br /> <br />
             </div>

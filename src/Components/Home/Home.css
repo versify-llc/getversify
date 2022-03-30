@@ -103,6 +103,16 @@
   transform: translate(-50%, -50%);
 }
 
+.esv-link {
+  text-decoration: none !important;
+  color: var(--theme-blue);
+}
+
+.esv-link:hover {
+  color: var(--theme-blue);
+  opacity: 0.75;
+}
+
 /* Breakpoints */
 @media only screen and (max-width: 768px) {
   .header-align, .phone-align, .btn-align {
