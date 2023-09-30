@@ -46,10 +46,10 @@ function AlyssaAbout() {
                     </b>
                 </p>
                 <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
-                    Alyssa is the lead UI/UX Designer for the Versify app. She is a senior at
+                    Alyssa is the co-founder and COO of Versify. She is a senior at
                     Ferris State University pursuing a degree in Computer Information Systems.
-                    She is also a Software Engineer Intern at State Farm. Her favorite thing about being a
-                    part of the Versify team is learning new programming tricks from her older brother.
+                    She is also an incoming Data Engineer at State Farm. Her favorite thing about being a
+                    part of the Versify team is learning new programming skills from her older brother.
                 </p>
 
             </div>
@@ -112,17 +112,17 @@ function About() {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">28,100</h1>
+                    <h1 className="text-header-xl white-text">35,400</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">43,500</h1>
+                        <h1 className="text-header white-text">54,700</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">1,234,000</h1>
+                        <h1 className="text-header white-text">1,563,000</h1>
                         <p className="text-header-sm white-text">Games Played</p>
                     </div>
 
@@ -161,7 +161,7 @@ function About() {
                                 </b>
                             </p>
                             <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
-                                Richie is the lead Software Developer of the Versify app. He recently graduated from
+                                Richie is the co-founder and CEO of Versify. He recently graduated from
                                 Ferris State University with a degree in Computer Information Systems. He works at Hagerty
                                 as a Software Engineer on its web team. His favorite thing about being a part of the Versify
                                 team is working on a project with his sister.
