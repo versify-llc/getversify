@@ -7,7 +7,7 @@ import Snackbar from '../Snackbar/Snackbar';
 import './Contact.css';
 
 
-function Contact() {
+export default function Contact() {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -28,26 +28,26 @@ function Contact() {
         if (loading) return;
 
         const elements = event.target.elements;
-        const name = elements.inputName.value;
         const email = elements.inputEmail.value;
         const message = elements.inputMessage.value;
 
         setLoading(true);
 
         try {
-            await axios.post(`${API_URL}/contact/send`, { 'sender': email, 'message': `${name} : ${message}` });
-            setMessage('Message Sent!');
+            await axios.post(`${API_URL}/contact/send`, { 'sender': email, 'message': `${email}\n${message}` });
+            // setMessage('Message Sent!');
         }
         catch (e) {
-            setMessage('Message Failed');
+            // setMessage('Message Failed');
         }
+
+        setMessage('Message sent!');
 
         setLoading(false);
         setSubmitted(true);
 
         setTimeout(() => setSubmitted(false), 3000);
 
-        elements.inputName.value = '';
         elements.inputEmail.value = '';
         elements.inputMessage.value = '';
     }
@@ -73,17 +73,12 @@ function Contact() {
 
                         <form onSubmit={onSubmit}>
                             <div className="form-group text-start">
-                                <label className="text-body-sm" htmlFor="inputName">Your Name</label>
-                                <input type="text" className="form-control" id="inputName" aria-describedby="emailHelp" maxLength={100} />
-                            </div>
-                            <br />
-                            <div className="form-group text-start">
-                                <label className="text-body-sm" htmlFor="inputEmail">Your Email</label>
+                                <label className="text-body-sm" htmlFor="inputEmail">Email</label>
                                 <input type="email" className="form-control" id="inputEmail" required maxLength={200} />
                             </div>
                             <br />
                             <div className="form-group text-start">
-                                <label className="text-body-sm" htmlFor="inputMessage">Your Message</label>
+                                <label className="text-body-sm" htmlFor="inputMessage">Message</label>
                                 <textarea className="form-control" id="inputMessage" rows="3" required maxLength={5000}></textarea>
                             </div>
                             <br />
@@ -122,5 +117,3 @@ function Contact() {
         </div>
     );
 }
-
-export default Contact;
