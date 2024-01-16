@@ -35,13 +35,11 @@ export default function Contact() {
 
         try {
             await axios.post(`${API_URL}/contact/send`, { 'sender': email, 'message': `${email}\n${message}` });
-            // setMessage('Message Sent!');
+            setMessage('Message Sent!');
         }
         catch (e) {
-            // setMessage('Message Failed');
+            setMessage('Message Failed');
         }
-
-        setMessage('Message sent!');
 
         setLoading(false);
         setSubmitted(true);
