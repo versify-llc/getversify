@@ -15,11 +15,8 @@ export default function Contact() {
 
     const ping = async () => {
         try {
-            var response = await axios.get(`${API_URL}/ping`);
-            console.log(response.statusText)
-        } catch (e) {
-            console.log(e);
-        }
+            await axios.get(`${API_URL}/ping`);
+        } catch (e) { }
     }
 
     const onSubmit = async (event) => {
@@ -35,10 +32,10 @@ export default function Contact() {
 
         try {
             await axios.post(`${API_URL}/contact/send`, { 'sender': email, 'message': `${email}\n${message}` });
-            setMessage('Message Sent!');
+            setMessage('Message sent!');
         }
         catch (e) {
-            setMessage('Message Failed');
+            setMessage('Message failed');
         }
 
         setLoading(false);
