@@ -2,7 +2,7 @@ import React from "react";
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+const Navbar = () => {
   return (
     <div className="container-fluid">
       <Link className="navbar-brand" to="/"><img src="/images/logo_hoz.png" alt="Versify Logo" className="navbar-logo" /></Link>

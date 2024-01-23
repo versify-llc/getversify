@@ -6,18 +6,23 @@ import Navbar from '../Navbar/Navbar';
 import Snackbar from '../Snackbar/Snackbar';
 import './Contact.css';
 
-export default function Contact() {
+const Contact = () => {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [message, setMessage] = useState('');
 
-    const onSubmit = async (event) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         if (loading) return;
 
-        const elements = event.target.elements;
+        const form = event.currentTarget
+        const elements = form.elements as typeof form.elements & {
+            inputEmail: HTMLFormElement,
+            inputMessage: HTMLFormElement
+        }
+
         const email = elements.inputEmail.value;
         const message = elements.inputMessage.value;
 
@@ -69,7 +74,7 @@ export default function Contact() {
                             <br />
                             <div className="form-group text-start">
                                 <label className="text-body-sm" htmlFor="inputMessage">Message</label>
-                                <textarea className="form-control" id="inputMessage" rows="3" required maxLength={5000}></textarea>
+                                <textarea className="form-control" id="inputMessage" rows={3} required maxLength={5000}></textarea>
                             </div>
                             <br />
                             <div className="content-align">
@@ -107,3 +112,5 @@ export default function Contact() {
         </div>
     );
 }
+
+export default Contact

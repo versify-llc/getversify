@@ -29,7 +29,7 @@ const REVIEW_BODY =
         'I have a difficult time memorizing verses and I have been on the search for an app to help me out. This app is so easy to use and understand. Additionally, this app makes it fun to memorize verses.'
     ]
 
-function incrementReviewIndex(current) {
+const incrementReviewIndex = (current: number) => {
     if (current === REVIEW_HEADER.length - 1) {
         return 0;
     }
@@ -37,7 +37,7 @@ function incrementReviewIndex(current) {
     return current + 1;
 }
 
-function decrementReviewIndex(current) {
+const decrementReviewIndex = (current: number) => {
     if (current === 0) {
         return REVIEW_HEADER.length - 1;
     }
@@ -45,13 +45,13 @@ function decrementReviewIndex(current) {
     return current - 1;
 }
 
-function Home() {
+const Home = () => {
     const [gameIndex, setGameIndex] = useState(0);
     const [reviewIndex, setReviewIndex] = useState(0);
     const [scrolled, setScrolled] = useState(false);
 
     const handleScroll = useCallback(
-        e => {
+        (e: any) => {
             const window = e.currentTarget;
             const threshold = 4.0;
 
@@ -109,7 +109,7 @@ function Home() {
                                 <div className="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" className="btn-check" name="btnradio" id="readbtn" value="read" autoComplete="off"
                                         checked={gameIndex === 0} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" forhtml="readbtn" onClick={() => setGameIndex(0)}>
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(0)}>
                                         <div className="col-5">
                                             <i className="fas fa-book-open fa-2x game-icon"></i>
                                         </div>
@@ -118,7 +118,7 @@ function Home() {
 
                                     <input type="radio" className="btn-check" name="btnradio" id="typebtn" value="type" autoComplete="off"
                                         checked={gameIndex === 1} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" forhtml="typebtn" onClick={() => setGameIndex(1)}>
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(1)}>
                                         <div className="col-5">
                                             <i className="fas fa-fingerprint game-icon fa-2x"></i>
                                         </div>
@@ -127,7 +127,7 @@ function Home() {
 
                                     <input type="radio" className="btn-check" name="btnradio" id="blankbtn" value="blank" autoComplete="off"
                                         checked={gameIndex === 2} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" forhtml="blankbtn" onClick={() => setGameIndex(2)}>
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(2)}>
                                         <div className="col-5">
                                             <i className="fas fa-bars fa-2x game-icon"></i>
                                         </div>
@@ -136,7 +136,7 @@ function Home() {
 
                                     <input type="radio" className="btn-check" name="btnradio" id="testbtn" value="test" autoComplete="off"
                                         checked={gameIndex === 3} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" forhtml="testbtn" onClick={() => setGameIndex(3)}>
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(3)}>
                                         <div className="col-5">
                                             <i className="far fa-check-circle fa-2x game-icon"></i>
                                         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
-function Privacy() {
+const Privacy = () => {
     return (
         <div>
             <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">

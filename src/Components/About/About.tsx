@@ -1,32 +1,28 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import './About.css';
 
 //Return correct order of picture and text based on screen size (mobile vs desktop)
-function AlyssaAbout() {
-    const [dimensions, setDimensions] = React.useState({
+const AlyssaAbout = () => {
+    const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     })
 
     //Listens for window resize
-    React.useEffect(() => {
-        function handleResize() {
+    useEffect(() => {
+        const handleResize = () => {
             setDimensions({
                 height: window.innerHeight,
                 width: window.innerWidth
             })
-
         }
 
         window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
-        return _ => {
-            window.removeEventListener('resize', handleResize)
-
-        }
-    })
     return (
         <div className="row justify-content-center top-margin" id="alyssa-profile">
             {dimensions.width < 768 ?
@@ -68,7 +64,7 @@ function AlyssaAbout() {
     );
 }
 
-function About() {
+const About = () => {
     return (
         <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
             <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
