@@ -6,18 +6,11 @@ import Navbar from '../Navbar/Navbar';
 import Snackbar from '../Snackbar/Snackbar';
 import './Contact.css';
 
-
 export default function Contact() {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [message, setMessage] = useState('');
-
-    const ping = async () => {
-        try {
-            await axios.get(`${API_URL}/ping`);
-        } catch (e) { }
-    }
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -49,7 +42,9 @@ export default function Contact() {
 
     // Ping our server when this page mounts to warm it up 
     // so the user does not need to wait for it to reboot.
-    useEffect(() => ping(), []);
+    useEffect(() => {
+        axios.get(`${API_URL}/ping`).catch(e => { })
+    }, []);
 
     return (
         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
