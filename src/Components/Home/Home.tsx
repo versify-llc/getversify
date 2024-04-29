@@ -8,7 +8,7 @@ const SCREENS =
         '/images/read_game_screen.png',
         '/images/type_game_screen.png',
         '/images/blank_game_screen.png',
-        '/images/type_game_screen.png'
+        '/images/flash_screen.png'
     ];
 
 const REVIEW_HEADER =
@@ -138,9 +138,9 @@ const Home = () => {
                                         checked={gameIndex === 3} readOnly={true} />
                                     <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(3)}>
                                         <div className="col-5">
-                                            <i className="far fa-check-circle fa-2x game-icon"></i>
+                                            <i className="fas fa-bolt fa-2x game-icon"></i>
                                         </div>
-                                        <div className="text-body-lg game-text col-7">Test</div>
+                                        <div className="text-body-lg game-text col-7">Flash</div>
                                     </label>
                                 </div>
                             </form>
