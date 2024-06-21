@@ -42,10 +42,11 @@ const AlyssaAbout = () => {
                     </b>
                 </p>
                 <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
-                    Alyssa is the co-founder and COO of Versify. She is a senior at
-                    Ferris State University pursuing a degree in Computer Information Systems.
-                    She is also an incoming Data Engineer at State Farm. Her favorite thing about being a
-                    part of the Versify team is learning new programming skills from her older brother.
+                    Alyssa is the co-founder and COO of Versify.
+                    She recently graduated from Ferris State University with a degree in Computer Information Systems,
+                    and she currently works as a data engineer at State Farm.
+                    Her favorite sport right now is pickleball,
+                    and she's read more books by Puritan authors than most people her age.
                 </p>
 
             </div>
@@ -91,9 +92,8 @@ const About = () => {
                         <p className="text-body-md">
                             Versify is a free app that makes it easy and fun to
                             memorize Bible verses through interactive games.
-                            Our inspiration comes from Proverbs 3:1-2.
-                            In the Bible we are called to memorize Scripture.
-                            We know this can be a daunting task, so Versify is here to help!
+                            Our inspiration comes from Proverbs 3:1-2,
+                            which calls God's people keep His Word in their hearts.
                         </p>
                         <br />
                         <p className="text-body-lg">
@@ -108,17 +108,17 @@ const About = () => {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">68,000+</h1>
+                    <h1 className="text-header-xl white-text">80,000+</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">109,000+</h1>
+                        <h1 className="text-header white-text">125,000+</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">3,100,000+</h1>
+                        <h1 className="text-header white-text">3,500,000+</h1>
                         <p className="text-header-sm white-text">Games Played</p>
                     </div>
 
@@ -139,7 +139,7 @@ const About = () => {
                             <p className="text-body-md">
                                 <b>
                                     Versify was created by two college students who have a passion for software development
-                                    and sharing God’s Word with others.
+                                    and sharing God's Word with others.
                                 </b>
                             </p>
                         </div>
@@ -157,10 +157,11 @@ const About = () => {
                                 </b>
                             </p>
                             <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
-                                Richie is the co-founder and CEO of Versify. He recently graduated from
-                                Ferris State University with a degree in Computer Information Systems. He works at Hagerty
-                                as a Software Engineer on its web team. His favorite thing about being a part of the Versify
-                                team is working on a project with his sister.
+                                Richie is the co-founder and CEO of Versify. He graduated from
+                                Ferris State University three years ago with a degree in Computer Information Systems,
+                                and he currently works as a software engineer at Hagerty.
+                                He plays lots of volleyball with his friends
+                                and is involved with the college ministry at his church.
                             </p>
                         </div>
                     </div>

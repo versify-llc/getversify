@@ -101,7 +101,7 @@ const Home = () => {
                 <img src="/images/grey_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px' }}>
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
-                    <p className="text-body-lg mb-4">Play a variety of interactive games to help you memorize verses</p>
+                    <p className="text-body-lg mb-4 px-3">Play a variety of interactive games to help you memorize verses</p>
 
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-4 btn-align">
@@ -157,7 +157,7 @@ const Home = () => {
                 <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
-                    <p className="text-body-lg white-text">Memorize any verse in the ESV for free! No subscription. No catch.</p>
+                    <p className="text-body-lg white-text px-3">Memorize any verse in ESV, NIV, NASB, or KJV for free! No subscription. No catch.</p>
                     <br />
                     <div className="review-promo justify-content-center row">
                         <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
@@ -203,11 +203,6 @@ const Home = () => {
                 <a href="https://play.google.com/store/apps/details?id=com.tarkowr.versify" target="_blank" rel="noreferrer">
                     <img className="download-icon" src="/images/google_play.png" alt="Google Play Store link" />
                 </a>
-                <div className="py-3 small">
-                    English Standard Version provided by www.esv.org
-                    <br />
-                    <a href="/esv" className="esv-link">Learn more</a>
-                </div>
             </div>
             <Footer />
             <div className="pt-1"></div>
