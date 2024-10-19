@@ -20,6 +20,11 @@ const Navbar = () => {
           </li>
           <li className="navbar-item mx-3">
             <a className="navbar-link"
+              href="https://versify.printful.me/"
+              target="_blank" rel="noreferrer">Merch</a>
+          </li>
+          <li className="navbar-item mx-3">
+            <a className="navbar-link"
               href="https://www.gofundme.com/f/versify?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1"
               target="_blank" rel="noreferrer">Donate</a>
           </li>
