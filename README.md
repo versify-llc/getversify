@@ -1,15 +1,14 @@
-# Versify Web App
+# Versify-Web
 
-Built with React and deployed with Firebase
+This web app is built with React and deployed onto Firebase.
 
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ### `npm run build`
@@ -18,6 +17,6 @@ Builds the app for production to the `build` folder.
 
 ## Deploy Steps
 
-1. `npm run build`  
-2. `firebase deploy`  
-3. If auth error, run `firebase login --reauth` before deploy
+Create a build of the project: `npm run build`\
+Deploy the build to firebase: `firebase deploy`\
+You may need to run `firebase login --reauth` if the deploy step fails.
