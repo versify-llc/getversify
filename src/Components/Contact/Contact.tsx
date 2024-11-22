@@ -53,10 +53,7 @@ const Contact = () => {
 
     return (
         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
-                <Navbar />
-            </nav>
-
+            <Navbar backgroundClass="transparent-blur" />
             <div className="container page-top-margin">
                 <div className="row justify-content-center pt-4">
                     <div className="col-12 col-md-6 col-lg-5 ">

@@ -6,9 +6,7 @@ import './NotFound.css';
 const NotFound = () => {
     return (
         <div>
-            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
-                <Navbar />
-            </nav>
+            <Navbar backgroundClass="transparent-blur" />
             <div className="container page-top-margin text-center m-auto">
                 <h1 className="text-header-xl p-3 margin-top" style={{ color: '#7FDCA5' }}>Oops!</h1>
                 <h4 className="text-header-sm mb-5" style={{ color: '#373737' }}>It seems like you've wandered off the straight and narrow path.</h4>

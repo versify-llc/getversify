@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import './Home.css';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -48,32 +48,10 @@ const decrementReviewIndex = (current: number) => {
 const Home = () => {
     const [gameIndex, setGameIndex] = useState(0);
     const [reviewIndex, setReviewIndex] = useState(0);
-    const [scrolled, setScrolled] = useState(false);
-
-    const handleScroll = useCallback(
-        (e: any) => {
-            const window = e.currentTarget;
-            const threshold = 4.0;
-
-            if (window.scrollY > threshold) {
-                if (!scrolled) setScrolled(true);
-            }
-            else if (window.scrollY <= threshold) {
-                if (scrolled) setScrolled(false);
-            }
-        }, [scrolled]
-    );
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [handleScroll]);
 
     return (
         <div className="bg-theme">
-            <nav className={"navbar navbar-light navbar-expand-md fixed-top transparent-blur-grey " + (scrolled ? "conditional-border" : "")}>
-                <Navbar />
-            </nav>
+            <Navbar backgroundClass="transparent-blur-grey" />
             <div className="pt-1"></div>
             <div className="container page-top-margin">
                 <div className="row justify-content-center align-items-center pt-4">

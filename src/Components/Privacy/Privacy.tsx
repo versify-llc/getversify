@@ -5,9 +5,7 @@ import Footer from '../Footer/Footer';
 const Privacy = () => {
     return (
         <div>
-            <nav className="navbar navbar-light navbar-expand-md fixed-top transparent-blur">
-                <Navbar />
-            </nav>
+            <Navbar backgroundClass="transparent-blur" />
 
             <div className="pt-1"></div>
 
