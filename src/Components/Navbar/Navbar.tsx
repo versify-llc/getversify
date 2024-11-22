@@ -37,7 +37,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse navbar-expanded" id="navbarCollapse">
-          <ul className="navbar-nav float-md-end mb-2 navbar-list">
+          <ul className="navbar-nav float-md-end navbar-list">
             <li className="navbar-item">
               <Link className="navbar-link" to="/about">About</Link>
             </li>

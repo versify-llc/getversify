@@ -21,7 +21,7 @@ nav.navbar:has(#navbarCollapse.show) {
 }
 
 .navbar-logo {
-    max-height: 40px;
+    max-height: 36px;
 }
 
 .navbar-expanded {
@@ -33,14 +33,15 @@ nav.navbar:has(#navbarCollapse.show) {
 .navbar-list {
     justify-content: center !important;
     flex-direction: row !important;
+    margin-bottom: 0.25rem;
 }
 
 .navbar-item {
     text-decoration: none;
-    margin: 0.25rem 0.75rem !important;
 }
 
 .navbar-link {
+    padding: 0.25rem 0.75rem !important;
     font-size: 18px !important;
     color: var(--theme-black) !important;
     text-decoration: none;
@@ -57,15 +58,18 @@ nav.navbar:has(#navbarCollapse.show) {
         padding: 20px 2% 0.25rem 2% !important;
     }
 
+    .navbar-logo {
+        max-height: 40px;
+    }
+
     .navbar-list {
         justify-content: right !important;
+        margin-bottom: 0.5rem;
     }
 
-    .navbar-item {
-        margin: 0.25rem 1rem !important;
-    }
 
     .navbar-link {
+        padding: 0.25rem 1rem !important;
         font-size: 20px !important;
     }
 }
