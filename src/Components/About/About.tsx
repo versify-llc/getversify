@@ -106,17 +106,17 @@ const About = () => {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">125,000+</h1>
+                    <h1 className="text-header-xl white-text">230,000+</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">175,000+</h1>
+                        <h1 className="text-header white-text">370,000+</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">5,000,000+</h1>
+                        <h1 className="text-header white-text">10,000,000+</h1>
                         <p className="text-header-sm white-text">Games Played</p>
                     </div>
 

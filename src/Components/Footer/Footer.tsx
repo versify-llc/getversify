@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div className="col-md-4 d-flex align-items-center">
           <img src="/images/logo.png" alt="Versify Logo" className="logo" />
-          <span className="text-body">2024 Versify LLC</span>
+          <span className="text-body">{new Date().getFullYear()} Versify LLC</span>
         </div>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
