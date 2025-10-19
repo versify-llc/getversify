@@ -91,7 +91,7 @@ const About = () => {
                             Versify is a free app that makes it easy and fun to
                             memorize Bible verses through interactive games.
                             Our inspiration comes from Proverbs 3:1-2,
-                            which calls God's people keep His Word in their hearts.
+                            which calls God's people to keep His Word in their hearts.
                         </p>
                         <br />
                         <p className="text-body-lg">
@@ -106,17 +106,17 @@ const About = () => {
             <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div style={{ marginTop: "50px" }}>
-                    <h1 className="text-header-xl white-text">230,000+</h1>
+                    <h1 className="text-header-xl white-text">275,000+</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
                 <div className="row justify-content-center small-pad">
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">370,000+</h1>
+                        <h1 className="text-header white-text">450,000+</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
                     </div>
                     <div className="col-md-3">
-                        <h1 className="text-header white-text">10,000,000+</h1>
+                        <h1 className="text-header white-text">12,500,000+</h1>
                         <p className="text-header-sm white-text">Games Played</p>
                     </div>
 
