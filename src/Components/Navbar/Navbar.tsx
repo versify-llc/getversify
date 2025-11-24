@@ -51,7 +51,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
             </li>
             <li className="navbar-item">
               <a className="navbar-link"
-                href="https://www.gofundme.com/f/versify?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1"
+                href="https://www.givesendgo.com/versify"
                 target="_blank" rel="noreferrer">Donate</a>
             </li>
           </ul>

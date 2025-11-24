@@ -135,7 +135,7 @@ const Home = () => {
                 <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
-                    <p className="text-body-lg white-text px-3">Memorize any verse in ESV, NIV, NASB, NLT, or KJV for free! No subscription. No catch.</p>
+                    <p className="text-body-lg white-text px-3">Memorize any verse in ESV, NIV, CSB, and more for free! No subscription. No ads.</p>
                     <br />
                     <div className="review-promo justify-content-center row">
                         <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>

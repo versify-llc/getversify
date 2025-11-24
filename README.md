@@ -4,16 +4,16 @@ This web app is built with React and deployed onto Firebase.
 
 ## Scripts
 
-In the project directory, you can run:
+Run the app in the development mode:
+```
+npm start
+```
 
-### `npm start`
+Build the app for deploying to production:
+```
+npm run build
+```
 
-Runs the app in the development mode.\
-
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
 
 ## Deploy Steps
 
