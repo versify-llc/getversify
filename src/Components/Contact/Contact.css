@@ -1,25 +1,23 @@
+.expand-height {
+    flex: 1;
+}
+
 .content-align {
     text-align: start;
 }
 
-.submit-btn {
-    margin: 0;
-    background-color: #7FDCA5 !important;
-    width: 100%;
-    text-align: center !important;
-    color: white !important;
-    border: transparent !important;
-    border-radius: 50px !important;
-    padding: 10px !important;
-    font-family: 'Barlow', sans-serif !important;
+.contact-methods a {
+    color: black !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-methods a:hover {
+    text-decoration: underline;
 }
 
 .chat-img {
     width: 100%;
-}
-
-.form-group>label {
-    color: var(--theme-darkgrey);
 }
 
 /* Breakpoints */

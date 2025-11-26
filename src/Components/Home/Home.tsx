@@ -8,12 +8,13 @@ const SCREENS =
         '/images/read_game_screen.png',
         '/images/type_game_screen.png',
         '/images/blank_game_screen.png',
+        '/images/speak_game_screen.png',
+        '/images/listen_game_screen.png',
         '/images/flash_screen.png'
     ];
 
 const REVIEW_HEADER =
     [
-        '"I would give it 10 stars if I could!!"',
         '"Fantastic"',
         '"Memorizing verses is no longer a chore!"',
         '"Great tool!"',
@@ -22,7 +23,6 @@ const REVIEW_HEADER =
 
 const REVIEW_BODY =
     [
-        'Such a well designed app to help you memorize verses!! I haven’t put my phone down since I downloaded it- even better than TikTok!!',
         'It is not often that a small dev makes something so polished and well rounded. This app feels clean and well made. Overall a great experience.',
         'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun!',
         'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!',
@@ -112,9 +112,27 @@ const Home = () => {
                                         <div className="text-body-lg game-text col-7">Blank</div>
                                     </label>
 
-                                    <input type="radio" className="btn-check" name="btnradio" id="testbtn" value="test" autoComplete="off"
+                                    <input type="radio" className="btn-check" name="btnradio" id="speakBtn" value="speak" autoComplete="off"
                                         checked={gameIndex === 3} readOnly={true} />
                                     <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(3)}>
+                                        <div className="col-5">
+                                            <i className="fas fa-microphone fa-2x game-icon"></i>
+                                        </div>
+                                        <div className="text-body-lg game-text col-7">Speak</div>
+                                    </label>
+
+                                    <input type="radio" className="btn-check" name="btnradio" id="listenBtn" value="listen" autoComplete="off"
+                                        checked={gameIndex === 4} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(4)}>
+                                        <div className="col-5">
+                                            <i className="fas fa-headphones fa-2x game-icon"></i>
+                                        </div>
+                                        <div className="text-body-lg game-text col-7">Listen</div>
+                                    </label>
+
+                                    <input type="radio" className="btn-check" name="btnradio" id="flashBtn" value="flash" autoComplete="off"
+                                        checked={gameIndex === 5} readOnly={true} />
+                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(5)}>
                                         <div className="col-5">
                                             <i className="fas fa-bolt fa-2x game-icon"></i>
                                         </div>
