@@ -156,10 +156,9 @@ const About = () => {
                             </p>
                             <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
                                 Richie is the co-founder and CEO of Versify. He graduated from
-                                Ferris State University five years ago with a degree in Computer Information Systems,
+                                Ferris State University with a degree in Computer Information Systems,
                                 and he currently works as a software engineer at Hagerty.
-                                He plays lots of volleyball with his friends
-                                and is involved with the college ministry at his church.
+                                Richie and his wife serve in the the college ministry at their church.
                             </p>
                         </div>
                     </div>
