@@ -1,22 +1,35 @@
-# Versify-Web
+# getversify
 
-This web app is built with React and deployed onto Firebase.
+Promotional website for the Versify app.
 
-## Scripts
+https://getversify.web.app  
+https://versifyapp.com
 
-Run the app in the development mode:
+## Contributing
+
+Run the app in development mode:
 ```
 npm start
 ```
 
-Build the app for deploying to production:
+
+## Deployment
+
+Create a local build: 
 ```
 npm run build
 ```
 
+Deploy the build to firebase:
+```
+firebase deploy
+```
 
-## Deploy Steps
+If the deploy fails, reauthenticate with firebase:
+```
+firebase login --reauth
+```
 
-Create a build of the project: `npm run build`\
-Deploy the build to firebase: `firebase deploy`\
-You may need to run `firebase login --reauth` if the deploy step fails.
+Upload the `dist` folder to Hostinger to update versifyapp.com
+
+That's all 🎉
