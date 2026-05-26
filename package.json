@@ -8,19 +8,19 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router-dom": "^7.12.0"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.1"
   },
   "devDependencies": {
     "@types/node": "^24",
-    "@types/react": "^19.2.8",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@types/react-router-dom": "^5.3.3",
-    "@vitejs/plugin-react": "^5.1.2",
-    "eslint": "^9.39.2",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.4.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
   },
   "scripts": {
     "start": "vite",
