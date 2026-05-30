@@ -1,3 +1,29 @@
+.page-spacer {
+    padding-top: 0.25rem;
+}
+
+.not-found-content {
+    text-align: center;
+    margin: auto;
+}
+
+.not-found-title {
+    padding: 1rem;
+}
+
+.not-found-subtitle {
+    margin-bottom: 3rem;
+}
+
+.not-found-cta-text {
+    margin-top: 3rem;
+}
+
+.not-found-actions {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+}
+
 .home-btn{
     margin: 0;
     background-color: #7FDCA5 !important;
@@ -9,4 +35,8 @@
     padding: 10px !important;
     font-family: 'Barlow', sans-serif !important;
     max-width: 200px;
+}
+
+.margin-top {
+    margin-top: 1rem;
 }

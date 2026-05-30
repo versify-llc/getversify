@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import './About.css';
@@ -24,19 +24,19 @@ const AlyssaAbout = () => {
     }, [])
 
     return (
-        <div className="row justify-content-center top-margin" id="alyssa-profile">
+        <div className="row about-centered-row top-margin" id="alyssa-profile">
             {dimensions.width < 768 ?
-                <Fragment>
-                    <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
+                <>
+                    <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
                         <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
                     <div className="col-md-1"></div>
-                </Fragment>
+                </>
                 :
                 null
             }
             <div className="col-md-5 about-header-align small-pad">
-                <p className="text-body-md pt-3">
+                <p className="text-body-md profile-name">
                     <b>
                         Alyssa Tarkowski
                     </b>
@@ -51,12 +51,12 @@ const AlyssaAbout = () => {
 
             </div>
             {dimensions.width >= 768 ?
-                <Fragment>
+                <>
                     <div className="col-md-1"></div>
-                    <div className="col-lg-3 col-md-4 text-center m-0" style={{ height: "auto", width: "auto" }}>
+                    <div className="col-lg-3 col-md-4 about-image-col about-image-col--no-margin" style={{ height: "auto", width: "auto" }}>
                         <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
-                </Fragment>
+                </>
                 :
                 null
             }
@@ -67,10 +67,10 @@ const AlyssaAbout = () => {
 
 const About = () => {
     return (
-        <div className="cover-container d-flex w-100 h-100 mx-auto flex-column">
+        <div className="cover-container about-page">
             <Navbar backgroundClass="transparent-blur" />
             <div className="container page-top-margin">
-                <div className="row justify-content-center pt-5">
+                <div className="row about-hero-row">
                     <div className="col-md-3" style={{ height: "auto" }}>
                         <div className="about-header-align">
                             <h1 className="text-header-sm">MEET</h1>
@@ -110,7 +110,7 @@ const About = () => {
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
-                <div className="row justify-content-center small-pad">
+                <div className="row about-centered-row small-pad">
                     <div className="col-md-3">
                         <h1 className="text-header white-text">500,000+</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
@@ -126,7 +126,7 @@ const About = () => {
             <div style={{ width: "100%" }}>
                 <img src="/images/green_triangle.png" alt="divider" className="triangle" />
                 <div className="container profile-top-margin">
-                    <div className="row justify-content-center top-margin">
+                    <div className="row about-centered-row top-margin">
                         <div className="col-md-4" style={{ height: "auto" }}>
                             <div className="about-header-align">
                                 <h1 className="text-header-sm">MEET</h1>
@@ -143,13 +143,13 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="row justify-content-center top-margin">
-                        <div className="col-lg-3 col-md-4 text-center" style={{ height: "auto" }}>
+                    <div className="row about-centered-row top-margin">
+                        <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
                             <img className="profile-img" src="/images/richie.jpg" alt="Richie" />
                         </div>
                         <div className="col-md-1"></div>
                         <div className="col-md-5 about-header-align small-pad">
-                            <p className="text-body-md pt-3">
+                            <p className="text-body-md profile-name">
                                 <b>
                                     Richie Tarkowski
                                 </b>
@@ -166,7 +166,7 @@ const About = () => {
                     <AlyssaAbout />
                 </div>
             </div>
-            <div className="py-1"></div>
+            <div className="footer-spacer"></div>
             <Footer />
         </div>
     );

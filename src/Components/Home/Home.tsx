@@ -45,6 +45,15 @@ const decrementReviewIndex = (current: number) => {
     return current - 1;
 }
 
+const GAME_OPTIONS = [
+    { id: 'readbtn', value: 'read', icon: 'fas fa-book-open fa-2x', label: 'Read' },
+    { id: 'typebtn', value: 'type', icon: 'fas fa-fingerprint fa-2x', label: 'Type' },
+    { id: 'blankbtn', value: 'blank', icon: 'fas fa-bars fa-2x', label: 'Blank' },
+    { id: 'speakBtn', value: 'speak', icon: 'fas fa-microphone fa-2x', label: 'Speak' },
+    { id: 'listenBtn', value: 'listen', icon: 'fas fa-headphones fa-2x', label: 'Listen' },
+    { id: 'flashBtn', value: 'flash', icon: 'fas fa-bolt fa-2x', label: 'Flash' },
+];
+
 const Home = () => {
     const [gameIndex, setGameIndex] = useState(0);
     const [reviewIndex, setReviewIndex] = useState(0);
@@ -52,9 +61,9 @@ const Home = () => {
     return (
         <div className="bg-theme">
             <Navbar backgroundClass="transparent-blur-grey" />
-            <div className="pt-1"></div>
+            <div className="page-spacer"></div>
             <div className="container page-top-margin">
-                <div className="row justify-content-center align-items-center pt-4">
+                <div className="row hero-row">
                     <div className="col-md-5">
                         <div className="header-align">
                             <h1 className="text-header">Bible Verse Memorization<br />Made Easy</h1>
@@ -75,69 +84,36 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="w-100 pb-2" style={{ backgroundColor: 'white' }}>
+            <div className="games-section" style={{ backgroundColor: 'white' }}>
                 <img src="/images/grey_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px' }}>
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
-                    <p className="text-body-lg mb-4 px-3">Play a variety of interactive games to help you memorize verses</p>
+                    <p className="text-body-lg games-intro">Play a variety of interactive games to help you memorize verses</p>
 
-                    <div className="row justify-content-center align-items-center">
+                    <div className="row games-row">
                         <div className="col-md-4 btn-align">
                             <form>
-                                <div className="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
-                                    <input type="radio" className="btn-check" name="btnradio" id="readbtn" value="read" autoComplete="off"
-                                        checked={gameIndex === 0} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(0)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-book-open fa-2x game-icon"></i>
-                                        </div>
-                                        <div className="col-7 text-body-lg game-text">Read</div>
-                                    </label>
-
-                                    <input type="radio" className="btn-check" name="btnradio" id="typebtn" value="type" autoComplete="off"
-                                        checked={gameIndex === 1} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(1)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-fingerprint game-icon fa-2x"></i>
-                                        </div>
-                                        <div className="col-7 text-body-lg game-text">Type</div>
-                                    </label>
-
-                                    <input type="radio" className="btn-check" name="btnradio" id="blankbtn" value="blank" autoComplete="off"
-                                        checked={gameIndex === 2} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(2)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-bars fa-2x game-icon"></i>
-                                        </div>
-                                        <div className="text-body-lg game-text col-7">Blank</div>
-                                    </label>
-
-                                    <input type="radio" className="btn-check" name="btnradio" id="speakBtn" value="speak" autoComplete="off"
-                                        checked={gameIndex === 3} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(3)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-microphone fa-2x game-icon"></i>
-                                        </div>
-                                        <div className="text-body-lg game-text col-7">Speak</div>
-                                    </label>
-
-                                    <input type="radio" className="btn-check" name="btnradio" id="listenBtn" value="listen" autoComplete="off"
-                                        checked={gameIndex === 4} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(4)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-headphones fa-2x game-icon"></i>
-                                        </div>
-                                        <div className="text-body-lg game-text col-7">Listen</div>
-                                    </label>
-
-                                    <input type="radio" className="btn-check" name="btnradio" id="flashBtn" value="flash" autoComplete="off"
-                                        checked={gameIndex === 5} readOnly={true} />
-                                    <label className="game-button btn-outline-primary row" onClick={() => setGameIndex(5)}>
-                                        <div className="col-5">
-                                            <i className="fas fa-bolt fa-2x game-icon"></i>
-                                        </div>
-                                        <div className="text-body-lg game-text col-7">Flash</div>
-                                    </label>
+                                <div className="game-option-list" role="group" aria-label="Basic radio toggle button group">
+                                    {GAME_OPTIONS.map((option, index) => (
+                                        <React.Fragment key={option.id}>
+                                            <input
+                                                type="radio"
+                                                className="game-option-input"
+                                                name="btnradio"
+                                                id={option.id}
+                                                value={option.value}
+                                                autoComplete="off"
+                                                checked={gameIndex === index}
+                                                readOnly={true}
+                                            />
+                                            <label className="game-button game-option-outline row" onClick={() => setGameIndex(index)}>
+                                                <div className="col-5">
+                                                    <i className={`${option.icon} game-icon`}></i>
+                                                </div>
+                                                <div className="col-7 text-body-lg game-text">{option.label}</div>
+                                            </label>
+                                        </React.Fragment>
+                                    ))}
                                 </div>
                             </form>
                         </div>
@@ -153,25 +129,25 @@ const Home = () => {
                 <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
-                    <p className="text-body-lg white-text px-3">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
+                    <p className="text-body-lg white-text free-intro">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
                     <br />
-                    <div className="review-promo justify-content-center row">
+                    <div className="review-promo row">
                         <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
-                            <button className="arrow-button align-middle"
+                            <button className="arrow-button"
                                 onClick={() => setReviewIndex(decrementReviewIndex(reviewIndex))}>
                                 <i className="fas fa-chevron-left fa-2x arrow-icon" />
                             </button>
                         </div>
                         <div className="col">
-                            <div className="pb-4">
-                                <i className="fas fa-star fa-lg star-icon px-1"></i>
-                                <i className="fas fa-star fa-lg star-icon px-1"></i>
-                                <i className="fas fa-star fa-lg star-icon px-1"></i>
-                                <i className="fas fa-star fa-lg star-icon px-1"></i>
-                                <i className="fas fa-star fa-lg star-icon px-1"></i>
+                            <div className="review-stars">
+                                <i className="fas fa-star fa-lg star-icon"></i>
+                                <i className="fas fa-star fa-lg star-icon"></i>
+                                <i className="fas fa-star fa-lg star-icon"></i>
+                                <i className="fas fa-star fa-lg star-icon"></i>
+                                <i className="fas fa-star fa-lg star-icon"></i>
                             </div>
                             <p className="text-body-lg white-text" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
-                            <p className="text-body-sm white-text m-auto" id="review-body" style={{ maxWidth: '500px' }}>
+                            <p className="text-body-sm white-text" id="review-body" style={{ maxWidth: '500px' }}>
                                 <i>{REVIEW_BODY[reviewIndex]}</i>
                             </p>
                         </div>
@@ -187,7 +163,7 @@ const Home = () => {
                 <img src="/images/grey_triangle.png" className="triangle-rotate" alt="" />
             </div>
 
-            <div className="w-100">
+            <div className="cta-section">
                 <div className="text-header-md small-pad-top">
                     <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
                     <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#7FDCA5' }}>Easy.</h1>
@@ -201,7 +177,7 @@ const Home = () => {
                 </a>
             </div>
             <Footer />
-            <div className="pt-1"></div>
+            <div className="page-spacer"></div>
         </div>
     );
 }

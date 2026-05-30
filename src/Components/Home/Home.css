@@ -1,5 +1,48 @@
 @charset "UTF-8";
 
+.page-spacer {
+  padding-top: 0.25rem;
+}
+
+.hero-row {
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.games-section {
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.games-intro {
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.games-row {
+  justify-content: center;
+  align-items: center;
+}
+
+.free-intro {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.review-stars {
+  padding-bottom: 1.5rem;
+}
+
+#review-body {
+  margin: auto;
+}
+
+.cta-section {
+  width: 100%;
+}
+
 .download-icon {
   height: 40px;
   margin: 0px 5px 30px 5px !important;
@@ -33,23 +76,30 @@
   margin-bottom: 10px;
   padding: 10px 15px;
   width: 160px;
+  cursor: pointer;
 }
 
 .game-button:hover {
   background-color: #f2f2f2;
 }
 
-.btn-check:checked+.btn-outline-primary {
+.game-option-input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.game-option-input:checked + .game-option-outline {
   background-color: #f2f2f2 !important;
   border-color: #f2f2f2 !important;
 }
 
-.btn-outline-primary:hover {
-  background-color: #f2f2f2 !important;
+.game-option-outline {
+  border: 1px solid #e7e7e7;
 }
 
-.btn-outline-primary {
-  border-color: #e7e7e7 !important;
+.game-option-outline:hover {
+  background-color: #f2f2f2 !important;
 }
 
 .btn-align {
@@ -68,7 +118,12 @@
   margin-left: 20%;
 }
 
-.btn-group-vertical {
+.game-option-list {
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   text-align: center;
 }
 
@@ -78,6 +133,7 @@
 
 .review-promo {
   height: 235px !important;
+  justify-content: center;
 }
 
 .arrow-icon {
@@ -86,6 +142,8 @@
 
 .star-icon {
   color: white;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 .arrow-button {

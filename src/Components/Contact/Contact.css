@@ -1,3 +1,19 @@
+.contact-page {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.contact-hero-row {
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.footer-spacer {
+    padding-top: 1rem;
+}
+
 .expand-height {
     flex: 1;
 }
@@ -6,23 +22,71 @@
     text-align: start;
 }
 
-.contact-methods a {
-    color: black !important;
-    font-weight: 500;
-    text-decoration: none;
+.contact-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
 }
 
-.contact-methods a:hover {
-    text-decoration: underline;
+.contact-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex: 1 1 140px;
+    max-width: 200px;
+    min-height: 120px;
+    padding: 1.25rem 1rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    background: #fff;
+    color: #373737;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-tile:hover {
+    background-color: #f8f8f8;
+}
+
+.contact-tile__icon {
+    color: #7fdca5;
+}
+
+.contact-tile__title {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .chat-img {
     width: 100%;
 }
 
+.contact-illustration {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .contact-illustration {
+        display: inline-block;
+    }
+}
+
 /* Breakpoints */
 @media only screen and (max-width: 767px) {
     .content-align {
         text-align: center;
+    }
+
+    .contact-tiles {
+        justify-content: center;
+    }
+
+    .contact-tile {
+        max-width: none;
     }
 }

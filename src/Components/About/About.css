@@ -1,5 +1,37 @@
 @charset "UTF-8";
 
+.about-page {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-hero-row {
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.about-centered-row {
+  justify-content: center;
+}
+
+.about-image-col {
+  text-align: center;
+}
+
+.about-image-col--no-margin {
+  margin: 0;
+}
+
+.profile-name {
+  padding-top: 1rem;
+}
+
+.footer-spacer {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .about-header-align {
   text-align: start;
 }
@@ -12,19 +44,6 @@
 .phone-screen {
   width: 300px;
   align-items: center;
-}
-
-.btn-check:checked+.btn-outline-primary{
-  background-color: #f2f2f2 !important;
-  border-color: #f2f2f2 !important;
-}
-
-.btn-outline-primary:hover{
-  background-color: #f2f2f2 !important;
-}
-
-.btn-outline-primary{
-  border-color: #e7e7e7 !important;
 }
 
 .btn-align {
@@ -41,10 +60,6 @@
 
 .sub-text {
   margin-left: 20%;
-}
-
-.btn-group-vertical {
-  text-align: center;
 }
 
 .small-pad .small-pad-top {
