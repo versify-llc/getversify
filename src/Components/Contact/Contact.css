@@ -6,20 +6,11 @@
 }
 
 .contact-hero-row {
-    justify-content: center;
     padding-top: 3rem;
 }
 
-.footer-spacer {
-    padding-top: 1rem;
-}
-
-.expand-height {
+.contact-main {
     flex: 1;
-}
-
-.content-align {
-    text-align: start;
 }
 
 .contact-tiles {
@@ -43,9 +34,9 @@
     border: 1px solid #e7e7e7;
     border-radius: 12px;
     background: #fff;
-    color: #373737;
+    color: var(--theme-black);
     font-weight: 500;
-    text-decoration: none !important;
+    text-decoration: none;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -53,16 +44,16 @@
     background-color: #f8f8f8;
 }
 
-.contact-tile__icon {
-    color: #7fdca5;
+.contact-tile-icon {
+    color: var(--theme-green);
 }
 
-.contact-tile__title {
+.contact-tile-title {
     font-size: 1rem;
     text-align: center;
 }
 
-.chat-img {
+.contact-chat-img {
     width: 100%;
 }
 
@@ -76,12 +67,7 @@
     }
 }
 
-/* Breakpoints */
-@media only screen and (max-width: 767px) {
-    .content-align {
-        text-align: center;
-    }
-
+@media (max-width: 767px) {
     .contact-tiles {
         justify-content: center;
     }

@@ -4,18 +4,18 @@ const Footer = () => {
   return (
     <div className="container">
       <footer className="site-footer">
-        <div className="col-md-4 footer-brand">
-          <img src="/images/logo.png" alt="Versify Logo" className="logo" />
+        <div className="col-md-4 site-footer-brand">
+          <img src="/images/logo.png" alt="Versify Logo" className="site-footer-logo" />
           <span className="text-body">{new Date().getFullYear()} Versify LLC</span>
         </div>
 
-        <ul className="nav col-md-4 footer-social">
-          <li className="footer-social-item"><a className="footer-social-link" href="https://instagram.com/theversifyapp" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram social-icon"></i>
+        <ul className="nav col-md-4 site-footer-social">
+          <li className="site-footer-social-item"><a className="site-footer-social-link" href="https://instagram.com/theversifyapp" target="_blank" rel="noreferrer">
+            <i className="fab fa-instagram site-footer-social-icon"></i>
           </a></li>
-          <li className="footer-social-item"><a className="footer-social-link" href="https://www.facebook.com/profile.php?id=100071561531471"
+          <li className="site-footer-social-item"><a className="site-footer-social-link" href="https://www.facebook.com/profile.php?id=100071561531471"
             target="_blank" rel="noreferrer">
-            <i className="fab fa-facebook social-icon"></i>
+            <i className="fab fa-facebook site-footer-social-icon"></i>
           </a></li>
         </ul>
       </footer>

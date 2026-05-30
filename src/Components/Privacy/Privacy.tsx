@@ -5,11 +5,11 @@ import './Privacy.css';
 const Privacy = () => {
     return (
         <div>
-            <Navbar backgroundClass="transparent-blur" />
+            <Navbar backgroundClass="nav-bg-light" />
 
             <div className="page-spacer"></div>
 
-            <div className="container page-top-margin privacy-content" style={{ textAlign: 'left' }}>
+            <div className="container page-top privacy-content" style={{ textAlign: 'left' }}>
                 <h2>Privacy Policy</h2> <br />
 
                 <h5>Versify is a free app. It is intended for use as is. </h5> <br />

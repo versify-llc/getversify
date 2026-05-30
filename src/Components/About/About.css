@@ -1,125 +1,77 @@
-@charset "UTF-8";
-
 .about-page {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.about-hero-row {
-  justify-content: center;
-  padding-top: 3rem;
-}
-
-.about-centered-row {
-  justify-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .about-image-col {
-  text-align: center;
+    text-align: center;
 }
 
-.about-image-col--no-margin {
-  margin: 0;
+.about-image-col--flush {
+    margin: 0;
 }
 
-.profile-name {
-  padding-top: 1rem;
+.about-hero-row {
+    padding-top: 3rem;
 }
 
-.footer-spacer {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.about-profile-name {
+    padding-top: 1rem;
 }
 
-.about-header-align {
-  text-align: start;
-}
-
-.download-icon {
-  height: 40px;
-  margin:0px 5px 30px 5px !important;
-}
-
-.phone-screen {
-  width: 300px;
-  align-items: center;
-}
-
-.btn-align {
-  text-align: end;
-}
-
-.game-screen{
-  height: 500px;
-}
-
-.phone-align {
-  text-align: start;
-}
-
-.sub-text {
-  margin-left: 20%;
-}
-
-.small-pad .small-pad-top {
-  padding: 0px;
-}
-
-.line-divide {
+.about-divider {
     width: 50px;
-    height: 4px !important;
-    color: #7FDCA5;
+    height: 4px;
+    color: var(--theme-green);
     opacity: 1;
 }
 
-.profile-img {
-  width: 225px;
-  border-radius: 150px;
+.about-profile-img {
+    width: 225px;
+    border-radius: 150px;
 }
 
-.top-margin {
-  margin-top: 40px !important;
+.about-spacing-top {
+    margin-top: 40px;
 }
 
-.profile-top-margin {
-  margin-top: 100px !important;
+.about-profile-section {
+    margin-top: 100px;
 }
 
-/* Breakpoints */
-@media only screen and (max-width: 767px) {
-  .about-header-align, .phone-align, .btn-align {
-    text-align: center;
-  }
-  .small-pad {
-    padding-bottom: 20px;
-  }
-  .small-pad-top {
-    padding-top: 20px;
-  }
-  .line-divide {
-    margin: auto;
-    margin-bottom: 15px;
-  }
-  .top-margin{
-    margin-top: 10px !important;
-  }
-  .profile-top-margin{
-    margin-top: 30px !important;
-  }
-  .break{
-    display: none;
-  }
-  .profile-img {
-    width: 175px;
-  }
+.about-col-spaced {
+    padding-bottom: 0;
 }
 
-@media only screen and (max-width: 1000px) {
-  .download-icon {
-    height: 35px;
-  }
-  .sub-text {
-    margin-left: 0px;
-  }
+.about-section-pad {
+    padding-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .about-col-spaced,
+    .about-section-pad {
+        padding-bottom: 20px;
+    }
+
+    .about-divider {
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    .about-spacing-top {
+        margin-top: 10px;
+    }
+
+    .about-profile-section {
+        margin-top: 30px;
+    }
+
+    .about-break {
+        display: none;
+    }
+
+    .about-profile-img {
+        width: 175px;
+    }
 }

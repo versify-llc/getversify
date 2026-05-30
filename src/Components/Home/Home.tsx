@@ -60,14 +60,14 @@ const Home = () => {
 
     return (
         <div className="bg-theme">
-            <Navbar backgroundClass="transparent-blur-grey" />
+            <Navbar backgroundClass="nav-bg-grey" />
             <div className="page-spacer"></div>
-            <div className="container page-top-margin">
-                <div className="row hero-row">
+            <div className="container page-top">
+                <div className="row row-center home-hero-row">
                     <div className="col-md-5">
-                        <div className="header-align">
+                        <div className="align-md-end">
                             <h1 className="text-header">Bible Verse Memorization<br />Made Easy</h1>
-                            <p className="text-body-lg sub-text">Our app is available in app stores! Download it today.</p>
+                            <p className="text-body-lg home-hero-subtext">Our app is available in app stores! Download it today.</p>
 
                             <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">
                                 <img className="download-icon" src="/images/apple_store.png" alt="Apple App Store link" />
@@ -78,27 +78,27 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="col-md-1"></div>
-                    <div className="col-md-5 phone-align small-pad">
-                        <img className="phone-screen" src="/images/home_screen.png" alt="Versify home screenshot" />
+                    <div className="col-md-5 align-md-start home-phone-col">
+                        <img className="home-phone-img" src="/images/home_screen.png" alt="Versify home screenshot" />
                     </div>
                 </div>
             </div>
 
-            <div className="games-section" style={{ backgroundColor: 'white' }}>
+            <section className="section-banner section-banner--white home-games-section">
                 <img src="/images/grey_triangle.png" className="triangle" alt="" />
-                <div style={{ marginTop: '50px' }}>
+                <div className="section-banner__inner">
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
-                    <p className="text-body-lg games-intro">Play a variety of interactive games to help you memorize verses</p>
+                    <p className="text-body-lg home-games-intro">Play a variety of interactive games to help you memorize verses</p>
 
-                    <div className="row games-row">
-                        <div className="col-md-4 btn-align">
+                    <div className="row row-center home-games-row">
+                        <div className="col-md-4 align-md-end">
                             <form>
-                                <div className="game-option-list" role="group" aria-label="Basic radio toggle button group">
+                                <div className="home-game-options" role="group" aria-label="Basic radio toggle button group">
                                     {GAME_OPTIONS.map((option, index) => (
                                         <React.Fragment key={option.id}>
                                             <input
                                                 type="radio"
-                                                className="game-option-input"
+                                                className="home-game-option-input"
                                                 name="btnradio"
                                                 id={option.id}
                                                 value={option.value}
@@ -106,11 +106,11 @@ const Home = () => {
                                                 checked={gameIndex === index}
                                                 readOnly={true}
                                             />
-                                            <label className="game-button game-option-outline row" onClick={() => setGameIndex(index)}>
+                                            <label className="home-game-option row" onClick={() => setGameIndex(index)}>
                                                 <div className="col-5">
-                                                    <i className={`${option.icon} game-icon`}></i>
+                                                    <i className={`${option.icon} home-game-icon`}></i>
                                                 </div>
-                                                <div className="col-7 text-body-lg game-text">{option.label}</div>
+                                                <div className="col-7 text-body-lg home-game-label">{option.label}</div>
                                             </label>
                                         </React.Fragment>
                                     ))}
@@ -118,33 +118,33 @@ const Home = () => {
                             </form>
                         </div>
                         <div className="col-md-1"></div>
-                        <div className="col-md-4 phone-align small-pad" id="gameScreen">
-                            <img className="game-screen" src={SCREENS[gameIndex]} alt="Game screenshot" />
+                        <div className="col-md-4 align-md-start home-phone-col" id="gameScreen">
+                            <img className="home-game-screen" src={SCREENS[gameIndex]} alt="Game screenshot" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div style={{ backgroundColor: '#5AC1D0', width: '100%' }}>
+            <section className="section-banner section-banner--blue">
                 <img src="/images/white_triangle.png" className="triangle" alt="" />
-                <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+                <div className="section-banner__inner section-banner__inner--spaced">
                     <h1 className="text-header-md white-text">Memorization Made Free.</h1>
-                    <p className="text-body-lg white-text free-intro">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
+                    <p className="text-body-lg white-text home-free-intro">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
                     <br />
-                    <div className="review-promo row">
+                    <div className="row home-review">
                         <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
-                            <button className="arrow-button"
+                            <button className="home-review-control" type="button"
                                 onClick={() => setReviewIndex(decrementReviewIndex(reviewIndex))}>
-                                <i className="fas fa-chevron-left fa-2x arrow-icon" />
+                                <i className="fas fa-chevron-left fa-2x home-review-icon" />
                             </button>
                         </div>
                         <div className="col">
-                            <div className="review-stars">
-                                <i className="fas fa-star fa-lg star-icon"></i>
-                                <i className="fas fa-star fa-lg star-icon"></i>
-                                <i className="fas fa-star fa-lg star-icon"></i>
-                                <i className="fas fa-star fa-lg star-icon"></i>
-                                <i className="fas fa-star fa-lg star-icon"></i>
+                            <div className="home-review-stars">
+                                <i className="fas fa-star fa-lg home-review-star"></i>
+                                <i className="fas fa-star fa-lg home-review-star"></i>
+                                <i className="fas fa-star fa-lg home-review-star"></i>
+                                <i className="fas fa-star fa-lg home-review-star"></i>
+                                <i className="fas fa-star fa-lg home-review-star"></i>
                             </div>
                             <p className="text-body-lg white-text" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
                             <p className="text-body-sm white-text" id="review-body" style={{ maxWidth: '500px' }}>
@@ -152,21 +152,21 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="col-1" style={{ position: 'relative' }}>
-                            <button className="arrow-button"
+                            <button className="home-review-control" type="button"
                                 onClick={() => setReviewIndex(incrementReviewIndex(reviewIndex))}>
-                                <i className="fas fa-chevron-right fa-2x arrow-icon" />
+                                <i className="fas fa-chevron-right fa-2x home-review-icon" />
                             </button>
                         </div>
                         <div className="col-1 col-sm-2"></div>
                     </div>
                 </div>
-                <img src="/images/grey_triangle.png" className="triangle-rotate" alt="" />
-            </div>
+                <img src="/images/grey_triangle.png" className="triangle triangle--flip" alt="" />
+            </section>
 
-            <div className="cta-section">
-                <div className="text-header-md small-pad-top">
+            <div className="home-cta-section">
+                <div className="text-header-md home-cta-heading">
                     <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
-                    <h1 className="text-header-md" id="type-word" style={{ display: 'inline-block', color: '#7FDCA5' }}>Easy.</h1>
+                    <h1 className="text-header-md text-accent" id="type-word" style={{ display: 'inline-block' }}>Easy.</h1>
                 </div>
                 <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
                 <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">

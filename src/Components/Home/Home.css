@@ -1,204 +1,151 @@
-@charset "UTF-8";
-
-.page-spacer {
-  padding-top: 0.25rem;
+.home-hero-row {
+    align-items: center;
+    padding-top: 1.5rem;
 }
 
-.hero-row {
-  justify-content: center;
-  align-items: center;
-  padding-top: 1.5rem;
+.home-games-section {
+    width: 100%;
+    padding-bottom: 0.5rem;
 }
 
-.games-section {
-  width: 100%;
-  padding-bottom: 0.5rem;
+.home-games-intro {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
-.games-intro {
-  margin-bottom: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+.home-games-row {
+    align-items: center;
 }
 
-.games-row {
-  justify-content: center;
-  align-items: center;
+.home-free-intro {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
-.free-intro {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.review-stars {
-  padding-bottom: 1.5rem;
+.home-review-stars {
+    padding-bottom: 1.5rem;
 }
 
 #review-body {
-  margin: auto;
+    margin: auto;
 }
 
-.cta-section {
-  width: 100%;
+.home-cta-section {
+    width: 100%;
 }
 
-.download-icon {
-  height: 40px;
-  margin: 0px 5px 30px 5px !important;
+.home-phone-img {
+    width: 300px;
 }
 
-.header-align,
-.btn-align {
-  text-align: right !important;
+.home-game-icon {
+    display: inline-block;
+    color: var(--theme-black);
+    vertical-align: middle;
 }
 
-.phone-screen {
-  width: 300px;
-  align-items: center;
+.home-game-label {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.game-icon {
-  display: inline-block !important;
-  color: #373737;
-  vertical-align: middle;
+.home-game-option {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    width: 160px;
+    cursor: pointer;
 }
 
-.game-text {
-  display: inline-block;
-  vertical-align: middle;
+.home-game-option-input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
 }
 
-.game-button {
-  border: none;
-  border-radius: 10px;
-  background-color: transparent;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  width: 160px;
-  cursor: pointer;
+.home-game-option-input:checked + .home-game-option {
+    background-color: var(--theme-lightgrey);
+    border-color: var(--theme-lightgrey);
 }
 
-.game-button:hover {
-  background-color: #f2f2f2;
+.home-game-option:hover {
+    background-color: var(--theme-lightgrey);
+    border-color: var(--theme-lightgrey);
 }
 
-.game-option-input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
+.home-game-screen {
+    height: 500px;
 }
 
-.game-option-input:checked + .game-option-outline {
-  background-color: #f2f2f2 !important;
-  border-color: #f2f2f2 !important;
+.home-hero-subtext {
+    margin-left: 20%;
 }
 
-.game-option-outline {
-  border: 1px solid #e7e7e7;
+.home-game-options {
+    display: inline-flex;
+    vertical-align: middle;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
 }
 
-.game-option-outline:hover {
-  background-color: #f2f2f2 !important;
+.home-review {
+    height: 235px;
+    justify-content: center;
 }
 
-.btn-align {
-  text-align: end;
+.home-review-control {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.game-screen {
-  height: 500px;
+.home-review-icon {
+    color: #fff;
 }
 
-.phone-align {
-  text-align: start;
+.home-review-star {
+    color: #fff;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
 }
 
-.sub-text {
-  margin-left: 20%;
+.home-cta-heading {
+    padding-top: 0;
 }
 
-.game-option-list {
-  display: inline-flex;
-  vertical-align: middle;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
+.home-phone-col {
+    padding-bottom: 0;
 }
 
-.small-pad .small-pad-top {
-  padding: 0px;
+@media (max-width: 767px) {
+    .home-phone-col {
+        padding-bottom: 20px;
+    }
+
+    .home-phone-img {
+        width: 200px;
+    }
+
+    .home-cta-heading {
+        padding-top: 20px;
+    }
 }
 
-.review-promo {
-  height: 235px !important;
-  justify-content: center;
-}
+@media (max-width: 1000px) {
+    .home-hero-subtext {
+        margin-left: 0;
+    }
 
-.arrow-icon {
-  color: white;
-}
-
-.star-icon {
-  color: white;
-  padding-right: 0.25rem;
-  padding-left: 0.25rem;
-}
-
-.arrow-button {
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.esv-link {
-  text-decoration: none !important;
-  color: var(--theme-blue);
-}
-
-.esv-link:hover {
-  color: var(--theme-blue);
-  opacity: 0.75;
-}
-
-@media only screen and (max-width: 767px) {
-
-  .header-align,
-  .phone-align,
-  .btn-align {
-    text-align: center !important;
-  }
-
-  .small-pad {
-    padding-bottom: 20px;
-  }
-
-  .small-pad-top {
-    padding-top: 20px;
-  }
-
-  .phone-screen {
-    width: 200px;
-  }
-
-}
-
-@media only screen and (max-width: 1000px) {
-  .download-icon {
-    height: 35px;
-  }
-
-  .sub-text {
-    margin-left: 0px;
-  }
-
-  .phone-screen {
-    width: 250px;
-  }
+    .home-phone-img {
+        width: 250px;
+    }
 }

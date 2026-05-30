@@ -5,14 +5,14 @@ import './NotFound.css';
 const NotFound = () => {
     return (
         <div>
-            <Navbar backgroundClass="transparent-blur" />
-            <div className="container page-top-margin not-found-content">
-                <h1 className="text-header-xl not-found-title margin-top" style={{ color: '#7FDCA5' }}>Oops!</h1>
-                <h4 className="text-header-sm not-found-subtitle" style={{ color: '#373737' }}>It seems like you've wandered off the straight and narrow path.</h4>
+            <Navbar backgroundClass="nav-bg-light" />
+            <div className="container page-top not-found-content">
+                <h1 className="text-header-xl text-accent not-found-title">Oops!</h1>
+                <h4 className="text-header-sm not-found-subtitle">It seems like you've wandered off the straight and narrow path.</h4>
 
-                <p className="text-body-md not-found-cta-text">Let's get you back on track</p>
+                <p className="text-body-md not-found-cta">Let's get you back on track</p>
                 <div className="not-found-actions">
-                    <a href="/"><button className="home-btn">Return Home</button></a>
+                    <a href="/"><button type="button" className="btn-primary">Return Home</button></a>
                 </div>
                 <br />
                 <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">

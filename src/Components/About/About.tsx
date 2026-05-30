@@ -3,14 +3,12 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import './About.css';
 
-//Return correct order of picture and text based on screen size (mobile vs desktop)
 const AlyssaAbout = () => {
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     })
 
-    //Listens for window resize
     useEffect(() => {
         const handleResize = () => {
             setDimensions({
@@ -24,24 +22,24 @@ const AlyssaAbout = () => {
     }, [])
 
     return (
-        <div className="row about-centered-row top-margin" id="alyssa-profile">
+        <div className="row row-center about-spacing-top" id="alyssa-profile">
             {dimensions.width < 768 ?
                 <>
                     <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
-                        <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                        <img className="about-profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
                     <div className="col-md-1"></div>
                 </>
                 :
                 null
             }
-            <div className="col-md-5 about-header-align small-pad">
-                <p className="text-body-md profile-name">
+            <div className="col-md-5 align-md-start about-col-spaced">
+                <p className="text-body-md about-profile-name">
                     <b>
                         Alyssa Tarkowski
                     </b>
                 </p>
-                <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
+                <p className="text-body-sm text-muted">
                     Alyssa is the co-founder and COO of Versify.
                     She recently graduated from Ferris State University with a degree in Computer Information Systems,
                     and she currently works as a data engineer at State Farm.
@@ -53,8 +51,8 @@ const AlyssaAbout = () => {
             {dimensions.width >= 768 ?
                 <>
                     <div className="col-md-1"></div>
-                    <div className="col-lg-3 col-md-4 about-image-col about-image-col--no-margin" style={{ height: "auto", width: "auto" }}>
-                        <img className="profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
+                    <div className="col-lg-3 col-md-4 about-image-col about-image-col--flush" style={{ height: "auto", width: "auto" }}>
+                        <img className="about-profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
                 </>
                 :
@@ -67,26 +65,26 @@ const AlyssaAbout = () => {
 
 const About = () => {
     return (
-        <div className="cover-container about-page">
-            <Navbar backgroundClass="transparent-blur" />
-            <div className="container page-top-margin">
-                <div className="row about-hero-row">
+        <div className="page-shell about-page">
+            <Navbar backgroundClass="nav-bg-light" />
+            <div className="container page-top">
+                <div className="row row-center about-hero-row">
                     <div className="col-md-3" style={{ height: "auto" }}>
-                        <div className="about-header-align">
+                        <div className="align-md-start">
                             <h1 className="text-header-sm">MEET</h1>
-                            <h1 className="text-header" style={{ color: "#7FDCA5" }}>Versify.</h1>
+                            <h1 className="text-header text-accent">Versify.</h1>
                         </div>
                     </div>
                     <div className="col-md-1"></div>
-                    <div className="col-md-5 about-header-align small-pad">
-                        <p className="text-body-md" style={{ color: "#8f8f8f" }}><i>
+                    <div className="col-md-5 align-md-start about-col-spaced">
+                        <p className="text-body-md text-muted"><i>
                             "My son, do not forget my teaching,
                             but let your heart keep my commandments,
                             for length of days and years of life
                             and peace they will add to you."</i><br />
                             Proverbs 3:1-2
                         </p>
-                        <hr className="line-divide" />
+                        <hr className="about-divider" />
                         <p className="text-body-md">
                             Versify is a free app that makes it easy and fun to
                             memorize Bible verses through interactive games.
@@ -103,14 +101,14 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ backgroundColor: "#7FDCA5", width: "100%" }}>
+            <section className="section-banner section-banner--green">
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
-                <div style={{ marginTop: "50px" }}>
+                <div className="section-banner__inner">
                     <h1 className="text-header-xl white-text">300,000+</h1>
                     <p className="text-header-sm white-text">Downloads</p>
                 </div>
                 <br />
-                <div className="row about-centered-row small-pad">
+                <div className="row row-center about-section-pad">
                     <div className="col-md-3">
                         <h1 className="text-header white-text">500,000+</h1>
                         <p className="text-header-sm white-text">Verses Memorized</p>
@@ -121,19 +119,19 @@ const About = () => {
                     </div>
 
                 </div>
-            </div>
+            </section>
 
-            <div style={{ width: "100%" }}>
+            <section className="section-banner">
                 <img src="/images/green_triangle.png" alt="divider" className="triangle" />
-                <div className="container profile-top-margin">
-                    <div className="row about-centered-row top-margin">
+                <div className="container about-profile-section">
+                    <div className="row row-center about-spacing-top">
                         <div className="col-md-4" style={{ height: "auto" }}>
-                            <div className="about-header-align">
+                            <div className="align-md-start">
                                 <h1 className="text-header-sm">MEET</h1>
-                                <h1 className="text-header" style={{ color: "#7FDCA5" }}>The Team.</h1>
+                                <h1 className="text-header text-accent">The Team.</h1>
                             </div>
                         </div>
-                        <div className="col-md-5 about-header-align small-pad">
+                        <div className="col-md-5 align-md-start about-col-spaced">
                             <p className="text-body-md">
                                 <b>
                                     Versify was created by two college students who have a passion for software development
@@ -143,18 +141,18 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="row about-centered-row top-margin">
+                    <div className="row row-center about-spacing-top">
                         <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
-                            <img className="profile-img" src="/images/richie.jpg" alt="Richie" />
+                            <img className="about-profile-img" src="/images/richie.jpg" alt="Richie" />
                         </div>
                         <div className="col-md-1"></div>
-                        <div className="col-md-5 about-header-align small-pad">
-                            <p className="text-body-md profile-name">
+                        <div className="col-md-5 align-md-start about-col-spaced">
+                            <p className="text-body-md about-profile-name">
                                 <b>
                                     Richie Tarkowski
                                 </b>
                             </p>
-                            <p className="text-body-sm" style={{ color: "#8f8f8f" }}>
+                            <p className="text-body-sm text-muted">
                                 Richie is the co-founder and CEO of Versify. He graduated from
                                 Ferris State University with a degree in Computer Information Systems,
                                 and he currently works as a software engineer at Hagerty.
@@ -162,11 +160,11 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <br className="break" />
+                    <br className="about-break" />
                     <AlyssaAbout />
                 </div>
-            </div>
-            <div className="footer-spacer"></div>
+            </section>
+            <div className="page-gap-footer"></div>
             <Footer />
         </div>
     );

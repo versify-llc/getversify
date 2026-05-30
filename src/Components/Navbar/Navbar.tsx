@@ -49,7 +49,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
   };
 
   return (
-    <nav className={`site-nav ${backgroundClass} ${scrolled ? "conditional-border" : ""} ${menuOpen ? "site-nav-open" : ""}`}>
+    <nav className={`site-nav ${backgroundClass} ${scrolled || menuOpen ? "site-nav--bordered" : ""}`}>
       <div className="site-nav-inner container-fluid">
         <Link className="site-nav-brand" to="/" onClick={closeMenu}>
           <img src="/images/logo_hoz.png" alt="Versify Logo" className="site-nav-logo" />
@@ -65,7 +65,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
           <span className="site-nav-toggle-icon"></span>
         </button>
         <div className={`site-nav-menu ${menuOpen ? "is-open" : ""}`} id="siteNavMenu">
-          <ul className="site-nav-links float-md-end">
+          <ul className="site-nav-links">
             <li className="site-nav-item">
               <Link className="site-nav-link" to="/about" onClick={closeMenu}>About</Link>
             </li>

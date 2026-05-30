@@ -10,33 +10,33 @@
     border-top: 1px solid #dee2e6;
 }
 
-.footer-brand {
+.site-footer-brand {
     display: flex;
     align-items: center;
 }
 
-.footer-social {
-    justify-content: flex-end;
+.site-footer-social {
     display: flex;
+    justify-content: flex-end;
 }
 
-.footer-social-item {
+.site-footer-social-item {
     margin-left: 1rem;
 }
 
-.footer-social-link {
-    color: #6c757d;
+.site-footer-social-link {
+    color: var(--footer-muted);
 }
 
-.social-icon {
-    font-size: 1.6em !important;
+.site-footer-social-icon {
+    font-size: 1.6em;
 }
 
-.social-icon:hover {
-    opacity: 60%;
+.site-footer-social-icon:hover {
+    opacity: 0.6;
 }
 
-.logo {
+.site-footer-logo {
     width: 25px;
     text-align: center;
     margin-right: 10px;
