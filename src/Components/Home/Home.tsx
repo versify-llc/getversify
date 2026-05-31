@@ -59,13 +59,13 @@ const Home = () => {
     const [reviewIndex, setReviewIndex] = useState(0);
 
     return (
-        <div className="bg-theme">
+        <div className="bg-theme-lightgrey">
             <Navbar backgroundClass="nav-bg-grey" />
             <div className="page-spacer"></div>
             <div className="container page-top">
-                <div className="row row-center home-hero-row">
-                    <div className="col-md-5">
-                        <div className="align-md-end">
+                <div className="flex flex-wrap -mx-3 justify-center home-hero-row">
+                    <div className="shrink-0 px-3 w-full md:w-5/12">
+                        <div className="text-center md:text-right">
                             <h1 className="text-header">Bible Verse Memorization<br />Made Easy</h1>
                             <p className="text-body-lg home-hero-subtext">Our app is available in app stores! Download it today.</p>
 
@@ -77,8 +77,8 @@ const Home = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="col-md-1"></div>
-                    <div className="col-md-5 align-md-start home-phone-col">
+                    <div className="shrink-0 px-3 w-full md:w-1/12"></div>
+                    <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left home-phone-col">
                         <img className="home-phone-img" src="/images/home_screen.png" alt="Versify home screenshot" />
                     </div>
                 </div>
@@ -90,8 +90,8 @@ const Home = () => {
                     <h1 className="text-header-md">Memorization Made Fun.</h1>
                     <p className="text-body-lg home-games-intro">Play a variety of interactive games to help you memorize verses</p>
 
-                    <div className="row row-center home-games-row">
-                        <div className="col-md-4 align-md-end">
+                    <div className="flex flex-wrap -mx-3 justify-center home-games-row">
+                        <div className="shrink-0 px-3 w-full md:w-1/4 text-center md:text-right">
                             <form>
                                 <div className="home-game-options" role="group" aria-label="Basic radio toggle button group">
                                     {GAME_OPTIONS.map((option, index) => (
@@ -106,19 +106,19 @@ const Home = () => {
                                                 checked={gameIndex === index}
                                                 readOnly={true}
                                             />
-                                            <label className="home-game-option row" onClick={() => setGameIndex(index)}>
-                                                <div className="col-5">
+                                            <label className="home-game-option flex flex-wrap -mx-3" onClick={() => setGameIndex(index)}>
+                                                <div className="shrink-0 px-3 w-5/12">
                                                     <i className={`${option.icon} home-game-icon`}></i>
                                                 </div>
-                                                <div className="col-7 text-body-lg home-game-label">{option.label}</div>
+                                                <div className="shrink-0 px-3 w-7/12 text-body-lg home-game-label">{option.label}</div>
                                             </label>
                                         </React.Fragment>
                                     ))}
                                 </div>
                             </form>
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-4 align-md-start home-phone-col" id="gameScreen">
+                        <div className="shrink-0 px-3 w-full md:w-1/12"></div>
+                        <div className="shrink-0 px-3 w-full md:w-1/4 text-center md:text-left home-phone-col" id="gameScreen">
                             <img className="home-game-screen" src={SCREENS[gameIndex]} alt="Game screenshot" />
                         </div>
                     </div>
@@ -128,17 +128,17 @@ const Home = () => {
             <section className="section-banner section-banner--blue">
                 <img src="/images/white_triangle.png" className="triangle" alt="" />
                 <div className="section-banner__inner section-banner__inner--spaced">
-                    <h1 className="text-header-md white-text">Memorization Made Free.</h1>
-                    <p className="text-body-lg white-text home-free-intro">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
+                    <h1 className="text-header-md text-white">Memorization Made Free.</h1>
+                    <p className="text-body-lg text-white home-free-intro">Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.</p>
                     <br />
-                    <div className="row home-review">
-                        <div className="col-1 offset-1 offset-sm-2" style={{ position: 'relative' }}>
+                    <div className="flex flex-wrap -mx-3 home-review">
+                        <div className="shrink-0 px-3 w-1/12" style={{ position: 'relative' }}>
                             <button className="home-review-control" type="button"
                                 onClick={() => setReviewIndex(decrementReviewIndex(reviewIndex))}>
                                 <i className="fas fa-chevron-left fa-2x home-review-icon" />
                             </button>
                         </div>
-                        <div className="col">
+                        <div className="shrink-0 px-3 w-7/12">
                             <div className="home-review-stars">
                                 <i className="fas fa-star fa-lg home-review-star"></i>
                                 <i className="fas fa-star fa-lg home-review-star"></i>
@@ -146,18 +146,17 @@ const Home = () => {
                                 <i className="fas fa-star fa-lg home-review-star"></i>
                                 <i className="fas fa-star fa-lg home-review-star"></i>
                             </div>
-                            <p className="text-body-lg white-text" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
-                            <p className="text-body-sm white-text" id="review-body" style={{ maxWidth: '500px' }}>
+                            <p className="text-body-lg text-white" id="review-header"><b>{REVIEW_HEADER[reviewIndex]}</b></p>
+                            <p className="text-body-sm text-white" id="review-body" style={{ maxWidth: '500px' }}>
                                 <i>{REVIEW_BODY[reviewIndex]}</i>
                             </p>
                         </div>
-                        <div className="col-1" style={{ position: 'relative' }}>
+                        <div className="shrink-0 px-3 w-1/12" style={{ position: 'relative' }}>
                             <button className="home-review-control" type="button"
                                 onClick={() => setReviewIndex(incrementReviewIndex(reviewIndex))}>
                                 <i className="fas fa-chevron-right fa-2x home-review-icon" />
                             </button>
                         </div>
-                        <div className="col-1 col-sm-2"></div>
                     </div>
                 </div>
                 <img src="/images/grey_triangle.png" className="triangle triangle--flip" alt="" />
@@ -166,7 +165,7 @@ const Home = () => {
             <div className="home-cta-section">
                 <div className="text-header-md home-cta-heading">
                     <h1 className="text-header-md" style={{ display: 'inline-block' }}>Bible Verse Memorization Made&nbsp;</h1>
-                    <h1 className="text-header-md text-accent" id="type-word" style={{ display: 'inline-block' }}>Easy.</h1>
+                    <h1 className="text-header-md text-theme-green" id="type-word" style={{ display: 'inline-block' }}>Easy.</h1>
                 </div>
                 <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
                 <a href="https://apps.apple.com/us/app/versify-app/id1597230197" target="_blank" rel="noreferrer">

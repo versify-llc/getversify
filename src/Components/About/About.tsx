@@ -22,24 +22,24 @@ const AlyssaAbout = () => {
     }, [])
 
     return (
-        <div className="row row-center about-spacing-top" id="alyssa-profile">
+        <div className="flex flex-wrap -mx-3 justify-center about-spacing-top" id="alyssa-profile">
             {dimensions.width < 768 ?
                 <>
-                    <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
+                    <div className="shrink-0 px-3 w-full md:w-1/4 lg:w-3/12 about-image-col" style={{ height: "auto" }}>
                         <img className="about-profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
-                    <div className="col-md-1"></div>
+                    <div className="shrink-0 px-3 w-full md:w-1/12"></div>
                 </>
                 :
                 null
             }
-            <div className="col-md-5 align-md-start about-col-spaced">
+            <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left about-col-spaced">
                 <p className="text-body-md about-profile-name">
                     <b>
                         Alyssa Tarkowski
                     </b>
                 </p>
-                <p className="text-body-sm text-muted">
+                <p className="text-body-sm text-theme-muted">
                     Alyssa is the co-founder and COO of Versify.
                     She recently graduated from Ferris State University with a degree in Computer Information Systems,
                     and she currently works as a data engineer at State Farm.
@@ -50,8 +50,8 @@ const AlyssaAbout = () => {
             </div>
             {dimensions.width >= 768 ?
                 <>
-                    <div className="col-md-1"></div>
-                    <div className="col-lg-3 col-md-4 about-image-col about-image-col--flush" style={{ height: "auto", width: "auto" }}>
+                    <div className="shrink-0 px-3 w-full md:w-1/12"></div>
+                    <div className="shrink-0 px-3 w-full md:w-1/4 lg:w-3/12 about-image-col about-image-col--flush" style={{ height: "auto", width: "auto" }}>
                         <img className="about-profile-img" src="/images/alyssa.jpg" alt="Alyssa" />
                     </div>
                 </>
@@ -68,16 +68,16 @@ const About = () => {
         <div className="page-shell about-page">
             <Navbar backgroundClass="nav-bg-light" />
             <div className="container page-top">
-                <div className="row row-center about-hero-row">
-                    <div className="col-md-3" style={{ height: "auto" }}>
-                        <div className="align-md-start">
+                <div className="flex flex-wrap -mx-3 justify-center about-hero-row">
+                    <div className="shrink-0 px-3 w-full md:w-3/12" style={{ height: "auto" }}>
+                        <div className="text-center md:text-left">
                             <h1 className="text-header-sm">MEET</h1>
-                            <h1 className="text-header text-accent">Versify.</h1>
+                            <h1 className="text-header text-theme-green">Versify.</h1>
                         </div>
                     </div>
-                    <div className="col-md-1"></div>
-                    <div className="col-md-5 align-md-start about-col-spaced">
-                        <p className="text-body-md text-muted"><i>
+                    <div className="shrink-0 px-3 w-full md:w-1/12"></div>
+                    <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left about-col-spaced">
+                        <p className="text-body-md text-theme-muted"><i>
                             "My son, do not forget my teaching,
                             but let your heart keep my commandments,
                             for length of days and years of life
@@ -104,18 +104,18 @@ const About = () => {
             <section className="section-banner section-banner--green">
                 <img src="/images/white_triangle.png" alt="divider" className="triangle" />
                 <div className="section-banner__inner">
-                    <h1 className="text-header-xl white-text">300,000+</h1>
-                    <p className="text-header-sm white-text">Downloads</p>
+                    <h1 className="text-header-xl text-white">300,000+</h1>
+                    <p className="text-header-sm text-white">Downloads</p>
                 </div>
                 <br />
-                <div className="row row-center about-section-pad">
-                    <div className="col-md-3">
-                        <h1 className="text-header white-text">500,000+</h1>
-                        <p className="text-header-sm white-text">Verses Memorized</p>
+                <div className="flex flex-wrap -mx-3 justify-center about-section-pad">
+                    <div className="shrink-0 px-3 w-full md:w-3/12">
+                        <h1 className="text-header text-white">500,000+</h1>
+                        <p className="text-header-sm text-white">Verses Memorized</p>
                     </div>
-                    <div className="col-md-3">
-                        <h1 className="text-header white-text">14,000,000+</h1>
-                        <p className="text-header-sm white-text">Games Played</p>
+                    <div className="shrink-0 px-3 w-full md:w-3/12">
+                        <h1 className="text-header text-white">14,000,000+</h1>
+                        <p className="text-header-sm text-white">Games Played</p>
                     </div>
 
                 </div>
@@ -124,14 +124,14 @@ const About = () => {
             <section className="section-banner">
                 <img src="/images/green_triangle.png" alt="divider" className="triangle" />
                 <div className="container about-profile-section">
-                    <div className="row row-center about-spacing-top">
-                        <div className="col-md-4" style={{ height: "auto" }}>
-                            <div className="align-md-start">
+                    <div className="flex flex-wrap -mx-3 justify-center about-spacing-top">
+                        <div className="shrink-0 px-3 w-full md:w-1/4" style={{ height: "auto" }}>
+                            <div className="text-center md:text-left">
                                 <h1 className="text-header-sm">MEET</h1>
-                                <h1 className="text-header text-accent">The Team.</h1>
+                                <h1 className="text-header text-theme-green">The Team.</h1>
                             </div>
                         </div>
-                        <div className="col-md-5 align-md-start about-col-spaced">
+                        <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left about-col-spaced">
                             <p className="text-body-md">
                                 <b>
                                     Versify was created by two college students who have a passion for software development
@@ -141,18 +141,18 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="row row-center about-spacing-top">
-                        <div className="col-lg-3 col-md-4 about-image-col" style={{ height: "auto" }}>
+                    <div className="flex flex-wrap -mx-3 justify-center about-spacing-top">
+                        <div className="shrink-0 px-3 w-full md:w-1/4 lg:w-3/12 about-image-col" style={{ height: "auto" }}>
                             <img className="about-profile-img" src="/images/richie.jpg" alt="Richie" />
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-5 align-md-start about-col-spaced">
+                        <div className="shrink-0 px-3 w-full md:w-1/12"></div>
+                        <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left about-col-spaced">
                             <p className="text-body-md about-profile-name">
                                 <b>
                                     Richie Tarkowski
                                 </b>
                             </p>
-                            <p className="text-body-sm text-muted">
+                            <p className="text-body-sm text-theme-muted">
                                 Richie is the co-founder and CEO of Versify. He graduated from
                                 Ferris State University with a degree in Computer Information Systems,
                                 and he currently works as a software engineer at Hagerty.

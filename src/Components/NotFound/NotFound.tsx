@@ -7,7 +7,7 @@ const NotFound = () => {
         <div>
             <Navbar backgroundClass="nav-bg-light" />
             <div className="container page-top not-found-content">
-                <h1 className="text-header-xl text-accent not-found-title">Oops!</h1>
+                <h1 className="text-header-xl text-theme-green not-found-title">Oops!</h1>
                 <h4 className="text-header-sm not-found-subtitle">It seems like you've wandered off the straight and narrow path.</h4>
 
                 <p className="text-body-md not-found-cta">Let's get you back on track</p>
