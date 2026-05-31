@@ -51,7 +51,6 @@
 }
 
 .home-game-option {
-    border: 1px solid #e7e7e7;
     border-radius: 10px;
     background-color: transparent;
     margin-bottom: 10px;
@@ -66,7 +65,7 @@
     pointer-events: none;
 }
 
-.home-game-option-input:checked + .home-game-option {
+.home-game-option-input:checked+.home-game-option {
     background-color: var(--theme-lightgrey);
     border-color: var(--theme-lightgrey);
 }

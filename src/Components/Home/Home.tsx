@@ -138,7 +138,7 @@ const Home = () => {
                                 <i className="fas fa-chevron-left fa-2x home-review-icon" />
                             </button>
                         </div>
-                        <div className="shrink-0 px-3 w-7/12">
+                        <div className="shrink-0 px-3 w-1/2">
                             <div className="home-review-stars">
                                 <i className="fas fa-star fa-lg home-review-star"></i>
                                 <i className="fas fa-star fa-lg home-review-star"></i>

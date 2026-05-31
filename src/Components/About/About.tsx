@@ -131,6 +131,7 @@ const About = () => {
                                 <h1 className="text-header text-theme-green">The Team.</h1>
                             </div>
                         </div>
+                        <div className="md:w-1/12" />
                         <div className="shrink-0 px-3 w-full md:w-5/12 text-center md:text-left about-col-spaced">
                             <p className="text-body-md">
                                 <b>

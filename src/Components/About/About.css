@@ -23,7 +23,8 @@
 .about-divider {
     width: 50px;
     height: 4px;
-    color: var(--theme-green);
+    background-color: var(--theme-green);
+    border: none;
     opacity: 1;
 }
 
@@ -49,6 +50,7 @@
 }
 
 @media (max-width: 767px) {
+
     .about-col-spaced,
     .about-section-pad {
         padding-bottom: 20px;
