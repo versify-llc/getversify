@@ -1,4 +1,5 @@
 import { APP_STORE_URL, PLAY_STORE_URL } from '../../content/links';
+import './StoreBadges.css';
 
 const StoreBadges = () => {
   return (

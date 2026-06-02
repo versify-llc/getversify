@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <Layout navBackgroundClass="nav-bg-light" className="page-shell contact-page">
+    <Layout navClassName="nav-bg-light" className="page-shell contact-page">
       <div className="container page-top contact-main">
         <div className="flex flex-wrap -mx-3 justify-center contact-hero-row">
           <div className="shrink-0 w-full md:w-7/12 lg:w-5/12">

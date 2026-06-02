@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <Layout navBackgroundClass="nav-bg-light" className="page-shell about-page">
+    <Layout navClassName="nav-bg-light" className="page-shell about-page">
       <div className="container page-top">
         <div className="flex flex-wrap -mx-3 justify-center about-hero-row">
           <div className="shrink-0 px-3 w-full md:w-3/12">

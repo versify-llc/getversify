@@ -108,7 +108,7 @@ Because routing is client-side, host configs (`firebase.json` and
 
 ## Shared layout and content
 
-- **Layout** (`Layout.tsx`): every page wraps content in `<Layout navBackgroundClass="..."
+- **Layout** (`Layout.tsx`): every page wraps content in `<Layout navClassName="..."
 className="...">`. Renders fixed `Navbar`, page `children`, then `Footer`. Pass
   `nav-bg-grey` (Home) or `nav-bg-light` (other pages). Optional `className` for page-level
   shells (e.g. `page-shell`, `bg-theme-lightgrey`).

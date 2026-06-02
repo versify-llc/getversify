@@ -4,34 +4,24 @@ import { DONATE_URL, MERCH_URL } from '../../content/links';
 import './Navbar.css';
 
 type NavbarProps = {
-  backgroundClass: string;
+  className: string;
 };
 
 const SCROLL_THRESHOLD = 4;
 
-const Navbar = ({ backgroundClass }: NavbarProps) => {
+const Navbar = ({ className }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > SCROLL_THRESHOLD);
-    };
+  const handleScroll = () => {
+    setScrolled(window.scrollY > SCROLL_THRESHOLD);
+  };
 
+  // Track scroll position for navbar styling
+  useEffect(() => {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -43,9 +33,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
   };
 
   return (
-    <nav
-      className={`site-nav ${backgroundClass} ${scrolled || menuOpen ? 'site-nav--bordered' : ''}`}
-    >
+    <nav className={`site-nav ${className} ${scrolled || menuOpen ? 'site-nav--bordered' : ''}`}>
       <div className="site-nav-inner container-fluid">
         <Link className="site-nav-brand" to="/" onClick={closeMenu}>
           <img src="/images/logo_hoz.png" alt="Versify Logo" className="site-nav-logo" />
@@ -58,7 +46,7 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
           aria-label="Toggle navigation"
           onClick={toggleMenu}
         >
-          <span className="site-nav-toggle-icon"></span>
+          <span className="site-nav-toggle-icon" />
         </button>
         <div className={`site-nav-menu ${menuOpen ? 'is-open' : ''}`} id="siteNavMenu">
           <ul className="site-nav-links">

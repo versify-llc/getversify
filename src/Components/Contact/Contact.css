@@ -58,20 +58,6 @@
   font-weight: 300;
 }
 
-.contact-chat-img {
-  width: 100%;
-}
-
-.contact-illustration {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .contact-illustration {
-    display: inline-block;
-  }
-}
-
 @media (max-width: 767px) {
   .contact-tiles {
     justify-content: center;

@@ -186,11 +186,6 @@
   margin-bottom: 50px;
 }
 
-.download-icon {
-  height: 40px;
-  margin: 0 5px 30px;
-}
-
 .triangle {
   width: 100%;
   vertical-align: top;
@@ -233,11 +228,5 @@
 
   .text-body-md {
     font-size: calc(1rem + 0.4vw);
-  }
-}
-
-@media (max-width: 1000px) {
-  .download-icon {
-    height: 35px;
   }
 }

@@ -28,7 +28,7 @@ const Home = () => {
   const review = REVIEWS[reviewIndex];
 
   return (
-    <Layout navBackgroundClass="nav-bg-grey" className="bg-theme-lightgrey">
+    <Layout navClassName="nav-bg-grey" className="bg-theme-lightgrey">
       <div className="page-spacer"></div>
       <div className="container page-top">
         <div className="flex flex-wrap -mx-3 justify-center home-hero-row">
@@ -159,7 +159,7 @@ const Home = () => {
           </h2>
           <h2 className="text-header-md text-theme-green home-cta-heading-text">Easy.</h2>
         </div>
-        <p className="text-body-lg">So what’s the hold up? Start memorizing today!</p>
+        <p className="text-body-lg">So what's the hold up? Start memorizing today!</p>
         <StoreBadges />
       </div>
       <br />

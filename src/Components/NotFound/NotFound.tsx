@@ -3,7 +3,7 @@ import Layout from '../Layout/Layout';
 
 const NotFound = () => {
   return (
-    <Layout navBackgroundClass="nav-bg-light" className="page-shell">
+    <Layout navClassName="nav-bg-light" className="page-shell">
       <div className="px-8 flex-1 content-center">
         <h1 className="text-header-xl text-theme-green">Oops!</h1>
         <br />

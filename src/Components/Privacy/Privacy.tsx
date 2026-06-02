@@ -4,7 +4,7 @@ import './Privacy.css';
 
 const Privacy = () => {
   return (
-    <Layout navBackgroundClass="nav-bg-light">
+    <Layout navClassName="nav-bg-light">
       <div className="page-spacer" />
       <div className="page-top" />
 
