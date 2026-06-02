@@ -1,6 +1,4 @@
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
@@ -8,18 +6,12 @@ export default tseslint.config(
   },
   {
     files: ['**/*.{ts,tsx}'],
-    extends: [
-      ...tseslint.configs.recommended,
-      reactRefresh.configs.vite,
-    ],
-    plugins: {
-      'react-hooks': reactHooks,
-    },
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 2022,
     },
     rules: {
       ...reactHooks.configs['recommended-latest'].rules,
     },
-  },
-)
+  }
+);

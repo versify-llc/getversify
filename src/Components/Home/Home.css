@@ -1,150 +1,150 @@
 .home-hero-row {
-    align-items: center;
-    padding-top: 1.5rem;
+  align-items: center;
+  padding-top: 1.5rem;
 }
 
 .home-games-section {
-    width: 100%;
-    padding-bottom: 0.5rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 .home-games-intro {
-    margin-bottom: 1.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .home-games-row {
-    align-items: center;
+  align-items: center;
 }
 
 .home-free-intro {
-    padding-right: 1rem;
-    padding-left: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .home-review-stars {
-    padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 #review-body {
-    margin: auto;
+  margin: auto;
 }
 
 .home-cta-section {
-    width: 100%;
+  width: 100%;
 }
 
 .home-phone-img {
-    width: 300px;
+  width: 300px;
 }
 
 .home-game-icon {
-    display: inline-block;
-    color: var(--theme-black);
-    vertical-align: middle;
+  display: inline-block;
+  color: var(--theme-black);
+  vertical-align: middle;
 }
 
 .home-game-label {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .home-game-option {
-    border-radius: 10px;
-    background-color: transparent;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    width: 160px;
-    cursor: pointer;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  width: 160px;
+  cursor: pointer;
 }
 
 .home-game-option-input {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    pointer-events: none;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
 }
 
-.home-game-option-input:checked+.home-game-option {
-    background-color: var(--theme-lightgrey);
-    border-color: var(--theme-lightgrey);
+.home-game-option-input:checked + .home-game-option {
+  background-color: var(--theme-lightgrey);
+  border-color: var(--theme-lightgrey);
 }
 
 .home-game-option:hover {
-    background-color: var(--theme-lightgrey);
-    border-color: var(--theme-lightgrey);
+  background-color: var(--theme-lightgrey);
+  border-color: var(--theme-lightgrey);
 }
 
 .home-game-screen {
-    height: 500px;
+  height: 500px;
 }
 
 .home-hero-subtext {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 .home-game-options {
-    display: inline-flex;
-    vertical-align: middle;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
 }
 
 .home-review {
-    height: 235px;
-    justify-content: center;
+  height: 235px;
+  justify-content: center;
 }
 
 .home-review-control {
-    border: none;
-    background-color: transparent;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .home-review-icon {
-    color: #fff;
+  color: #fff;
 }
 
 .home-review-star {
-    color: #fff;
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
+  color: #fff;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 .home-cta-heading {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .home-phone-col {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media (max-width: 767px) {
-    .home-phone-col {
-        padding-bottom: 20px;
-    }
+  .home-phone-col {
+    padding-bottom: 20px;
+  }
 
-    .home-phone-img {
-        width: 200px;
-    }
+  .home-phone-img {
+    width: 200px;
+  }
 
-    .home-cta-heading {
-        padding-top: 20px;
-    }
+  .home-cta-heading {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .home-hero-subtext {
-        margin-left: 0;
-    }
+  .home-hero-subtext {
+    margin-left: 0;
+  }
 
-    .home-phone-img {
-        width: 250px;
-    }
+  .home-phone-img {
+    width: 250px;
+  }
 }

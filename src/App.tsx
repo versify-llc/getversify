@@ -1,16 +1,11 @@
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Privacy from './Components/Privacy/Privacy';
 import NotFound from './Components/NotFound/NotFound';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

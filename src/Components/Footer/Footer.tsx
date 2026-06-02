@@ -10,17 +10,30 @@ const Footer = () => {
         </div>
 
         <ul className="flex flex-wrap list-none pl-0 mb-0 md:w-1/4 site-footer-social">
-          <li className="site-footer-social-item"><a className="site-footer-social-link" href="https://instagram.com/theversifyapp" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram site-footer-social-icon"></i>
-          </a></li>
-          <li className="site-footer-social-item"><a className="site-footer-social-link" href="https://www.facebook.com/profile.php?id=100071561531471"
-            target="_blank" rel="noreferrer">
-            <i className="fab fa-facebook site-footer-social-icon"></i>
-          </a></li>
+          <li className="site-footer-social-item">
+            <a
+              className="site-footer-social-link"
+              href="https://instagram.com/theversifyapp"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-instagram site-footer-social-icon"></i>
+            </a>
+          </li>
+          <li className="site-footer-social-item">
+            <a
+              className="site-footer-social-link"
+              href="https://www.facebook.com/profile.php?id=100071561531471"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-facebook site-footer-social-icon"></i>
+            </a>
+          </li>
         </ul>
       </footer>
     </div>
   );
-}
+};
 
 export default Footer;

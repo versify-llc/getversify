@@ -1,84 +1,86 @@
 .contact-page {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 1rem;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
 }
 
 .contact-hero-row {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 .contact-main {
-    flex: 1;
+  flex: 1;
 }
 
 .contact-tiles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    justify-content: flex-start;
-    margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
 }
 
 .contact-tile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 130px;
-    max-width: 200px;
-    min-height: 120px;
-    padding: 1.25rem 0.75rem;
-    border: 1px solid #e7e7e7;
-    border-radius: 12px;
-    background: #fff;
-    color: var(--theme-black);
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 130px;
+  max-width: 200px;
+  min-height: 120px;
+  padding: 1.25rem 0.75rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--theme-black);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .contact-tile:hover {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .contact-tile-icon {
-    color: var(--theme-green);
+  color: var(--theme-green);
 }
 
 .contact-tile-title {
-    margin-top: 0.75rem;
-    font-size: 1rem;
-    text-align: center;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .contact-tile-subtext {
-    font-size: 0.875rem;
-    color: var(--theme-darkgrey);
-    font-weight: 300;
+  font-size: 0.875rem;
+  color: var(--theme-darkgrey);
+  font-weight: 300;
 }
 
 .contact-chat-img {
-    width: 100%;
+  width: 100%;
 }
 
 .contact-illustration {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 992px) {
-    .contact-illustration {
-        display: inline-block;
-    }
+  .contact-illustration {
+    display: inline-block;
+  }
 }
 
 @media (max-width: 767px) {
-    .contact-tiles {
-        justify-content: center;
-    }
+  .contact-tiles {
+    justify-content: center;
+  }
 
-    .contact-tile {
-        max-width: none;
-    }
+  .contact-tile {
+    max-width: none;
+  }
 }

@@ -1,0 +1,6 @@
+dist
+build
+node_modules
+.firebase
+.vscode
+package-lock.json

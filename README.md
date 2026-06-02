@@ -8,24 +8,27 @@ https://versifyapp.com
 ## Contributing
 
 Run the app in development mode:
+
 ```
 npm start
 ```
 
-
 ## Deployment
 
-Create a local build: 
+Create a local build:
+
 ```
 npm run build
 ```
 
 Deploy the build to firebase:
+
 ```
 firebase deploy
 ```
 
 If the deploy fails, reauthenticate with firebase:
+
 ```
 firebase login --reauth
 ```
