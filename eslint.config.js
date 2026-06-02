@@ -1,3 +1,4 @@
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -9,9 +10,9 @@ export default tseslint.config(
     extends: [...tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 2022,
-    },
-    rules: {
-      ...reactHooks.configs['recommended-latest'].rules,
+      globals: {
+        ...globals.browser,
+      },
     },
   }
 );

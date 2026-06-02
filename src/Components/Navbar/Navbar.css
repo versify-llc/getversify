@@ -94,13 +94,13 @@
   padding: 0.25rem 0.75rem;
   font-size: 18px;
   font-weight: 700;
-  color: var(--theme-black);
+  color: var(--color-theme-black);
   text-decoration: none;
 }
 
 .site-nav-link:hover,
 .site-nav-link:focus {
-  color: var(--theme-black);
+  color: var(--color-theme-black);
   text-decoration: none;
   opacity: 0.6;
 }

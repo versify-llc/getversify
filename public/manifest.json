@@ -1,25 +1,16 @@
 {
   "short_name": "Versify",
-  "name": "Versify",
+  "name": "Versify - Bible Verse Memorization",
   "icons": [
     {
       "src": "versify.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "versify.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "versify.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "624x624",
+      "purpose": "any"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#7fdca5",
+  "background_color": "#f2f2f2"
 }

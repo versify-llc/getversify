@@ -1,30 +1,27 @@
-import { useCallback, useEffect, useState } from 'react';
-import './Navbar.css';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DONATE_URL, MERCH_URL } from '../../content/links';
+import './Navbar.css';
 
 type NavbarProps = {
   backgroundClass: string;
 };
 
+const SCROLL_THRESHOLD = 4;
+
 const Navbar = ({ backgroundClass }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleScroll = useCallback((e: Event) => {
-    const window = e.currentTarget as Window;
-    const threshold = 4.0;
-
-    if (window.scrollY > threshold) {
-      setScrolled(true);
-    } else if (window.scrollY <= threshold) {
-      setScrolled(false);
-    }
-  }, []);
-
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > SCROLL_THRESHOLD);
+    };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -76,22 +73,12 @@ const Navbar = ({ backgroundClass }: NavbarProps) => {
               </Link>
             </li>
             <li className="site-nav-item">
-              <a
-                className="site-nav-link"
-                href="https://versify.printful.me/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="site-nav-link" href={MERCH_URL} target="_blank" rel="noreferrer">
                 Merch
               </a>
             </li>
             <li className="site-nav-item">
-              <a
-                className="site-nav-link"
-                href="https://www.givesendgo.com/versify"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="site-nav-link" href={DONATE_URL} target="_blank" rel="noreferrer">
                 Donate
               </a>
             </li>

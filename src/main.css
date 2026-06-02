@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;700&display=swap');
-
 @layer theme, base, components, utilities;
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
@@ -17,63 +15,61 @@
 }
 
 :root {
-  --theme-blue: #5ac1d0;
-  --theme-green: #7fdca5;
-  --theme-lightgrey: #f2f2f2;
-  --theme-black: #373737;
-  --theme-muted: #8f8f8f;
-  --theme-darkgrey: #aaaaaa;
-  --footer-muted: #6c757d;
   --nav-height: 74px;
   --gutter-x: 1.5rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Base element resets live in the `base` layer so the typography classes in the
+   `components` layer (e.g. .text-header) win on shared elements without needing
+   !important. */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html,
-body,
-#root {
-  width: 100%;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-align: center;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 200;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--theme-black);
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-theme-black);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 
-hr {
-  margin: 1rem 0;
-  color: inherit;
-  border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+  hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.25;
+  }
 }
 
 /* --- Layout --- */
@@ -93,18 +89,6 @@ hr {
   padding-top: 0.25rem;
 }
 
-.page-gap-footer {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.page-gap-footer--lg {
-  padding-top: 1rem;
-  padding-bottom: 0;
-}
-
-/* --- Container --- */
-
 .container,
 .container-fluid {
   width: 100%;
@@ -118,87 +102,50 @@ hr {
   max-width: none;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
 /* --- Typography --- */
-/* Wrapped in a cascade layer so Tailwind color utilities (e.g. text-white,
-   text-theme-green) win over the default black color when used together. */
+/* Wrapped in a cascade layer so Tailwind color utilities (e.g. text-white) win when used together. */
+
 @layer components {
   .text-header-xl {
-    font-weight: 700 !important;
-    color: var(--theme-black);
-    font-size: calc(3.5rem + 2vw);
+    font-weight: 700;
+    color: var(--color-theme-black);
+    font-size: clamp(3.5rem, 3.5rem + 2vw, 7rem);
   }
 
   .text-header {
-    font-weight: 700 !important;
-    color: var(--theme-black);
-    font-size: calc(1.75rem + 1.5vw);
+    font-weight: 700;
+    color: var(--color-theme-black);
+    font-size: clamp(1.75rem, 1.75rem + 1.5vw, 3.5rem);
   }
 
   .text-header-md {
-    font-weight: 700 !important;
-    color: var(--theme-black);
-    font-size: calc(1rem + 1.5vw);
+    font-weight: 700;
+    color: var(--color-theme-black);
+    font-size: clamp(1rem, 1rem + 1.5vw, 2.5rem);
   }
 
   .text-header-sm {
-    font-weight: 700 !important;
-    color: var(--theme-black);
-    font-size: calc(1rem + 1vw);
+    font-weight: 700;
+    color: var(--color-theme-black);
+    font-size: clamp(1rem, 1rem + 1vw, 2rem);
   }
 
   .text-body-lg {
     font-weight: 300;
-    color: var(--theme-black);
-    font-size: calc(1.375rem + 0.1vw);
+    color: var(--color-theme-black);
+    font-size: clamp(1.375rem, 1.375rem + 0.1vw, 1.5rem);
   }
 
   .text-body-md {
     font-weight: 300;
-    color: var(--theme-black);
-    font-size: calc(1.25rem + 0.1vw);
+    color: var(--color-theme-black);
+    font-size: clamp(1.25rem, 1.25rem + 0.1vw, 1.375rem);
   }
 
   .text-body-sm {
     font-weight: 300;
-    color: var(--theme-black);
-    font-size: calc(1rem + 0.1vw);
-  }
-
-  /* Footer copyright: unstyled class in original — match body defaults */
-  .text-body {
-    font-weight: 200;
-    font-size: 1rem;
-    color: var(--theme-black);
+    color: var(--color-theme-black);
+    font-size: clamp(1rem, 1rem + 0.1vw, 1.125rem);
   }
 }
 
@@ -219,11 +166,11 @@ hr {
 }
 
 .section-banner--blue {
-  background-color: var(--theme-blue);
+  background-color: var(--color-theme-blue);
 }
 
 .section-banner--green {
-  background-color: var(--theme-green);
+  background-color: var(--color-theme-green);
 }
 
 .section-banner--white {
@@ -257,18 +204,26 @@ hr {
   margin-bottom: -1px;
 }
 
-button.btn-primary {
+.btn-primary {
   margin: 0;
   max-width: 200px;
   width: 100%;
   padding: 16px;
   border: none;
   border-radius: 50px;
-  background-color: var(--theme-green);
+  background-color: var(--color-theme-green);
   color: #fff;
   font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
   text-align: center;
   cursor: pointer;
+}
+
+/* Anchor/Link rendered with button styling (e.g. NotFound "Return Home"). */
+.btn-primary--link {
+  display: inline-block;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {

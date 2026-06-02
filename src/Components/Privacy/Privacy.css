@@ -1,0 +1,21 @@
+.privacy-page {
+  text-align: left;
+}
+
+.privacy-content {
+  padding-bottom: 2rem;
+}
+
+.privacy-content h1 {
+  margin-bottom: 1rem;
+}
+
+.privacy-content h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-content ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

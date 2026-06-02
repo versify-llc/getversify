@@ -27,8 +27,17 @@
   padding-bottom: 1.5rem;
 }
 
-#review-body {
+.home-review-body {
   margin: auto;
+  max-width: 500px;
+}
+
+.home-review-control-col {
+  position: relative;
+}
+
+.home-cta-heading-text {
+  display: inline-block;
 }
 
 .home-cta-section {
@@ -41,7 +50,7 @@
 
 .home-game-icon {
   display: inline-block;
-  color: var(--theme-black);
+  color: var(--color-theme-black);
   vertical-align: middle;
 }
 
@@ -51,28 +60,21 @@
 }
 
 .home-game-option {
+  border: none;
   border-radius: 10px;
   background-color: transparent;
   margin-bottom: 10px;
   padding: 10px 15px;
   width: 160px;
+  font: inherit;
+  color: inherit;
+  align-items: center;
   cursor: pointer;
 }
 
-.home-game-option-input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
-}
-
-.home-game-option-input:checked + .home-game-option {
-  background-color: var(--theme-lightgrey);
-  border-color: var(--theme-lightgrey);
-}
-
-.home-game-option:hover {
-  background-color: var(--theme-lightgrey);
-  border-color: var(--theme-lightgrey);
+.home-game-option:hover,
+.home-game-option.is-selected {
+  background-color: var(--color-theme-lightgrey);
 }
 
 .home-game-screen {

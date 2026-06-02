@@ -1,8 +1,5 @@
 .contact-page {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .contact-hero-row {
@@ -33,7 +30,7 @@
   border: 1px solid #e7e7e7;
   border-radius: 12px;
   background: #fff;
-  color: var(--theme-black);
+  color: var(--color-theme-black);
   font-weight: 500;
   text-decoration: none;
   transition:
@@ -46,7 +43,7 @@
 }
 
 .contact-tile-icon {
-  color: var(--theme-green);
+  color: var(--color-theme-green);
 }
 
 .contact-tile-title {
@@ -57,7 +54,7 @@
 
 .contact-tile-subtext {
   font-size: 0.875rem;
-  color: var(--theme-darkgrey);
+  color: var(--color-theme-darkgrey);
   font-weight: 300;
 }
 

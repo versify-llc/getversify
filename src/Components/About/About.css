@@ -8,10 +8,6 @@
   text-align: center;
 }
 
-.about-image-col--flush {
-  margin: 0;
-}
-
 .about-hero-row {
   padding-top: 3rem;
 }
@@ -23,7 +19,7 @@
 .about-divider {
   width: 50px;
   height: 4px;
-  background-color: var(--theme-green);
+  background-color: var(--color-theme-green);
   border: none;
   opacity: 1;
 }
@@ -50,6 +46,12 @@
 }
 
 @media (max-width: 767px) {
+  /* On mobile the reversed profile (Alyssa) should still show the photo above
+     the bio, matching the natural top-to-bottom reading order. */
+  .about-profile--reversed .about-image-col {
+    order: -1;
+  }
+
   .about-col-spaced,
   .about-section-pad {
     padding-bottom: 20px;
