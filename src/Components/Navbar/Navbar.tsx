@@ -49,28 +49,20 @@ const Navbar = ({ className }: NavbarProps) => {
           <span className="site-nav-toggle-icon" />
         </button>
         <div className={`site-nav-menu ${menuOpen ? 'is-open' : ''}`} id="siteNavMenu">
-          <ul className="site-nav-links">
-            <li className="site-nav-item">
-              <Link className="site-nav-link" to="/about" onClick={closeMenu}>
-                About
-              </Link>
-            </li>
-            <li className="site-nav-item">
-              <Link className="site-nav-link" to="/contact" onClick={closeMenu}>
-                Contact
-              </Link>
-            </li>
-            <li className="site-nav-item">
-              <a className="site-nav-link" href={MERCH_URL} target="_blank" rel="noreferrer">
-                Merch
-              </a>
-            </li>
-            <li className="site-nav-item">
-              <a className="site-nav-link" href={DONATE_URL} target="_blank" rel="noreferrer">
-                Donate
-              </a>
-            </li>
-          </ul>
+          <div className="site-nav-links">
+            <Link className="site-nav-link" to="/about" onClick={closeMenu}>
+              About
+            </Link>
+            <Link className="site-nav-link" to="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
+            <a className="site-nav-link" href={MERCH_URL} target="_blank" rel="noreferrer">
+              Merch
+            </a>
+            <a className="site-nav-link" href={DONATE_URL} target="_blank" rel="noreferrer">
+              Donate
+            </a>
+          </div>
         </div>
       </div>
     </nav>
