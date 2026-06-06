@@ -24,7 +24,7 @@ npm run build
 Deploy the build to firebase:
 
 ```
-firebase deploy
+npm run deploy
 ```
 
 If the deploy fails, reauthenticate with firebase:
