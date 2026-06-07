@@ -32,10 +32,6 @@
   max-width: 500px;
 }
 
-.home-review-control-col {
-  position: relative;
-}
-
 .home-cta-heading-text {
   display: inline-block;
 }
@@ -92,25 +88,6 @@
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-}
-
-.home-review {
-  height: 235px;
-  justify-content: center;
-}
-
-.home-review-control {
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.home-review-icon {
-  color: #fff;
 }
 
 .home-review-star {

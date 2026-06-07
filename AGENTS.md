@@ -75,7 +75,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
     ├── content/
     │   ├── links.ts           # external URLs + CONTACT_EMAIL (single source of truth)
     │   └── home.ts            # GAME_OPTIONS + REVIEWS for Home carousels
-    └── Components/
+    └── components/
         ├── Layout/            # Layout.tsx — Navbar + children + Footer shell
         ├── StoreBadges/       # StoreBadges.tsx — App Store / Play Store badge images
         ├── Navbar/            # Navbar.tsx + Navbar.css

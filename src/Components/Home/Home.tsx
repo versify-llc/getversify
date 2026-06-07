@@ -1,31 +1,13 @@
 import { useState } from 'react';
-import './Home.css';
 import Layout from '../Layout/Layout';
 import StoreBadges from '../StoreBadges/StoreBadges';
 import { GAME_OPTIONS, REVIEWS } from '../../content/home';
-
-const incrementReviewIndex = (current: number) => {
-  if (current === REVIEWS.length - 1) {
-    return 0;
-  }
-
-  return current + 1;
-};
-
-const decrementReviewIndex = (current: number) => {
-  if (current === 0) {
-    return REVIEWS.length - 1;
-  }
-
-  return current - 1;
-};
+import './Home.css';
 
 const Home = () => {
   const [gameIndex, setGameIndex] = useState(0);
-  const [reviewIndex, setReviewIndex] = useState(0);
 
   const selectedGame = GAME_OPTIONS[gameIndex];
-  const review = REVIEWS[reviewIndex];
 
   return (
     <Layout navClassName="nav-bg-grey" className="bg-theme-lightgrey">
@@ -113,39 +95,19 @@ const Home = () => {
             Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.
           </p>
           <br />
-          <div className="flex flex-wrap -mx-3 home-review">
-            <div className="shrink-0 px-3 w-1/12 home-review-control-col">
-              <button
-                className="home-review-control"
-                type="button"
-                onClick={() => setReviewIndex(decrementReviewIndex)}
-                aria-label="Previous review"
-              >
-                <i className="fas fa-chevron-left fa-2x home-review-icon"></i>
-              </button>
-            </div>
-            <div className="shrink-0 px-3 w-1/2">
+          <div className="flex flex-wrap justify-center pb-5">
+            <div className="px-3">
               <div className="home-review-stars" aria-label="Rated 5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <i key={i} className="fas fa-star fa-lg home-review-star" aria-hidden="true"></i>
                 ))}
               </div>
               <p className="text-body-lg text-white">
-                <b>{review.header}</b>
+                <b>{REVIEWS[0].header}</b>
               </p>
               <p className="text-body-sm text-white home-review-body">
-                <i>{review.body}</i>
+                <i>{REVIEWS[0].body}</i>
               </p>
-            </div>
-            <div className="shrink-0 px-3 w-1/12 home-review-control-col">
-              <button
-                className="home-review-control"
-                type="button"
-                onClick={() => setReviewIndex(incrementReviewIndex)}
-                aria-label="Next review"
-              >
-                <i className="fas fa-chevron-right fa-2x home-review-icon"></i>
-              </button>
             </div>
           </div>
         </div>
