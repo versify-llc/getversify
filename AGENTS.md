@@ -28,7 +28,7 @@ Live deployments:
 | Lint        | ESLint 10 + `typescript-eslint` recommended rules only (flat config in `eslint.config.js`)                                  |
 | Deploy      | Firebase Hosting (`firebase.json` -> serves `dist/`, SPA rewrites); Apache SPA fallback in `public/.htaccess` for Hostinger |
 | Runtime     | Node `>=24`, ES modules (`"type": "module"`)                                                                                |
-| Icons       | Font Awesome (kit `<script>` in `index.html`; used as `<i className="fas ...">` / `fab ...`)                                |
+| Icons       | Font Awesome via npm (`@fortawesome/react-fontawesome` + free solid/brands icon packs; tree-shaken per component)           |
 | Fonts       | Barlow (Google Fonts `<link>` in `index.html`, weights 300/500/700)                                                         |
 
 There is **no** backend, SSR, data fetching, environment config, auth, CMS, or global state
@@ -56,7 +56,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
 
 ```
 .
-├── index.html                 # Vite HTML shell: meta, Font Awesome kit, Google Fonts, #root
+├── index.html                 # Vite HTML shell: meta, Google Fonts, #root
 ├── vite.config.ts             # react + tailwind plugins, dev port 3000
 ├── tsconfig.json              # strict TS, react-jsx, bundler resolution, includes src/
 ├── eslint.config.js           # flat config: typescript-eslint recommended for **/*.{ts,tsx}
@@ -74,7 +74,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
     ├── App.tsx                # Router + Routes + ScrollToTop
     ├── content/
     │   ├── links.ts           # external URLs + CONTACT_EMAIL (single source of truth)
-    │   └── home.ts            # GAME_OPTIONS + REVIEWS for Home carousels
+    │   └── home.ts            # GAME_OPTIONS + REVIEWS for Home component
     └── components/
         ├── Layout/            # Layout.tsx — Navbar + children + Footer shell
         ├── StoreBadges/       # StoreBadges.tsx — App Store / Play Store badge images
@@ -117,7 +117,7 @@ className="...">`. Renders fixed `Navbar`, page `children`, then `Footer`. Pass
 - **content/links.ts**: canonical external URLs (stores, social, merch, donate, feedback) and
   `CONTACT_EMAIL`. Import here when adding or changing outbound links — do not duplicate URLs
   in components.
-- **content/home.ts**: typed `GAME_OPTIONS` (id, label, icon class, screenshot path) and
+- **content/home.ts**: typed `GAME_OPTIONS` (id, label, `IconDefinition`, screenshot path) and
   `REVIEWS` (header, body) for the Home page carousels.
 
 ## Conventions for agents

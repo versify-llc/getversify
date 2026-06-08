@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComments, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Layout from '../Layout/Layout';
 import { CONTACT_EMAIL, FEEDBACK_URL } from '../../content/links';
 import './Contact.css';
@@ -20,7 +22,12 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fas fa-envelope fa-2x contact-tile-icon" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="2x"
+                  className="contact-tile-icon"
+                  aria-hidden
+                />
                 <div className="contact-tile-title">Email</div>
                 <div className="contact-tile-subtext">{CONTACT_EMAIL}</div>
               </a>
@@ -30,7 +37,12 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fas fa-comments fa-2x contact-tile-icon" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faComments}
+                  size="2x"
+                  className="contact-tile-icon"
+                  aria-hidden
+                />
                 <div className="contact-tile-title">Feedback</div>
                 <div className="contact-tile-subtext">Upvote ideas for the app</div>
               </a>

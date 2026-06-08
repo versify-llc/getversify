@@ -1,7 +1,17 @@
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import {
+  faBars,
+  faBolt,
+  faBookOpen,
+  faFingerprint,
+  faHeadphones,
+  faMicrophone,
+} from '@fortawesome/free-solid-svg-icons';
+
 export type GameOption = {
   id: string;
   value: string;
-  icon: string;
+  icon: IconDefinition;
   label: string;
   screen: string;
 };
@@ -10,42 +20,42 @@ export const GAME_OPTIONS: GameOption[] = [
   {
     id: 'readbtn',
     value: 'read',
-    icon: 'fas fa-book-open fa-2x',
+    icon: faBookOpen,
     label: 'Read',
     screen: '/images/read_game_screen.png',
   },
   {
     id: 'typebtn',
     value: 'type',
-    icon: 'fas fa-fingerprint fa-2x',
+    icon: faFingerprint,
     label: 'Type',
     screen: '/images/type_game_screen.png',
   },
   {
     id: 'blankbtn',
     value: 'blank',
-    icon: 'fas fa-bars fa-2x',
+    icon: faBars,
     label: 'Blank',
     screen: '/images/blank_game_screen.png',
   },
   {
     id: 'speakBtn',
     value: 'speak',
-    icon: 'fas fa-microphone fa-2x',
+    icon: faMicrophone,
     label: 'Speak',
     screen: '/images/speak_game_screen.png',
   },
   {
     id: 'listenBtn',
     value: 'listen',
-    icon: 'fas fa-headphones fa-2x',
+    icon: faHeadphones,
     label: 'Listen',
     screen: '/images/listen_game_screen.png',
   },
   {
     id: 'flashBtn',
     value: 'flash',
-    icon: 'fas fa-bolt fa-2x',
+    icon: faBolt,
     label: 'Flash',
     screen: '/images/flash_screen.png',
   },

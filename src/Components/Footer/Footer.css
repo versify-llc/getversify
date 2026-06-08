@@ -8,34 +8,18 @@
   border-top: 1px solid #dee2e6;
 }
 
-.site-footer-brand {
-  display: flex;
-  align-items: center;
+.site-footer-logo {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.site-footer-social {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.site-footer-social-item {
-  margin-left: 1rem;
-}
-
-.site-footer-social-link {
+.social-link {
+  margin-left: 8px;
   color: var(--color-footer-muted);
 }
 
-.site-footer-social-icon {
-  font-size: 1.6em;
-}
-
-.site-footer-social-icon:hover {
+.social-link:hover {
   opacity: 0.6;
-}
-
-.site-footer-logo {
-  width: 25px;
-  text-align: center;
-  margin-right: 10px;
 }

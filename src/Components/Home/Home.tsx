@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Layout from '../Layout/Layout';
 import StoreBadges from '../StoreBadges/StoreBadges';
 import { GAME_OPTIONS, REVIEWS } from '../../content/home';
@@ -65,7 +67,12 @@ const Home = () => {
                     onClick={() => setGameIndex(index)}
                   >
                     <div className="shrink-0 px-3 w-5/12">
-                      <i className={`${option.icon} home-game-icon`} aria-hidden="true"></i>
+                      <FontAwesomeIcon
+                        icon={option.icon}
+                        size="2x"
+                        className="home-game-icon"
+                        aria-hidden
+                      />
                     </div>
                     <div className="shrink-0 px-3 w-7/12 text-body-lg home-game-label">
                       {option.label}
@@ -99,7 +106,13 @@ const Home = () => {
             <div className="px-3">
               <div className="home-review-stars" aria-label="Rated 5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <i key={i} className="fas fa-star fa-lg home-review-star" aria-hidden="true"></i>
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    size="lg"
+                    className="home-review-star"
+                    aria-hidden
+                  />
                 ))}
               </div>
               <p className="text-body-lg text-white">
