@@ -10,6 +10,13 @@
   padding: 0.5rem 2%;
 }
 
+.site-nav-overlay {
+  position: fixed;
+  inset: 112px 0 0 0;
+  z-index: 1020;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .site-nav-inner {
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +127,10 @@
   }
 
   .site-nav-toggle {
+    display: none;
+  }
+
+  .site-nav-overlay {
     display: none;
   }
 

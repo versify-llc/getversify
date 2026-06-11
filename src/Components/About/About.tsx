@@ -6,14 +6,14 @@ const About = () => {
     <Layout navClassName="nav-bg-light">
       <div className="px-4 mx-auto">
         <div className="flex flex-wrap justify-center pt-12">
-          <div className="w-full md:w-3/12 lg:w-2/12">
+          <div className="w-full md:w-2/12">
             <div className="text-center md:text-left">
               <div className="text-header-sm">MEET</div>
               <h1 className="text-header text-theme-green">Versify.</h1>
             </div>
           </div>
           <div className="md:w-1/12"></div>
-          <div className="w-full md:w-5/12 lg:w-4/12 pb-4 text-center md:text-left">
+          <div className="w-full md:w-4/12 pb-4 text-center md:text-left">
             <p className="text-body-md text-theme-muted">
               <i>
                 "My son, do not forget my teaching, but let your heart keep my commandments, for
@@ -22,7 +22,7 @@ const About = () => {
               <br />
               Proverbs 3:1-2
             </p>
-            <hr className="about-divider mx-auto my-6" />
+            <hr className="about-divider mx-auto md:mx-0 my-6" />
             <p className="text-body-md">
               Versify is a free app that makes it easy and fun to memorize Bible verses through
               interactive games. Our inspiration comes from Proverbs 3:1-2, which calls God's people
@@ -59,12 +59,12 @@ const About = () => {
       </section>
 
       <img src="/images/green_triangle.png" alt="" className="triangle" />
-      <section className="w-full md:w-9/12 lg:w-7/12 mx-auto px-4 mb-8 md:mb-16">
+      <section className="w-full md:w-7/12 mx-auto px-4 mb-8 md:mb-16">
         <div className="flex flex-wrap justify-center mt-8 md:mt-20">
           <div className="w-full md:w-5/12">
             <div className="text-center md:text-left">
               <div className="text-header-sm">MEET</div>
-              <div className="text-header text-theme-green">The Team.</div>
+              <div className="text-header text-theme-green pr-2">The Team.</div>
             </div>
           </div>
           <div className="w-full md:w-7/12 text-center md:text-left">
