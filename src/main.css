@@ -72,36 +72,6 @@
   }
 }
 
-/* --- Layout --- */
-
-.page-shell {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.page-top {
-  margin-top: var(--nav-height);
-}
-
-.page-spacer {
-  padding-top: 0.25rem;
-}
-
-.container,
-.container-fluid {
-  width: 100%;
-  padding-right: calc(var(--gutter-x) * 0.5);
-  padding-left: calc(var(--gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.container-fluid {
-  max-width: none;
-}
-
 /* --- Typography --- */
 /* Wrapped in a cascade layer so Tailwind color utilities (e.g. text-white) win when used together. */
 
@@ -130,12 +100,6 @@
     font-size: clamp(1rem, 1rem + 1vw, 2rem);
   }
 
-  .text-body-lg {
-    font-weight: 300;
-    color: var(--color-theme-black);
-    font-size: clamp(1.375rem, 1.375rem + 0.1vw, 1.5rem);
-  }
-
   .text-body-md {
     font-weight: 300;
     color: var(--color-theme-black);
@@ -147,9 +111,15 @@
     color: var(--color-theme-black);
     font-size: clamp(1rem, 1rem + 0.1vw, 1.125rem);
   }
+
+  @media (max-width: 767px) {
+    .text-body-md {
+      font-size: calc(1rem + 0.4vw);
+    }
+  }
 }
 
-/* --- Surfaces --- */
+/* --- Shared --- */
 
 .nav-bg-light {
   background-color: rgba(255, 255, 255, 0.65);
@@ -159,31 +129,6 @@
 .nav-bg-grey {
   background-color: rgba(242, 242, 242, 0.65);
   backdrop-filter: blur(18px);
-}
-
-.section-banner {
-  width: 100%;
-}
-
-.section-banner--blue {
-  background-color: var(--color-theme-blue);
-}
-
-.section-banner--green {
-  background-color: var(--color-theme-green);
-}
-
-.section-banner--white {
-  background-color: #fff;
-}
-
-.section-banner__inner {
-  margin-top: 50px;
-}
-
-.section-banner__inner--spaced {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .triangle {
@@ -207,8 +152,7 @@
   border: none;
   border-radius: 50px;
   background-color: var(--color-theme-green);
-  color: #fff;
-  font-family: 'Barlow', sans-serif;
+  color: white;
   font-weight: 500;
   font-size: 1rem;
   text-align: center;
@@ -219,14 +163,4 @@
 .btn-primary--link {
   display: inline-block;
   text-decoration: none;
-}
-
-@media (max-width: 767px) {
-  .text-body-lg {
-    font-size: calc(1rem + 0.6vw);
-  }
-
-  .text-body-md {
-    font-size: calc(1rem + 0.4vw);
-  }
 }

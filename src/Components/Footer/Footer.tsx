@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="container">
+    <div className="container mx-auto px-3">
       <footer className="site-footer">
         <div className="flex">
           <img

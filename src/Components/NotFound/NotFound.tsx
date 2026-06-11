@@ -3,8 +3,8 @@ import Layout from '../Layout/Layout';
 
 const NotFound = () => {
   return (
-    <Layout navClassName="nav-bg-light" className="page-shell">
-      <div className="px-8 flex-1 content-center">
+    <Layout navClassName="nav-bg-light">
+      <div className="flex-1 content-center px-3 pb-12">
         <h1 className="text-header-xl text-theme-green">Oops!</h1>
         <br />
         <h3>It seems like you've wandered off the straight and narrow path.</h3>

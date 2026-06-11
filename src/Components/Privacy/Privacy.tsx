@@ -5,11 +5,8 @@ import './Privacy.css';
 const Privacy = () => {
   return (
     <Layout navClassName="nav-bg-light">
-      <div className="page-spacer" />
-      <div className="page-top" />
-
-      <div className="flex flex-wrap justify-center privacy-page">
-        <div className="w-full mx-3 md:w-1/2 privacy-content">
+      <div className="flex justify-center privacy-page">
+        <div className="w-full mx-3 my-6 md:w-1/2">
           <h1>Privacy Policy</h1>
           <p>
             <strong>Versify is a free app. It is intended for use as is.</strong>

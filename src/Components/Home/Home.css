@@ -1,67 +1,33 @@
-.home-hero-row {
-  align-items: center;
-  padding-top: 1.5rem;
-}
+/** Landing */
 
-.home-games-section {
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
-
-.home-games-intro {
-  margin-bottom: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.home-games-row {
-  align-items: center;
-}
-
-.home-free-intro {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.home-review-stars {
-  padding-bottom: 1.5rem;
-}
-
-.home-review-body {
-  margin: auto;
-  max-width: 500px;
-}
-
-.home-cta-heading-text {
-  display: inline-block;
-}
-
-.home-cta-section {
-  width: 100%;
-}
-
-.home-phone-img {
+.landing-img {
   width: 300px;
 }
 
-.home-game-icon {
-  display: inline-block;
-  color: var(--color-theme-black);
-  vertical-align: middle;
+@media (max-width: 767px) {
+  .landing-img {
+    width: 200px;
+  }
 }
 
-.home-game-label {
-  display: inline-block;
-  vertical-align: middle;
+@media (max-width: 992px) {
+  .landing-img {
+    width: 250px;
+  }
 }
+
+/** Games */
 
 .home-game-option {
+  display: flex;
+  justify-self: center;
   border: none;
   border-radius: 10px;
   background-color: transparent;
-  margin-bottom: 10px;
   padding: 10px 15px;
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
+  min-width: 120px;
   font: inherit;
   color: inherit;
   align-items: center;
@@ -77,53 +43,9 @@
   height: 500px;
 }
 
-.home-hero-subtext {
-  margin-left: 20%;
-}
+/** Reviews */
 
-.home-game-options {
-  display: inline-flex;
-  vertical-align: middle;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-}
-
-.home-review-star {
-  color: #fff;
-  padding-right: 0.25rem;
-  padding-left: 0.25rem;
-}
-
-.home-cta-heading {
-  padding-top: 0;
-}
-
-.home-phone-col {
-  padding-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  .home-phone-col {
-    padding-bottom: 20px;
-  }
-
-  .home-phone-img {
-    width: 200px;
-  }
-
-  .home-cta-heading {
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .home-hero-subtext {
-    margin-left: 0;
-  }
-
-  .home-phone-img {
-    width: 250px;
-  }
+.home-review-body {
+  margin: auto;
+  max-width: 500px;
 }
