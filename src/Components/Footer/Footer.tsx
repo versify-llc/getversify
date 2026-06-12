@@ -6,7 +6,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <div className="container mx-auto px-3">
-      <footer className="site-footer">
+      <footer className="site-footer px-2 md:px-0">
         <div className="flex">
           <img
             src="/images/logo.png"

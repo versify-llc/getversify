@@ -12,9 +12,19 @@
 
 .site-nav-overlay {
   position: fixed;
-  inset: 112px 0 0 0;
+  inset: 228px 0 0 0;
   z-index: 1020;
   background-color: rgba(0, 0, 0, 0.5);
+  animation: site-nav-overlay-fade 0.3s ease;
+}
+
+@keyframes site-nav-overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .site-nav-inner {
@@ -36,7 +46,6 @@
 .site-nav-brand {
   display: inline-block;
   padding-top: 0.5rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -86,14 +95,19 @@
 
 .site-nav-links {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.25rem 0;
   padding-left: 0;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   list-style: none;
+}
+
+.site-nav-link-icon {
+  width: 1.25em;
+  margin-right: 0.75rem;
+  text-align: center;
 }
 
 .site-nav-link {
@@ -110,6 +124,12 @@
   color: var(--color-theme-black);
   text-decoration: none;
   opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  html.site-nav-scroll-lock {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 768px) {
@@ -144,8 +164,10 @@
   }
 
   .site-nav-links {
-    justify-content: flex-end;
+    flex-direction: row;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
     margin-top: 0.5rem;
     margin-bottom: 0;
   }
@@ -153,5 +175,9 @@
   .site-nav-link {
     padding: 0.25rem 1rem;
     font-size: 20px;
+  }
+
+  .site-nav-link-icon {
+    display: none;
   }
 }

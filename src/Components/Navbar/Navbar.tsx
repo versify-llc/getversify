@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo, faEnvelope, faHeart, faShirt } from '@fortawesome/free-solid-svg-icons';
 import { DONATE_URL, MERCH_URL } from '../../content/links';
 import './Navbar.css';
 
@@ -23,6 +25,14 @@ const Navbar = ({ className }: NavbarProps) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock page scroll while the mobile menu is open
+  useEffect(() => {
+    document.documentElement.classList.toggle('site-nav-scroll-lock', menuOpen);
+    return () => {
+      document.documentElement.classList.remove('site-nav-scroll-lock');
+    };
+  }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen((open) => !open);
@@ -53,15 +63,19 @@ const Navbar = ({ className }: NavbarProps) => {
           <div className={`site-nav-menu ${menuOpen ? 'is-open' : ''}`} id="siteNavMenu">
             <div className="site-nav-links">
               <Link className="site-nav-link" to="/about" onClick={closeMenu}>
+                <FontAwesomeIcon icon={faCircleInfo} className="site-nav-link-icon" aria-hidden />
                 About
               </Link>
               <Link className="site-nav-link" to="/contact" onClick={closeMenu}>
+                <FontAwesomeIcon icon={faEnvelope} className="site-nav-link-icon" aria-hidden />
                 Contact
               </Link>
               <a className="site-nav-link" href={MERCH_URL} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faShirt} className="site-nav-link-icon" aria-hidden />
                 Merch
               </a>
               <a className="site-nav-link" href={DONATE_URL} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faHeart} className="site-nav-link-icon" aria-hidden />
                 Donate
               </a>
             </div>

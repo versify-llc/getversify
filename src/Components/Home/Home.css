@@ -39,8 +39,27 @@
   background-color: var(--color-theme-lightgrey);
 }
 
+.home-game-stage {
+  position: relative;
+  display: inline-block;
+}
+
 .home-game-screen {
   height: 500px;
+}
+
+/* Inactive screenshots are stacked behind the active one and faded out.
+   The active screenshot stays in normal flow so the stage keeps its size. */
+.home-game-screen:not(.is-active) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.home-game-screen.is-active {
+  position: relative;
+  opacity: 1;
 }
 
 /** Reviews */

@@ -1,4 +1,18 @@
 .download-icon {
   height: 40px;
   margin: 0 5px 30px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.25s ease;
+}
+
+.apple {
+  border-radius: 7px;
+}
+
+.google {
+  border-radius: 4px;
+}
+
+.download-icon:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

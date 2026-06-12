@@ -5,34 +5,30 @@ Promotional website for the Versify app.
 https://getversify.web.app  
 https://versifyapp.com
 
-## Contributing
+## Getting started
 
-Run the app in development mode:
+Follow these steps to get the project setup for local development.
+
+Install Node 24:
+
+```
+nvm install 24 && nvm use 24
+```
+
+Install packages:
+
+```
+npm install
+```
+
+Run the React app in development mode:
 
 ```
 npm start
 ```
 
-## Deployment
+Open [localhost:3000](http://localhost:3000) in a browser and you should be all set!
 
-Create a local build:
+## Release
 
-```
-npm run build
-```
-
-Deploy the build to firebase:
-
-```
-npm run deploy
-```
-
-If the deploy fails, reauthenticate with firebase:
-
-```
-firebase login --reauth
-```
-
-Upload the `dist` folder to Hostinger to update versifyapp.com
-
-That's all 🎉
+See [docs/release.md](docs/release.md) for how to release an updated version of this website.

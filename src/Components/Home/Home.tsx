@@ -8,7 +8,6 @@ import './Home.css';
 
 const Home = () => {
   const [gameIndex, setGameIndex] = useState(0);
-  const selectedGame = GAME_OPTIONS[gameIndex];
 
   return (
     <Layout navClassName="nav-bg-grey" className="bg-theme-lightgrey">
@@ -66,12 +65,18 @@ const Home = () => {
               </div>
             </div>
             <div className="w-full md:w-1/4 text-center md:text-left pb-6">
-              <img
-                className="home-game-screen"
-                src={selectedGame.screen}
-                alt={`${selectedGame.label} game screenshot`}
-                loading="lazy"
-              />
+              <div className="home-game-stage">
+                {GAME_OPTIONS.map((option, index) => (
+                  <img
+                    key={option.id}
+                    className={`home-game-screen ${gameIndex === index ? 'is-active' : ''}`}
+                    src={option.screen}
+                    alt={`${option.label} game screenshot`}
+                    aria-hidden={gameIndex !== index}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

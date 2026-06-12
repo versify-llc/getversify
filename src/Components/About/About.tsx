@@ -42,17 +42,17 @@ const About = () => {
       <section className="bg-(--color-theme-green) pb-4">
         <img src="/images/white_triangle.png" alt="" className="triangle" />
         <div className=" pt-6 md:pt-12">
-          <div className="text-header-xl text-white">300,000+</div>
+          <div className="text-header-xl text-white">350,000+</div>
           <div className="text-header-sm text-white">Downloads</div>
         </div>
         <br />
         <div className="flex flex-wrap pb-4 justify-center">
           <div className="w-full md:w-3/12">
-            <div className="text-header text-white">500,000+</div>
+            <div className="text-header text-white">700,000+</div>
             <div className="text-header-sm text-white">Verses Memorized</div>
           </div>
           <div className="pt-4 md:pt-0 w-full md:w-3/12">
-            <div className="text-header text-white">14,000,000+</div>
+            <div className="text-header text-white">16,000,000+</div>
             <div className="text-header-sm text-white">Games Played</div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const About = () => {
           <div className="w-full md:w-4/12 content-center">
             <img
               className="about-profile-img"
-              src="/images/richie.jpg"
+              src="/images/richie.png"
               alt="Richie Tarkowski"
               loading="lazy"
             />

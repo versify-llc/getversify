@@ -6,14 +6,14 @@ const StoreBadges = () => {
     <>
       <a href={APP_STORE_URL} target="_blank" rel="noreferrer">
         <img
-          className="download-icon"
+          className="apple download-icon"
           src="/images/apple_store.png"
           alt="Download Versify on the Apple App Store"
         />
       </a>
       <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
         <img
-          className="download-icon"
+          className="google download-icon"
           src="/images/google_play.png"
           alt="Get Versify on Google Play"
         />
