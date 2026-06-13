@@ -70,8 +70,8 @@ const About = () => {
           <div className="w-full md:w-7/12 text-center md:text-left">
             <p className="text-body-md">
               <b>
-                Versify was created by two college students who have a passion for software
-                development and sharing God's Word with others.
+                Versify was created by siblings who have a passion for software development and
+                sharing God's Word with others.
               </b>
             </p>
           </div>
@@ -101,7 +101,7 @@ const About = () => {
         <div className="flex flex-wrap justify-center mt-6 md:mt-12">
           <div className="w-full md:w-7/12 text-center md:text-left">
             <p className="text-body-md pt-4">
-              <b>Alyssa Tarkowski</b>
+              <b>Alyssa Hulet</b>
             </p>
             <p className="text-body-sm text-theme-muted">
               Alyssa is the co-founder and COO of Versify. She recently graduated from Ferris State
@@ -114,7 +114,7 @@ const About = () => {
           <div className="about-profile--reversed w-full md:w-4/12 content-center">
             <img
               className="about-profile-img"
-              src="/images/alyssa.jpg"
+              src="/images/alyssa.png"
               alt="Alyssa Tarkowski"
               loading="lazy"
             />
