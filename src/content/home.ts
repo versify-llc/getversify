@@ -75,12 +75,4 @@ export const REVIEWS: Review[] = [
     header: '"Memorizing verses is no longer a chore!"',
     body: 'I have a hard time memorizing Bible verses because it is such a daunting task. Versify has motivated me to memorize more verses and makes it manageable and fun!',
   },
-  {
-    header: '"Great tool!"',
-    body: 'Looking forward to being more intentional in scripture memory and excited for this helpful app! Excellent format!',
-  },
-  {
-    header: '"Best Memorization App"',
-    body: 'I have a difficult time memorizing verses and I have been on the search for an app to help me out. This app is so easy to use and understand. Additionally, this app makes it fun to memorize verses.',
-  },
 ];

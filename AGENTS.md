@@ -1,11 +1,10 @@
 # AGENTS.md
 
-Guidance for AI agents working in this repository. Read this first to understand the
-project without re-scanning everything.
+Guidance for AI agents working in this repository.
 
 ## What this is
 
-`getversify` (package name `versify-web`) is the **promotional / marketing website** for
+`getversify` is the **promotional / marketing website** for
 **Versify**, a free mobile app for memorizing Bible verses through interactive games. The
 site exists to drive App Store / Play Store downloads and to link out to merch, donations,
 feedback, and contact. It is **not** the Versify app itself and contains none of the app's
@@ -18,21 +17,21 @@ Live deployments:
 
 ## Tech stack
 
-| Concern     | Choice                                                                                                                      |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Language    | TypeScript 6 (`strict: true`)                                                                                               |
-| UI          | React 19                                                                                                                    |
-| Routing     | `react-router-dom` v7 (client-side `BrowserRouter`)                                                                         |
-| Styling     | Tailwind CSS v4 (via `@tailwindcss/vite`) + per-component CSS + global tokens in `src/main.css`                             |
-| Build / dev | Vite 8 (`@vitejs/plugin-react`), dev server on port 3000                                                                    |
-| Lint        | ESLint 10 + `typescript-eslint` recommended rules only (flat config in `eslint.config.js`)                                  |
-| Deploy      | Firebase Hosting (`firebase.json` -> serves `dist/`, SPA rewrites); Apache SPA fallback in `public/.htaccess` for Hostinger |
-| Runtime     | Node `>=24`, ES modules (`"type": "module"`)                                                                                |
-| Icons       | Font Awesome via npm (`@fortawesome/react-fontawesome` + free solid/brands icon packs; tree-shaken per component)           |
-| Fonts       | Barlow (Google Fonts `<link>` in `index.html`, weights 300/500/700)                                                         |
+| Concern     | Choice                                                                                       |
+| ----------- | -------------------------------------------------------------------------------------------- |
+| Language    | TypeScript 6 (`strict: true`)                                                                |
+| UI          | React 19                                                                                     |
+| Routing     | `react-router-dom` v7 (client-side `BrowserRouter`)                                          |
+| Styling     | Tailwind CSS v4 (via `@tailwindcss/vite`) + per-component CSS + global styles `src/main.css` |
+| Build / dev | Vite 8 (`@vitejs/plugin-react`), dev server on port 3000                                     |
+| Lint        | ESLint 10 + `typescript-eslint` recommended rules only (flat config in `eslint.config.js`)   |
+| Deploy      | Firebase Hosting (`firebase.json`); Apache SPA fallback in `public/.htaccess` for Hostinger  |
+| Runtime     | Node `>=24`, ES modules (`"type": "module"`)                                                 |
+| Icons       | Font Awesome via npm                                                                         |
+| Fonts       | Barlow (Google Fonts `<link>` in `index.html`, weights 300/500/700)                          |
 
-There is **no** backend, SSR, data fetching, environment config, auth, CMS, or global state
-library. It is a purely client-rendered static SPA.
+There is **no** backend, SSR, data fetching, environment config, auth, CMS, etc.
+It is a purely client-rendered static SPA.
 
 ## Scripts
 
@@ -46,11 +45,10 @@ npm run deploy     # npm run build && firebase deploy
 ```
 
 There is currently **no test framework or test script** (no Jest/Vitest/RTL/Playwright).
-The effective "test suite" is `npm run types` + `npm run lint` + `npm run format` Run them after making changes.
+The effective "test suite" is `npm run types` + `npm run lint` + `npm run format`
+Run them after making changes.
 
-Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettierignore`):
-2-space indent, single quotes in JS/TS, double quotes in JSX attributes, semicolons,
-`es5` trailing commas, 100-char print width. Run `npm run format` rather than hand-aligning.
+Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettierignore`)
 
 ## Project structure
 
@@ -60,7 +58,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
 ├── vite.config.ts             # react + tailwind plugins, dev port 3000
 ├── tsconfig.json              # strict TS, react-jsx, bundler resolution, includes src/
 ├── eslint.config.js           # flat config: typescript-eslint recommended for **/*.{ts,tsx}
-├── firebase.json / .firebaserc# Firebase hosting (project "getversify"), serves dist/, SPA rewrites
+├── firebase.json              # Firebase hosting (project "getversify"), serves dist/, SPA rewrites
 ├── public/
 │   ├── manifest.json          # PWA manifest
 │   ├── robots.txt             # allows all; Sitemap points at Firebase URL
@@ -69,7 +67,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
 │   └── images/                # all site images, referenced as /images/<name>
 └── src/
     ├── main.tsx               # createRoot bootstrap, React.StrictMode
-    ├── main.css               # Tailwind layers, @theme tokens, shared layout/typography/surfaces
+    ├── main.css               # Tailwind layers, @theme tokens, shared styles
     ├── global.d.ts            # declare module "*.css" (TS 6 css import shim)
     ├── App.tsx                # Router + Routes + ScrollToTop
     ├── content/
@@ -80,7 +78,7 @@ Formatting is enforced by Prettier (config in `.prettierrc`, scope in `.prettier
         ├── StoreBadges/       # StoreBadges.tsx — App Store / Play Store badge images
         ├── Navbar/            # Navbar.tsx + Navbar.css
         ├── Footer/            # Footer.tsx + Footer.css
-        ├── Home/              # Home.tsx + Home.css   (route "/")
+        ├── Home/              # Home.tsx + Home.css (route "/")
         ├── About/             # About.tsx + About.css (route "/about")
         ├── Contact/           # Contact.tsx + Contact.css (route "/contact")
         ├── Privacy/           # Privacy.tsx + Privacy.css (route "/privacy")
@@ -111,7 +109,9 @@ Because routing is client-side, host configs (`firebase.json` and
 - **Layout** (`Layout.tsx`): every page wraps content in `<Layout navClassName="..."
 className="...">`. Renders fixed `Navbar`, page `children`, then `Footer`. Pass
   `nav-bg-grey` (Home) or `nav-bg-light` (other pages). Optional `className` for page-level
-  shells (e.g. `page-shell`, `bg-theme-lightgrey`).
+  shells (e.g. `page-shell`). Set page background via the optional `backgroundColor` prop
+  (any CSS color, defaults to white) — Layout applies it to the page shell **and** mirrors it
+  onto the document root.
 - **StoreBadges** (`StoreBadges.tsx`): reusable App Store / Google Play `<img>` links; uses
   `APP_STORE_URL` and `PLAY_STORE_URL` from `content/links.ts`. Used on Home (hero + CTA).
 - **content/links.ts**: canonical external URLs (stores, social, merch, donate, feedback) and
@@ -127,7 +127,6 @@ className="...">`. Renders fixed `Navbar`, page `children`, then `Footer`. Pass
   you are editing. Format with Prettier (`npm run format`), not manual alignment.
 - **Props**: use `type FooProps = { ... }` for component props where needed (see `Layout`,
   `Navbar`).
-- **State**: local `useState` / `useEffect` only. No global store unless the task requires it.
 - **External links**: `target="_blank"` with `rel="noreferrer"` or `rel="noopener noreferrer"`.
   Define URLs in `src/content/links.ts`.
 - **Internal navigation**: use `react-router-dom` `<Link>` for in-app routes.
@@ -139,4 +138,9 @@ className="...">`. Renders fixed `Navbar`, page `children`, then `Footer`. Pass
   Sitemap URL accurate if the canonical host changes.
 - After changes, run `npm run types` and `npm run lint`; both should pass clean.
 
-As agents learn more about this project and make changes, they should update this document to be relevant for themselves and other agents in the future.
+## Instructions for agents
+
+- Prefer readability, maintainability, and correctness over clever or concise solutions.
+- If a requested change would significantly degrade architecture, security, performance, or maintainability, explain the concern and ask for clarification before proceeding.
+- Agent usage of git commit and push commands are prohibited.
+- Agents should update this document to be relevant as changes are made to this project.

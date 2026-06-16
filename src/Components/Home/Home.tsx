@@ -10,7 +10,7 @@ const Home = () => {
   const [gameIndex, setGameIndex] = useState(0);
 
   return (
-    <Layout navClassName="nav-bg-grey" className="bg-theme-lightgrey">
+    <Layout navClassName="nav-bg-grey" backgroundColor="var(--color-theme-lightgrey)">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center items-center pt-6">
           <div className="w-10/12 md:w-5/12">
@@ -20,12 +20,12 @@ const Home = () => {
                 <br />
                 Made Easy
               </h1>
-              <div className="text-body-md">Versify is available in app stores!</div>
-              <div className="text-body-md mb-4">Download it today.</div>
+              <div className="text-body-md">Store God's Word in your heart.</div>
+              <div className="text-body-md mb-4">Download Versify today!</div>
               <StoreBadges />
             </div>
           </div>
-          <div className="w-full md:w-1/12"></div>
+          <div className="w-full md:w-1/12" />
           <div className="w-full md:w-5/12 pb-8 text-center md:text-left">
             <img
               className="landing-img"
@@ -39,9 +39,9 @@ const Home = () => {
       <section className="bg-white pb-2">
         <img src="/images/grey_triangle.png" className="triangle" alt="" />
         <div className="mt-12">
-          <h2 className="text-header-md">Memorization Made Fun.</h2>
-          <p className="text-body-md px-6 mb-8">
-            Play a variety of interactive games to help you memorize verses
+          <h2 className="text-header-md">Memorization Made Simple.</h2>
+          <p className="text-body-md px-5 mb-8">
+            Practice with interactive games that make Scripture memory simple and effective.
           </p>
           <div className="flex flex-wrap items-center justify-center">
             <div className="w-full md:w-1/3 px-6">
@@ -87,7 +87,7 @@ const Home = () => {
         <div className="my-12 px-3">
           <h2 className="text-header-md text-white">Memorization Made Free.</h2>
           <p className="px-2 text-body-md text-white">
-            Memorize any verse in ESV, NIV, NLT, and more for free! No subscription. No ads.
+            Memorize verses in ESV, NIV, NLT and more for free! No subscription. No ads.
           </p>
           <br />
           <div className="pb-6" aria-label="Rated 5 out of 5 stars">
@@ -104,7 +104,7 @@ const Home = () => {
           <p className="text-body-md text-white">
             <b>{REVIEWS[0].header}</b>
           </p>
-          <p className="home-review-body pb-4 text-body-sm text-white">
+          <p className="home-review-body mx-auto pb-4 text-body-sm text-white">
             <i>{REVIEWS[0].body}</i>
           </p>
         </div>
@@ -113,9 +113,13 @@ const Home = () => {
 
       <div className="mt-4 md:mt-0">
         <h2 className="text-header-md">
-          Bible Verse Memorization Made <span className="text-theme-green">Easy.</span>
+          Memorization Made <span className="text-theme-green">Easy.</span>
         </h2>
-        <p className="text-body-md">So what's the hold up? Start memorizing today!</p>
+        <p className="text-body-md pb-2">
+          "Let the word of Christ dwell in you richly..."
+          <br />
+          Colossians 3:16
+        </p>
         <div className="mx-auto">
           <StoreBadges />
         </div>

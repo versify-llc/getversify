@@ -12,19 +12,9 @@
 
 .site-nav-overlay {
   position: fixed;
-  inset: 228px 0 0 0;
+  inset: 225px 0 0 0;
   z-index: 1020;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: site-nav-overlay-fade 0.3s ease;
-}
-
-@keyframes site-nav-overlay-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .site-nav-inner {

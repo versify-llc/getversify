@@ -45,7 +45,7 @@ const Navbar = ({ className }: NavbarProps) => {
   return (
     <>
       {menuOpen && <div className="site-nav-overlay" onClick={closeMenu} aria-hidden="true" />}
-      <nav className={`site-nav ${className} ${scrolled ? 'site-nav--bordered' : ''}`}>
+      <nav className={`site-nav ${className} ${scrolled && !menuOpen ? 'site-nav--bordered' : ''}`}>
         <div className="site-nav-inner px-3">
           <Link className="site-nav-brand" to="/" onClick={closeMenu}>
             <img src="/images/logo_hoz.png" alt="Versify Logo" className="site-nav-logo" />
