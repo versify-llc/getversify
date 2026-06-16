@@ -21,14 +21,8 @@ const Layout = ({
   backgroundColor = '#ffffff',
   children,
 }: LayoutProps) => {
-  // Apply backgroundColor to root of page
   useEffect(() => {
-    const root = document.documentElement;
-    const previous = root.style.backgroundColor;
-    root.style.backgroundColor = backgroundColor;
-    return () => {
-      root.style.backgroundColor = previous;
-    };
+    document.body.style.backgroundColor = backgroundColor;
   }, [backgroundColor]);
 
   return (
