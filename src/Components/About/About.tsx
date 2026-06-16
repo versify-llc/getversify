@@ -25,13 +25,14 @@ const About = () => {
             <hr className="about-divider mx-auto md:mx-0 my-6" />
             <p className="text-body-md">
               Versify is a free, easy-to-use app that is designed to help you memorize Scripture
-              through interactive games.
+              through interactive games. Our inspiration for this app comes from 2 Timothy 3:16-17
+              and Proverbs 3:1-2.
             </p>
             <br />
             <p className="text-body-md">
               <b>
-                We created this app to make it easier for everyone to access effective tools for
-                Scripture memorization.
+                We hope to make it easier for everyone to access effective tools for Scripture
+                memorization.
               </b>
             </p>
           </div>
@@ -90,9 +91,10 @@ const About = () => {
               <b>Richie Tarkowski</b>
             </p>
             <p className="text-body-sm text-theme-muted">
-              Richie is the main software engineer on the team. He graduated from Ferris State
-              University and currently works at Hagerty on the website and mobile app. Richie and
-              his wife live in Illinois and serve in the college ministry at their church.
+              Richie is the lead software engineer behind Versify. He graduated from Ferris State
+              University and currently works at Hagerty developing the company's website and mobile
+              app. Richie and his wife live in Illinois and are actively serving in the college
+              ministry at their church.
             </p>
           </div>
         </div>
@@ -102,9 +104,10 @@ const About = () => {
               <b>Alyssa Hulet</b>
             </p>
             <p className="text-body-sm text-theme-muted">
-              Alyssa runs the business side of things for Versify. She recently graduated from
-              Ferris State University and currently works as a data engineer at State Farm. Alyssa
-              and her husband live in Michigan, and her favorite sport right now is pickleball.
+              Alyssa oversees the business side of Versify. She recently graduated from Ferris State
+              University and currently works as a data engineer at State Farm. Alyssa and her
+              husband live in Michigan, and in her free time she enjoys playing pickleball and
+              reading Puritan books.
             </p>
           </div>
           <div className="w-full md:w-1/12"></div>

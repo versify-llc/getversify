@@ -10,8 +10,7 @@ const Contact = () => {
       <main className="px-3 pt-12 w-full md:w-7/12 mx-auto">
         <h1 className="text-header text-theme-green text-center md:text-left">Let's Talk</h1>
         <p className="text-body-sm text-center md:text-left">
-          To give us feedback for our app or just learn more about what we do, please get into
-          contact with us!
+          To provide feedback on our app or learn more about what we do, please reach out to us!
         </p>
         <div className="contact-tiles text-body-sm">
           <a
