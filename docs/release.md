@@ -18,6 +18,8 @@ npm run build
 
 Firebase hosts our free domain: getversify.web.app
 
+⚠️ You might need to turn off your ad-blocker before running this script ⚠️
+
 Run deploy script:
 
 ```
