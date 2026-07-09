@@ -2,8 +2,18 @@
 
 Promotional website for the Versify app.
 
-https://getversify.web.app  
-https://versifyapp.com
+## Domains
+
+### https://getversify.web.app
+
+- Free domain provided by Firebase hosting
+
+### https://versifyapp.com
+
+- Paid domain (required by app stores)
+- Purchased through Hostinger
+- DNS managed via Cloudflare
+- Connected to Firebase hosting (firebase deploy updates site)
 
 ## Getting started
 
@@ -31,4 +41,13 @@ Open [localhost:3000](http://localhost:3000) in a browser and you should be all 
 
 ## Release
 
-See [docs/release.md](docs/release.md) for how to release an updated version of this website.
+Run the deploy script:
+
+```
+npm run deploy
+```
+
+If the deploy fails, you probably need to:
+
+1. Disable ad-blockers
+2. Reauthenticate with Firebase: `firebase login --reauth`
