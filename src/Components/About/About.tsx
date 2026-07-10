@@ -48,7 +48,7 @@ const About = () => {
         <br />
         <div className="flex flex-wrap pb-4 justify-center">
           <div className="w-full md:w-3/12">
-            <div className="text-header text-white">40,000+</div>
+            <div className="text-header text-white">35,000+</div>
             <div className="text-header-sm text-white">Monthly Users</div>
           </div>
           <div className="pt-4 md:pt-0 w-full md:w-3/12">
