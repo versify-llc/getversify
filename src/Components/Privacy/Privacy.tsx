@@ -21,6 +21,59 @@ const Privacy = () => {
             and improving the app. We will not use or share your information with anyone except as
             described in this Privacy Policy.
           </p>
+          <p>
+            If you create an online account, your use of Versify is also governed by our{' '}
+            <a href="/terms" className="text-theme-blue">
+              Terms &amp; Conditions
+            </a>
+            .
+          </p>
+
+          <h2>Local-Only Use</h2>
+          <p>
+            Versify can be used without creating an account. If you use Versify this way, your
+            passages, categories, and progress are stored only on your device and are not sent to
+            us. You will need an internet connection to download Bible passage text, but no account
+            or personal information is required for local use.
+          </p>
+
+          <h2>Optional Online Account</h2>
+          <p>
+            Versify offers an optional online account feature that lets you sync your data across
+            devices. Creating an account is entirely optional — all app features are available to
+            local-only users.
+          </p>
+          <p>If you choose to create an account, we use the following third-party services:</p>
+          <ul>
+            <li>
+              <strong>Firebase Authentication</strong> (provided by Google) to create and manage
+              your account using your email address and password. Your email and password are
+              collected and stored by Firebase, not by us. See{' '}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noreferrer"
+                className="text-theme-blue"
+              >
+                Google's Privacy Policy
+              </a>{' '}
+              for details on how Firebase handles this data.
+            </li>
+            <li>
+              <strong>Amazon Web Services (AWS)</strong>, specifically Amazon DynamoDB hosted in the
+              US (us-east-1 region), to store your app data associated with your account. This
+              includes your saved passage references (not Bible text itself), the categories you
+              create, and your streak information.
+            </li>
+          </ul>
+
+          <h2>Account Deletion</h2>
+          <p>
+            You can delete your account at any time from within the app. Deleting your account
+            permanently removes your associated data — including your passage references,
+            categories, and streak information — from our AWS storage, as well as your credentials
+            from Firebase Authentication. This action cannot be undone.
+          </p>
 
           <h2>Captured Data</h2>
           <p>
@@ -29,12 +82,21 @@ const Privacy = () => {
             operating system version, the configuration of the app, and the time and date.
           </p>
 
-          <h2>Service Providers</h2>
-          <p>We may employ third-party services for the following reasons:</p>
-          <ul>
-            <li>To improve features in Versify</li>
-            <li>To assist us in analyzing how Versify is used.</li>
-          </ul>
+          <h2>Analytics</h2>
+          <p>
+            We use PostHog to help us understand how Versify is used and to help us identify and fix
+            errors. Data collected through PostHog is anonymous and is not tied to your identity,
+            email, or account.
+          </p>
+
+          <h2>Children's Privacy</h2>
+          <p>
+            Versify is designed to be usable by people of all ages, including young children, when
+            used in local-only mode without an account. Creating an online account requires an email
+            address. If you are a parent or guardian and believe your child under 13 has created an
+            account without your consent, please contact us at the email below so we can delete the
+            account and associated data.
+          </p>
 
           <h2>Security</h2>
           <p>
@@ -60,7 +122,7 @@ const Privacy = () => {
             this page.
           </p>
           <p>
-            <b>This policy is effective as of 2021-11-25</b>
+            <b>This policy is effective as of 2026-08-29</b>
           </p>
 
           <h2>Contact Us</h2>
