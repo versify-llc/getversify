@@ -36,9 +36,13 @@ const Terms = () => {
             under the age required to consent to these Terms in your jurisdiction, you should only
             create an account with the involvement of a parent or guardian.
           </p>
+          <p>You may delete your account at any time within the App.</p>
           <p>
-            You may delete your account at any time within the App. We may also suspend or terminate
-            accounts that we reasonably believe violate these Terms.
+            We reserve the right to disable, suspend, or delete any account, and to delete any data
+            associated with that account stored on our servers (including AWS), at our sole
+            discretion and without prior notice — for example, in cases of suspected violation of
+            these Terms, prolonged inactivity, technical or security concerns, or discontinuation of
+            the account feature. We are not liable for any loss of data resulting from such action.
           </p>
 
           <h2>Your Content</h2>
