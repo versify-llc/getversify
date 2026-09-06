@@ -1,0 +1,11 @@
+.link {
+  color: var(--color-theme-blue);
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.merch-img {
+  border-radius: 24px;
+}
