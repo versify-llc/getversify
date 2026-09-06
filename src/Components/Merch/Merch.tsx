@@ -5,7 +5,7 @@ const Merch = () => {
   return (
     <Layout navClassName="nav-bg-light">
       <main className="px-3 py-12 w-full md:w-7/12 mx-auto">
-        <h1 className="text-header text-theme-green text-center md:text-left">Merch Designs</h1>
+        <h1 className="text-header text-center md:text-left">Merch Designs</h1>
         <p className="text-body-sm text-left">
           Some of the t-shirt images on our merch website (Printful) may appear pixelated. We've
           included the designs here so you can see them in better detail. We've also ordered these
