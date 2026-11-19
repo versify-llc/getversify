@@ -16,4 +16,12 @@
     <loc>https://getversify.web.app/privacy</loc>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://getversify.web.app/terms</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://getversify.web.app/merch</loc>
+    <priority>0.4</priority>
+  </url>
 </urlset>

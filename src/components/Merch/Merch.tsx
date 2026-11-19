@@ -16,22 +16,32 @@ const Merch = () => {
           <a
             className="link"
             target="_blank"
+            rel="noreferrer"
             href="https://versify.printful.me/product/versify-embroidered-t-shirt-cowboy-edition-2"
           >
             Versify embroidered t-shirt | Cowboy
           </a>
         </p>
-        <img src="/images/cowbody_merch.jpeg" className="merch-img w-full" />
+        <img
+          src="/images/cowboy_merch.jpeg"
+          alt="Versify embroidered t-shirt Cowboy design"
+          className="merch-img w-full"
+        />
         <p className="flex justify-left mt-8">
           <a
             className="link"
             target="_blank"
+            rel="noreferrer"
             href="https://versify.printful.me/product/embroidered-t-shirt-back-image"
           >
             Versify embroidered t-shirt | Astronaut
           </a>
         </p>
-        <img src="/images/astronaut_merch.jpeg" className="merch-img w-full" />
+        <img
+          src="/images/astronaut_merch.jpeg"
+          alt="Versify embroidered t-shirt Astronaut design"
+          className="merch-img w-full"
+        />
         <p className="text-body-sm text-left mt-8">
           Each design was hand-drawn by{' '}
           <a href="mailto:njhank00@gmail.com" className="link">

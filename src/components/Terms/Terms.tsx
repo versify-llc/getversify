@@ -93,8 +93,8 @@ const Terms = () => {
 
           <h2>Governing Law</h2>
           <p>
-            These Terms are governed by the laws of [Your State/Country], without regard to conflict
-            of law principles.
+            These Terms are governed by the laws of the United States, without regard to conflict of
+            law principles.
           </p>
 
           <h2>Contact Us</h2>
