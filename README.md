@@ -41,6 +41,18 @@ Open [localhost:3000](http://localhost:3000) in a browser and you should be all 
 
 ## Release
 
+Install the firebase CLI if you haven't already:
+
+```
+npm install -g firebase-tools
+```
+
+Authenticate with Firebase:
+
+```
+firebase login
+```
+
 Run the deploy script:
 
 ```
